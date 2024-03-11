@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C0690888-7D7C-4B3C-AA21-A2D37EAA83E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.Domain", "Core\UlukunShopAPI.Domain\UlukunShopAPI.Domain.csproj", "{FB177E84-DE92-436F-AF7D-0A88AB574C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.Application", "Core\UlukunShopAPI.Application\UlukunShopAPI.Application.csproj", "{B559B017-C072-45D1-A306-4614A8A0884C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.Infrastructure", "Infrastructure\UlukunShopAPI.Infrastructure\UlukunShopAPI.Infrastructure.csproj", "{A4A1A3DD-9E07-4794-9FD0-4E723985EC67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.Persistence", "Infrastructure\UlukunShopAPI.Persistence\UlukunShopAPI.Persistence.csproj", "{48273DFE-CD26-4426-BA20-07346DA2CDAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FDF0F0F4-EFFA-4728-850C-6FBDC748CDC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.API", "Presentation\UlukunShopAPI.API\UlukunShopAPI.API.csproj", "{14092011-4C45-4341-936C-28D4E76E0445}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB177E84-DE92-436F-AF7D-0A88AB574C95} = {C0690888-7D7C-4B3C-AA21-A2D37EAA83E8}
+		{B559B017-C072-45D1-A306-4614A8A0884C} = {C0690888-7D7C-4B3C-AA21-A2D37EAA83E8}
+		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67} = {276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}
+		{48273DFE-CD26-4426-BA20-07346DA2CDAA} = {276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}
+		{14092011-4C45-4341-936C-28D4E76E0445} = {FDF0F0F4-EFFA-4728-850C-6FBDC748CDC6}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB177E84-DE92-436F-AF7D-0A88AB574C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB177E84-DE92-436F-AF7D-0A88AB574C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB177E84-DE92-436F-AF7D-0A88AB574C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB177E84-DE92-436F-AF7D-0A88AB574C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B559B017-C072-45D1-A306-4614A8A0884C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B559B017-C072-45D1-A306-4614A8A0884C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B559B017-C072-45D1-A306-4614A8A0884C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B559B017-C072-45D1-A306-4614A8A0884C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48273DFE-CD26-4426-BA20-07346DA2CDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48273DFE-CD26-4426-BA20-07346DA2CDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48273DFE-CD26-4426-BA20-07346DA2CDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48273DFE-CD26-4426-BA20-07346DA2CDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14092011-4C45-4341-936C-28D4E76E0445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14092011-4C45-4341-936C-28D4E76E0445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14092011-4C45-4341-936C-28D4E76E0445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14092011-4C45-4341-936C-28D4E76E0445}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

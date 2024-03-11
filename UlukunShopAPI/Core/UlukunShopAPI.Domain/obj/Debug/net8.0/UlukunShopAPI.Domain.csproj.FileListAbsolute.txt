@@ -1,0 +1,12 @@
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/bin/Debug/net8.0/UlukunShopAPI.Domain.deps.json
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/bin/Debug/net8.0/UlukunShopAPI.Domain.dll
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/bin/Debug/net8.0/UlukunShopAPI.Domain.pdb
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.AssemblyInfoInputs.cache
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.AssemblyInfo.cs
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.csproj.CoreCompileInputs.cache
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.sourcelink.json
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.dll
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/refint/UlukunShopAPI.Domain.dll
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.pdb
+/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/ref/UlukunShopAPI.Domain.dll
