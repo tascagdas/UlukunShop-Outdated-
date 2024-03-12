@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "prnnUZpKbe3Aaf9l+af9+39A/vyXi+QDc/LIHHJD+F40mhDah+z4royPAzUlY1p0YoxzxSwSJbnhxOfP8/zRGw==",
+  "dgSpecHash": "RMOOHojcHl8UfBis9GNC5qKtBvn1C6VeolKaGEa8L2aOetC0JhKx7tPwA/lVsRZAbD5V7GhcV7psmsi7SWYw2Q==",
   "success": true,
-  "projectFilePath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
+  "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
   "expectedPackageFiles": [
     "/Users/tascagdas/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

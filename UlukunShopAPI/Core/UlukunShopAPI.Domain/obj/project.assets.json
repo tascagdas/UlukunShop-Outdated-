@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
+      "projectUniqueName": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
       "projectName": "UlukunShopAPI.Domain",
-      "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
+      "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
       "packagesPath": "/Users/tascagdas/.nuget/packages/",
-      "outputPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/",
+      "outputPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/tascagdas/.nuget/NuGet/NuGet.Config"

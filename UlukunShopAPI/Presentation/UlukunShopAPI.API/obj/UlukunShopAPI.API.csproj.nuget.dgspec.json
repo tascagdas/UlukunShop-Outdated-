@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj": {}
+    "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj": {}
   },
   "projects": {
-    "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
+    "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj",
+        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj",
         "projectName": "UlukunShopAPI.Application",
-        "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj",
+        "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj",
         "packagesPath": "/Users/tascagdas/.nuget/packages/",
-        "outputPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/obj/",
+        "outputPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tascagdas/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj": {
-                "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj"
+              "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj": {
+                "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj": {
+    "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
+        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
         "projectName": "UlukunShopAPI.Domain",
-        "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
+        "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/UlukunShopAPI.Domain.csproj",
         "packagesPath": "/Users/tascagdas/.nuget/packages/",
-        "outputPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/",
+        "outputPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tascagdas/.nuget/NuGet/NuGet.Config"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj": {
+    "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
+        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
         "projectName": "UlukunShopAPI.Persistence",
-        "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
+        "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
         "packagesPath": "/Users/tascagdas/.nuget/packages/",
-        "outputPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/",
+        "outputPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tascagdas/.nuget/NuGet/NuGet.Config"
@@ -145,8 +145,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
-                "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj"
+              "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
+                "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj"
               }
             }
           }
@@ -208,14 +208,14 @@
         }
       }
     },
-    "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj": {
+    "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
+        "projectUniqueName": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
         "projectName": "UlukunShopAPI.API",
-        "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
+        "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
         "packagesPath": "/Users/tascagdas/.nuget/packages/",
-        "outputPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/",
+        "outputPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tascagdas/.nuget/NuGet/NuGet.Config"
@@ -231,11 +231,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
-                "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj"
+              "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj": {
+                "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj"
               },
-              "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj": {
-                "projectPath": "/Users/tascagdas/Documents/GitHub/UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj"
+              "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj": {
+                "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj"
               }
             }
           }

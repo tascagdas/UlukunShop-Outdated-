@@ -12,35 +12,29 @@ namespace UlukunShopAPI.API.Controllers
     {
         readonly private IProductReadRespository _productReadRespository;
         readonly private IProductWriteRepository _productWriteRepository;
+        readonly private IOrderWriteRepository _orderWriteRepository;
+        readonly private ICustomerWriteRepository _customerWriteRepository;
+        readonly private IOrderReadRepository _orderReadRepository;
 
         public ProductsController(IProductReadRespository productReadRespository,
-            IProductWriteRepository productWriteRepository)
+            IProductWriteRepository productWriteRepository, IOrderWriteRepository orderWriteRepository,
+            ICustomerWriteRepository customerWriteRepository, IOrderReadRepository orderReadRepository)
         {
             _productReadRespository = productReadRespository;
             _productWriteRepository = productWriteRepository;
+            _orderWriteRepository = orderWriteRepository;
+            _customerWriteRepository = customerWriteRepository;
+            _orderReadRepository = orderReadRepository;
         }
 
         [HttpGet]
         public async Task Get()
         {
-            // await _productWriteRepository.AddRangeAsync(new()
-            // {
-            //     new() { Id = Guid.NewGuid(), Name = "Ürün-1", Price = 110, CreatedDate = DateTime.UtcNow, Stock = 10 },
-            //     new() { Id = Guid.NewGuid(), Name = "Ürün-2", Price = 201, CreatedDate = DateTime.UtcNow, Stock = 42 },
-            //     new() { Id = Guid.NewGuid(), Name = "Ürün-3", Price = 338, CreatedDate = DateTime.UtcNow, Stock = 64 },
-            //     new() { Id = Guid.NewGuid(), Name = "Ürün-4", Price = 499, CreatedDate = DateTime.UtcNow, Stock = 14 }
-            // });
-            // await _productWriteRepository.SaveAsync();
-            Product p = await _productReadRespository.GetByIdAsync("0b5f9f01-c099-4b6d-bee5-78f2bdb71757",false);
-            p.Name = "selen";
-            await _productWriteRepository.SaveAsync();
-        }
+            
+           Order order= await _orderReadRepository.GetByIdAsync("a3cd0a78-4754-4958-bbde-d793079509a5");
+           order.Address = "Kastamonu";
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(string id)
-        {
-            Product product=await _productReadRespository.GetByIdAsync(id);
-            return Ok(product);
+           await _orderWriteRepository.SaveAsync();
         }
     }
 }
