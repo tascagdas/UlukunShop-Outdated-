@@ -12,8 +12,8 @@ const routes: Routes = [
       {path:"orders",loadChildren:()=>import("./admin/components/orders/orders.module").then(module=>module.OrdersModule)},
     ]},
   {path:"",component:HomeComponent},
-  {path:"shoppingcart",loadChildren:()=>import("./ui/components/shoppingcarts/shoppingcarts.module")},
-  {path:"products",loadChildren:()=>import("./ui/components/products/products.module")}
+  {path:"shoppingcart",loadChildren:()=>import("./ui/components/shoppingcarts/shoppingcarts.module").then(module=>module.ShoppingcartsModule)},
+  {path:"products",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)}
 ];
 
 @NgModule({
