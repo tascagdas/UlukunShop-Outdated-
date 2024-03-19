@@ -10,6 +10,4 @@ export class AppComponent {
   title = 'UlukunShop.UI';
 
 }
-$(document).ready(()=>{
-  alert("UlukunShop.UI");
-})
+
