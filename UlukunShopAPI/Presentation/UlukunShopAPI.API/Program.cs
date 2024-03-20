@@ -4,6 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddPersistenceServices();
+builder.Services.AddCors(options =>options.AddDefaultPolicy(policyBuilder =>
+    policyBuilder.AllowAnyHeader()
+        .AllowAnyMethod().AllowAnyOrigin()) );
 
 builder.Services.AddControllers();
 
@@ -17,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 
