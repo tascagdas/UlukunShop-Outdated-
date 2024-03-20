@@ -28,12 +28,9 @@ namespace UlukunShopAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task Get()
+        public async Task<IActionResult> Get()
         {
-            Order order = await _orderReadRepository.GetByIdAsync("a3cd0a78-4754-4958-bbde-d793079509a5");
-            order.Address = "Kastamonu";
-
-            await _orderWriteRepository.SaveAsync();
+            return Ok("sadece belirli adresten gelen isteklere cevap okkk");
         }
     }
 }

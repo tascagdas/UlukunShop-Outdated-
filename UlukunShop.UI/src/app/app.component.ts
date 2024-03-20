@@ -15,3 +15,8 @@ constructor(private toastrService: CustomToastrService)  {
 }
 }
 
+$.get("https://localhost:7138/api/products", data=>{
+  console.log(data);
+})
+
+
