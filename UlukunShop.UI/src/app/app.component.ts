@@ -11,10 +11,7 @@ declare var $: any;
 export class AppComponent {
   title = 'UlukunShop.UI';
 constructor(private toastrService: CustomToastrService)  {
-  toastrService.message("Hoşgeldiniz !","UlukunShop",{
-    messageType:ToastrMessageType.Success,
-    position:ToastrPosition.TopRight
-  });
+
 }
 }
 
