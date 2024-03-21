@@ -12,7 +12,7 @@ using UlukunShopAPI.Persistence.Contexts;
 namespace UlukunShopAPI.Persistence.Migrations
 {
     [DbContext(typeof(UlukunAPIDbContext))]
-    [Migration("20240312080104_Initial")]
+    [Migration("20240321201314_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
