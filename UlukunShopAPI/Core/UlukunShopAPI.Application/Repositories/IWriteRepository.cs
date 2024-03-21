@@ -8,7 +8,7 @@ public interface IWriteRepository<T>:IRepository<T> where T:BaseEntity
     Task<bool> AddRangeAsync(List<T> datas);
     bool Remove(T model);
     bool RemoveRange(List<T> datas);
-    Task<bool> Remove(string id);
+    Task<bool> RemoveAsync(string id);
     bool Update(T model);
     Task<int> SaveAsync();
 }
