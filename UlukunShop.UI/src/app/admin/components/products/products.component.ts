@@ -3,7 +3,6 @@ import { BaseComponent, SpinnerType } from "../../../base/base.component";
 import { NgxSpinnerService } from "ngx-spinner";
 import { AlertifyService } from "../../../services/admin/alertify.service";
 import { HttpClientService } from "../../../services/common/http-client.service";
-import { Product } from "../../../contracts/product";
 
 @Component ( {
   selector: 'app-products',
@@ -20,7 +19,7 @@ export class ProductsComponent extends BaseComponent implements OnInit {
 
 
 
-    
+
     // this._httpClientService.post({
     //   controller:"products"
     // },{
@@ -41,9 +40,6 @@ export class ProductsComponent extends BaseComponent implements OnInit {
     // } catch ( error ) {
     //   console.error ( error );
     // }
-
-
-
 
   }
 
