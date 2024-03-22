@@ -19,41 +19,14 @@ export class ProductsComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.showSpinner(SpinnerType.Pacman);
 
-    this._httpClientService.post({
-      controller:"products"
-    },{
-      name:"99",
-      price:0,
-      stock:0
-    }).subscribe();
-
-
-    this._httpClientService.post({
-      controller:"products"
-    },{
-      name:"100",
-      price:0,
-      stock:0
-    }).subscribe();
-
-
-    this._httpClientService.post({
-      controller:"products"
-    },{
-      name:"101",
-      price:0,
-      stock:0
-    }).subscribe();
-
-
-    this._httpClientService.post({
-      controller:"products"
-    },{
-      name:"102",
-      price:0,
-      stock:0
-    }).subscribe();
-
+    // this._httpClientService.post({
+    //   controller: "products"
+    // }, {
+    //   name: "aaa",
+    //   stock: 3,
+    //   price: 15
+    // }).subscribe();
+    //
   }
 
 }

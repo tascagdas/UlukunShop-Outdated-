@@ -8,9 +8,8 @@ import {Observable} from "rxjs";
 export class HttpClientService {
 
   constructor(private httpClient: HttpClient,@Inject("baseUrl") private baseUrl: string) {}
-  private url(requestParameters:Partial<RequestParameters>):string{
-return `${requestParameters.baseUrl?requestParameters.baseUrl:this.baseUrl}/${requestParameters.controller}${requestParameters.action?`/${requestParameters.action}`:""}`;
-  }
+  private url(requestParameters: Partial<RequestParameters>): string {
+    return `${requestParameters.baseUrl ? requestParameters.baseUrl : this.baseUrl}/${requestParameters.controller}${requestParameters.action ? `/${requestParameters.action}` : ""}`;}
     get<T>(requestParameters:Partial<RequestParameters>,id?:string):Observable<T> {
       let url: string = "";
       if(requestParameters.fullEndPoint){
@@ -23,12 +22,12 @@ return `${requestParameters.baseUrl?requestParameters.baseUrl:this.baseUrl}/${re
 
     post<T>(requestParameters:Partial<RequestParameters>, body:Partial<T>):Observable<T> {
       let url: string = "";
-      if(requestParameters.fullEndPoint)
+      if (requestParameters.fullEndPoint)
         url = requestParameters.fullEndPoint;
       else
-        url=`${this.url(requestParameters)}`;
+        url = `${this.url(requestParameters)}`
 
-      return  this.httpClient.post<T>(url, body,{headers:requestParameters.headers});
+      return this.httpClient.post<T>(url, body, { headers: requestParameters.headers });
     }
 
     put<T>(requestParameters:Partial<RequestParameters>, body:Partial<T>):Observable<T> {

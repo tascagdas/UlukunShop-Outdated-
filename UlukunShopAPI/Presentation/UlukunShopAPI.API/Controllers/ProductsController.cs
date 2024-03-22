@@ -16,7 +16,8 @@ namespace UlukunShopAPI.API.Controllers
         readonly private IProductWriteRepository _productWriteRepository;
 
 
-        public ProductsController(IProductReadRespository productReadRespository,
+        public ProductsController(
+            IProductReadRespository productReadRespository,
             IProductWriteRepository productWriteRepository)
         {
             _productReadRespository = productReadRespository;
