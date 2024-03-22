@@ -14,7 +14,7 @@ public class UlukunAPIDbContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Customer> Customers { get; set; }
 
-    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         //changetracker entityler uzerinde yapilan degisikliklerin yada yeni eklenen verinin yaskalanmasini saglayan proptir.update operasyonlarinda track edilen verileri yakalayip elde etmemizi saglar.
         var datas = ChangeTracker.Entries<BaseEntity>();
