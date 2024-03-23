@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TH3cBi53QKTwb/OXVXNXOKgNCozn6p9NooD051LGqkM/4vrP2gjMBa+5G7rzwA15KD+bN5U36pW5nV0R0F6WDw==",
+  "dgSpecHash": "vzsGoHeXbW3u+lT+Qx4jIaC/tElVZd9VPJVhKt9JN8+mVlc+VsFWBwua5xyx8InOldY4jrmeetsROXEHMQmbjQ==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
   "expectedPackageFiles": [
+    "/Users/tascagdas/.nuget/packages/fluentvalidation/10.4.0/fluentvalidation.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.aspnetcore/10.4.0/fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.4.0/fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

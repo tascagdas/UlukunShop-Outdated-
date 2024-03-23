@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RMOOHojcHl8UfBis9GNC5qKtBvn1C6VeolKaGEa8L2aOetC0JhKx7tPwA/lVsRZAbD5V7GhcV7psmsi7SWYw2Q==",
+  "dgSpecHash": "+Kz/DkjxIyzeY93pm+UcxGLlD+lbECxGe5wJiQHWClNd2cvbrdOczN76ESdmIMJRysYbfbaccCdQUoWH18j8ig==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
   "expectedPackageFiles": [
+    "/Users/tascagdas/.nuget/packages/fluentvalidation/10.4.0/fluentvalidation.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.aspnetcore/10.4.0/fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.4.0/fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",

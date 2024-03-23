@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "E6iS8+lH9co/Oi9j7iYRted+5po1HcpjLVPoRtft3+LT7J1SRfvc3hHB0N/W1yWHyfyNRSTCpwt3hiY9asis2g==",
+  "dgSpecHash": "a/V6N999ZjbnbGzXh/O95qXmnYX7GmfIAIEUP8Ekrn9V3dqBDz1Bd/IJM3+x/aC2+2xx4QSWzDYXUUWfsm8tAg==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/UlukunShopAPI.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/tascagdas/.nuget/packages/fluentvalidation/10.4.0/fluentvalidation.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.aspnetcore/10.4.0/fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.4.0/fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.9.0.0-preview.1.24081.2.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.abstractions.9.0.0-preview.1.24081.2.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.analyzers.9.0.0-preview.1.24081.2.nupkg.sha512",

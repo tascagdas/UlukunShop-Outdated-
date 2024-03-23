@@ -42,6 +42,10 @@ namespace UlukunShopAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(ProductCreateViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                
+            }
             await _productWriteRepository.AddAsync(new()
             {
                 Name = model.Name,

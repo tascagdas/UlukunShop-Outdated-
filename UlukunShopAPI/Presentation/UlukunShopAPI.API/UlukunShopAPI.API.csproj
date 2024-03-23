@@ -19,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Core\UlukunShopAPI.Application\UlukunShopAPI.Application.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\UlukunShopAPI.Infrastructure\UlukunShopAPI.Infrastructure.csproj" />
       <ProjectReference Include="..\..\Infrastructure\UlukunShopAPI.Persistence\UlukunShopAPI.Persistence.csproj" />
     </ItemGroup>
 
