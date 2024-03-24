@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClientService} from "../http-client.service";
-import {Create_Product} from "../../../contracts/product";
+import {Create_Product} from "../../../contracts/create_product";
 import {HttpErrorResponse} from "@angular/common/http";
+import {List_Product} from "../../../contracts/List_Product";
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,16 @@ export class ProductService {
         errorCallBack(message);
 
       });
+  }
+
+  async read():Promise<List_Product[]>{
+    const promiseData:Promise<List_Product[]> = this._httpClientService.get<List_Product[]>({
+      controller: "products"
+    }).toPromise();
+
+    promiseData.then()
+      .catch()
+
+    return await promiseData
   }
 }

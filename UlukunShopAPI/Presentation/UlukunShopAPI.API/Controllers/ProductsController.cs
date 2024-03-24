@@ -28,7 +28,15 @@ namespace UlukunShopAPI.API.Controllers
         public async Task<IActionResult> Get()
         {
             //tracking devre disi daha verimli calisma icin.
-            return Ok(_productReadRespository.GetAll(false));
+            return Ok(_productReadRespository.GetAll(false).Select(p=>new
+            {
+                p.Id,
+                p.Name,
+                p.Stock,
+                p.Price,
+                p.CreatedDate,
+                p.UpdatedDate
+            }));
         }
 
         [HttpGet("{id}")]
@@ -42,10 +50,7 @@ namespace UlukunShopAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(ProductCreateViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                
-            }
+
             await _productWriteRepository.AddAsync(new()
             {
                 Name = model.Name,

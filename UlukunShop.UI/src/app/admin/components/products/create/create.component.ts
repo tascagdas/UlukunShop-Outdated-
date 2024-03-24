@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../../../services/common/models/product.service";
-import {Create_Product} from "../../../../contracts/product";
+import {Create_Product} from "../../../../contracts/create_product";
 import {BaseComponent, SpinnerType} from "../../../../base/base.component";
 import {NgxSpinnerService} from "ngx-spinner";
 import {AlertifyService, MessageType, Position} from "../../../../services/admin/alertify.service";
@@ -25,21 +25,23 @@ export class CreateComponent extends BaseComponent implements OnInit {
     create_product.stock=parseInt(stock.value);
     create_product.price=parseFloat(price.value);
 
-    if (!name.value){
-      this.alertify.message("Lutfen urun adini giriniz",{
-        messageType:MessageType.Warning,
-        position:Position.TopRight
-      });
-      return;
-    }
+    // Buradaki kontrolleri if else ile yapmak doğru olmadığı için devre dışı bırakıyorum sonraki comitlerde sileceğim.
 
-    if (parseInt(stock.value)<0) {
-      this.alertify.message("Lutfen stok bilgisini dogru giriniz",{
-        messageType:MessageType.Warning,
-        position:Position.TopRight
-      });
-      return;
-    }
+    // if (!name.value){
+    //   this.alertify.message("Lutfen urun adini giriniz",{
+    //     messageType:MessageType.Warning,
+    //     position:Position.TopRight
+    //   });
+    //   return;
+    // }
+    //
+    // if (parseInt(stock.value)<0) {
+    //   this.alertify.message("Lutfen stok bilgisini dogru giriniz",{
+    //     messageType:MessageType.Warning,
+    //     position:Position.TopRight
+    //   });
+    //   return;
+    // }
 
 
     this.productService.create(create_product,()=> {
