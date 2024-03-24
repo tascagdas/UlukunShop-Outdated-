@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UlukunShopAPI.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0e73f6d1900f16c9d4e02d675aa7250e1b3a175")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44dc50ee033fc6ebd16ad23370e08e6b6ba365be")]
 [assembly: System.Reflection.AssemblyProductAttribute("UlukunShopAPI.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UlukunShopAPI.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,6 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Repositories;
+using UlukunShopAPI.Application.RequestParameters;
 using UlukunShopAPI.Application.ViewModels.Products;
 using UlukunShopAPI.Domain.Entities;
 
@@ -25,10 +26,11 @@ namespace UlukunShopAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]Pagination pagination)
         {
+            var totalCount = _productReadRespository.GetAll(false).Count();
             //tracking devre disi daha verimli calisma icin.
-            return Ok(_productReadRespository.GetAll(false).Select(p=>new
+            var products = _productReadRespository.GetAll(false).Skip(pagination.Page * pagination.Size).Take(pagination.Size).Select(p => new
             {
                 p.Id,
                 p.Name,
@@ -36,7 +38,12 @@ namespace UlukunShopAPI.API.Controllers
                 p.Price,
                 p.CreatedDate,
                 p.UpdatedDate
-            }));
+            }).ToList();
+            return Ok(new
+            {
+                totalCount,
+                products
+            });
         }
 
         [HttpGet("{id}")]
