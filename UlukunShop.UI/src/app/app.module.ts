@@ -10,11 +10,12 @@ import {ToastrModule} from "ngx-toastr";
 import {NgxSpinnerModule} from "ngx-spinner";
 import { BaseComponent } from './base/base.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DeleteDirective } from './directives/admin/delete.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+    declarations: [
+        AppComponent
+    ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -25,9 +26,12 @@ import {HttpClientModule} from "@angular/common/http";
         NgxSpinnerModule,
         HttpClientModule,
     ],
-  providers: [
-    {provide:"baseUrl", useValue:'https://localhost:7131/api',multi: true},
-  ],
-  bootstrap: [AppComponent]
+    providers: [
+        {provide: "baseUrl", useValue: 'https://localhost:7131/api', multi: true},
+    ],
+    exports: [
+
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
