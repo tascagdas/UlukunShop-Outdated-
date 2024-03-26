@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/1187137427.png",
+      "PackagePath": "staticwebassets/resource/product-images/1187137427.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.UlukunShopAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.UlukunShopAPI.API.props",
+      "PackagePath": "build\\UlukunShopAPI.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.UlukunShopAPI.API.props",
+      "PackagePath": "buildMultiTargeting\\UlukunShopAPI.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.UlukunShopAPI.API.props",
+      "PackagePath": "buildTransitive\\UlukunShopAPI.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

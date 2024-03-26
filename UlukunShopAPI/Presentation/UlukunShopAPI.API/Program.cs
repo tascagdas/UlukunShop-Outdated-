@@ -1,5 +1,6 @@
 using FluentValidation.AspNetCore;
 using UlukunShopAPI.Application.Validators.Products;
+using UlukunShopAPI.Infrastructure;
 using UlukunShopAPI.Infrastructure.Filters;
 using UlukunShopAPI.Persistence;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddPersistenceServices();
+builder.Services.AddInfrastructureServices();
 builder.Services.AddCors(options =>options.AddDefaultPolicy(policyBuilder =>
     policyBuilder
         .WithOrigins("http://localhost:4200","https://localhost:4200")

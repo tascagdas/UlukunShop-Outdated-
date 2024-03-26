@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Repositories;
 using UlukunShopAPI.Application.RequestParameters;
+using UlukunShopAPI.Application.Services;
 using UlukunShopAPI.Application.ViewModels.Products;
 using UlukunShopAPI.Domain.Entities;
 
@@ -15,17 +16,16 @@ namespace UlukunShopAPI.API.Controllers
     {
         readonly private IProductReadRespository _productReadRespository;
         readonly private IProductWriteRepository _productWriteRepository;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IFileService _fileService;
 
 
         public ProductsController(
             IProductReadRespository productReadRespository,
-            IProductWriteRepository productWriteRepository,
-            IWebHostEnvironment webHostEnvironment)
+            IProductWriteRepository productWriteRepository, IFileService fileService)
         {
             _productReadRespository = productReadRespository;
             _productWriteRepository = productWriteRepository;
-            _webHostEnvironment = webHostEnvironment;
+            _fileService = fileService;
         }
 
         [HttpGet]
@@ -94,20 +94,7 @@ namespace UlukunShopAPI.API.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> Upload()
         {
-            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,"resource/product-images");
-
-            Random r = new();
-            foreach (IFormFile file in Request.Form.Files)
-            {
-                string fullPath = Path.Combine(uploadPath, $"{r.Next()}{Path.GetExtension(file.FileName)}");
-                if (!Directory.Exists(uploadPath))
-                {
-                    Directory.CreateDirectory(uploadPath);
-                }
-                using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None,1024*1024,useAsync:false);
-                await file.CopyToAsync(fileStream);
-                await fileStream.FlushAsync();
-            }
+            await _fileService.UploadAsync("resource/product-images", Request.Form.Files);
             return Ok();
         }
     }
