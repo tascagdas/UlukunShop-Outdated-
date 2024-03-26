@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "wJPzOBfuq3qSap0yGlu/9TbusXp8P71vlpthfxBcY6k=",
+  "Hash": "EgXQpv8hbWJecxaoIBSVyGSmEFWrblUfR5v8m6gEJBU=",
   "Source": "UlukunShopAPI.API",
   "BasePath": "_content/UlukunShopAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "UlukunShopAPI.API/wwwroot",
+      "Source": "UlukunShopAPI.API",
+      "ContentRoot": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/",
+      "BasePath": "_content/UlukunShopAPI.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
