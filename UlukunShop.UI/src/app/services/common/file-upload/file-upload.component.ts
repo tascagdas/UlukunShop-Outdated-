@@ -4,6 +4,13 @@ import {HttpClientService} from "../http-client.service";
 import {HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {AlertifyService, MessageType, Position} from "../../admin/alertify.service";
 import {CustomToastrService, ToastrMessageType, ToastrPosition} from "../../ui/custom-toastr.service";
+import {DeleteDialogComponent, DeleteState} from "../../../dialogs/delete-dialog/delete-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
+import {
+  FileUploadDialogComponent,
+  FileUploadDialogState
+} from "../../../dialogs/file-upload-dialog/file-upload-dialog.component";
+import {DialogService} from "../dialog.service";
 
 @Component({
   selector: 'app-file-upload',
@@ -13,7 +20,9 @@ import {CustomToastrService, ToastrMessageType, ToastrPosition} from "../../ui/c
 export class FileUploadComponent {
   constructor(private _httpClientService: HttpClientService,
               private alertify: AlertifyService,
-              private toastr: CustomToastrService) {}
+              private toastr: CustomToastrService,
+              private dialog:MatDialog,
+              private dialogService:DialogService) {}
 
   public files: NgxFileDropEntry[];
 
@@ -28,39 +37,58 @@ export class FileUploadComponent {
       });
     }
 
-    this._httpClientService.post({
-      controller: this.options.controller,
-      action: this.options.action,
-      queryString: this.options.queryString,
-      headers: new HttpHeaders({"responseType": "blob"})
-    }, fileData).subscribe(data => {
-      const message:string="Dosyalar Basariyla yuklenmistir"
-      if (this.options.isAdminPage){
-        this.alertify.message(message,{
-          messageType:MessageType.Success,
-          position:Position.TopRight
+    this.dialogService.openDialog({
+      componentType:FileUploadDialogComponent,
+      data:FileUploadDialogState.Yes,
+      afterClosed:()=>{
+        this._httpClientService.post({
+          controller: this.options.controller,
+          action: this.options.action,
+          queryString: this.options.queryString,
+          headers: new HttpHeaders({"responseType": "blob"})
+        }, fileData).subscribe(data => {
+          const message:string="Dosyalar Basariyla yuklenmistir"
+          if (this.options.isAdminPage){
+            this.alertify.message(message,{
+              messageType:MessageType.Success,
+              position:Position.TopRight
+            });
+          }else{
+            this.toastr.message(message,"Basarili",{
+              messageType:ToastrMessageType.Success,
+              position:ToastrPosition.TopRight
+            })
+          }
+        }, (errorResponse: HttpErrorResponse) => {
+          if (this.options.isAdminPage){
+            this.alertify.message("Hata olustu",{
+              messageType:MessageType.Error,
+              position:Position.TopRight
+            });
+          }else{
+            this.toastr.message("hata ile karsilasildi","Hata",{
+              messageType:ToastrMessageType.Error,
+              position:ToastrPosition.TopRight
+            })
+          }
         });
-      }else{
-        this.toastr.message(message,"Basarili",{
-          messageType:ToastrMessageType.Success,
-          position:ToastrPosition.TopRight
-        })
       }
-    }, (errorResponse: HttpErrorResponse) => {
-      if (this.options.isAdminPage){
-        this.alertify.message("Hata olustu",{
-          messageType:MessageType.Error,
-          position:Position.TopRight
-        });
-      }else{
-        this.toastr.message("hata ile karsilasildi","Hata",{
-          messageType:ToastrMessageType.Error,
-          position:ToastrPosition.TopRight
-        })
-      }
-    });
+    })
 
   }
+
+  // openDialog(afterClosed: any): void {
+  //   const dialogRef = this.dialog.open(FileUploadDialogComponent, {
+  //     width: '500px',
+  //     data: FileUploadDialogState.Yes,
+  //   });
+  //
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result == DeleteState.Yes) {
+  //       afterClosed();
+  //     }
+  //   });
+  // }
 
 }
 

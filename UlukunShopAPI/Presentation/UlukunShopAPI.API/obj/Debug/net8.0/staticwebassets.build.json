@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EgXQpv8hbWJecxaoIBSVyGSmEFWrblUfR5v8m6gEJBU=",
+  "Hash": "YoBJrlrudqLSchs4ZJ8tT7NWqoI8RDDZzZaVwO2JPtQ=",
   "Source": "UlukunShopAPI.API",
   "BasePath": "_content/UlukunShopAPI.API",
   "Mode": "Default",
@@ -15,5 +15,25 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/1187137427.png",
+      "SourceId": "UlukunShopAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/",
+      "BasePath": "_content/UlukunShopAPI.API",
+      "RelativePath": "resource/product-images/1187137427.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/resource/product-images/1187137427.png"
+    }
+  ]
 }

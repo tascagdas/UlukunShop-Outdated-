@@ -10,21 +10,26 @@ import {ToastrModule} from "ngx-toastr";
 import {NgxSpinnerModule} from "ngx-spinner";
 import { BaseComponent } from './base/base.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
     declarations: [
         AppComponent
     ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        AdminModule,
-        UiModule,
-        ToastrModule.forRoot(),
-        NgxSpinnerModule,
-        HttpClientModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    AdminModule,
+    UiModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatDialogModule,
+  ],
     providers: [
         {provide: "baseUrl", useValue: 'https://localhost:7131/api', multi: true},
     ],
