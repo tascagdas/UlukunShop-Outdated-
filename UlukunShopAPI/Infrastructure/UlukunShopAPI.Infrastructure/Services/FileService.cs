@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using UlukunShopAPI.Application.Services;
+using UlukunShopAPI.Infrastructure.Operations;
 
 namespace UlukunShopAPI.Infrastructure.Services;
 
@@ -28,7 +29,7 @@ public class FileService : IFileService
         List<bool> results = new();
         foreach (IFormFile file in files)
         {
-            string fileNewName = await FileRenameAsync(file.FileName);
+            string fileNewName = await FileRenameAsync(uploadPath,file.FileName);
             bool result = await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
             datas.Add((fileNewName, $"{uploadPath}\\{fileNewName}"));
         }
@@ -42,9 +43,51 @@ public class FileService : IFileService
         return null;
     }
 
-    public Task<string> FileRenameAsync(string fileName)
+    private async Task<string> FileRenameAsync(string path, string fileName,bool first=true)
     {
-        throw new NotImplementedException();
+      string regulatedFileName= await Task.Run<string>(async () =>
+        {
+            string extension = Path.GetExtension(fileName);
+            string regulatedFileName = string.Empty;    
+                if (first)
+            {
+                string oldName = Path.GetFileNameWithoutExtension(fileName);
+                 regulatedFileName = $"{NameOperation.CharacterRegulatory(oldName)}{extension}";
+            }
+                else
+                {
+                    regulatedFileName = fileName;
+                    int indexNo1 = regulatedFileName.IndexOf("-");
+                    if (indexNo1==-1)
+                    {
+                        regulatedFileName = $"{Path.GetFileNameWithoutExtension(regulatedFileName)}-2{extension}";
+                    }
+                    else
+                    {
+                        int indexNo2 = regulatedFileName.IndexOf(".");
+                        string fileNo = regulatedFileName.Substring(indexNo1, indexNo2 - indexNo1 - 1);
+                        int _fileNo=int.Parse(fileNo);
+                        _fileNo++;
+
+                        regulatedFileName = regulatedFileName.Remove(indexNo1, indexNo2 - indexNo1 - 1)
+                            .Insert(indexNo1, _fileNo.ToString());
+                    }
+                }
+                
+                
+
+            if (File.Exists($"{path}\\{regulatedFileName}"))
+            {
+                return await FileRenameAsync(path, regulatedFileName,false);
+            }else {
+                return regulatedFileName;
+            }
+            
+            
+            
+            
+        });
+        return regulatedFileName;
     }
 
     public async Task<bool> CopyFileAsync(string path, IFormFile file)
@@ -54,7 +97,7 @@ public class FileService : IFileService
             await using FileStream fileStream = new(path, FileMode.Create, FileAccess.Write, FileShare.None,
                 1024 * 1024, useAsync: false);
 
-            await fileStream.CopyToAsync(fileStream);
+            await file.CopyToAsync(fileStream);
             await fileStream.FlushAsync();
             return true;
         }
