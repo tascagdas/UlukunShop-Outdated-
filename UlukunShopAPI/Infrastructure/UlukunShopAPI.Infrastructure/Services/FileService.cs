@@ -29,7 +29,7 @@ public class FileService : IFileService
         List<bool> results = new();
         foreach (IFormFile file in files)
         {
-            string fileNewName = await FileRenameAsync(uploadPath,file.FileName);
+            string fileNewName = await FileRenameAsync(uploadPath, file.FileName);
             bool result = await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
             datas.Add((fileNewName, $"{uploadPath}\\{fileNewName}"));
         }
@@ -43,49 +43,61 @@ public class FileService : IFileService
         return null;
     }
 
-    private async Task<string> FileRenameAsync(string path, string fileName,bool first=true)
+    private async Task<string> FileRenameAsync(string path, string fileName, bool first = true)
     {
-      string regulatedFileName= await Task.Run<string>(async () =>
+        string regulatedFileName = await Task.Run<string>(async () =>
         {
             string extension = Path.GetExtension(fileName);
-            string regulatedFileName = string.Empty;    
-                if (first)
+            string regulatedFileName = string.Empty;
+            if (first)
             {
                 string oldName = Path.GetFileNameWithoutExtension(fileName);
-                 regulatedFileName = $"{NameOperation.CharacterRegulatory(oldName)}{extension}";
+                regulatedFileName = $"{NameOperation.CharacterRegulatory(oldName)}{extension}";
             }
+            else
+            {
+                regulatedFileName = fileName;
+                int indexNo1 = regulatedFileName.IndexOf("-");
+                if (indexNo1 == -1)
+                {
+                    regulatedFileName = $"{Path.GetFileNameWithoutExtension(regulatedFileName)}-2{extension}";
+                }
                 else
                 {
-                    regulatedFileName = fileName;
-                    int indexNo1 = regulatedFileName.IndexOf("-");
-                    if (indexNo1==-1)
+                    int lastIndex = 0;
+                    while (true)
                     {
-                        regulatedFileName = $"{Path.GetFileNameWithoutExtension(regulatedFileName)}-2{extension}";
+                        lastIndex = indexNo1;
+                        indexNo1 = regulatedFileName.IndexOf("-", indexNo1 + 1);
+                        if (indexNo1 == -1)
+                        {
+                            indexNo1 = lastIndex;
+                            break;
+                        }
+                    }
+                    int indexNo2 = regulatedFileName.IndexOf(".");
+                    string fileNo = regulatedFileName.Substring(indexNo1 + 1, indexNo2 - indexNo1 - 1);
+
+                    if (int.TryParse(fileNo, out int _fileNo))
+                    {
+                        _fileNo++;
+                        regulatedFileName = regulatedFileName.Remove(indexNo1 + 1, indexNo2 - indexNo1 - 1)
+                            .Insert(indexNo1 + 1, _fileNo.ToString());
                     }
                     else
                     {
-                        int indexNo2 = regulatedFileName.IndexOf(".");
-                        string fileNo = regulatedFileName.Substring(indexNo1, indexNo2 - indexNo1 - 1);
-                        int _fileNo=int.Parse(fileNo);
-                        _fileNo++;
-
-                        regulatedFileName = regulatedFileName.Remove(indexNo1, indexNo2 - indexNo1 - 1)
-                            .Insert(indexNo1, _fileNo.ToString());
+                        regulatedFileName = $"{Path.GetFileNameWithoutExtension(regulatedFileName)}-2{extension}";
                     }
                 }
-                
-                
-
+            }
             if (File.Exists($"{path}\\{regulatedFileName}"))
             {
-                return await FileRenameAsync(path, regulatedFileName,false);
-            }else {
+                return await FileRenameAsync(path, regulatedFileName, false);
+            }
+            else
+            {
                 return regulatedFileName;
             }
-            
-            
-            
-            
         });
         return regulatedFileName;
     }

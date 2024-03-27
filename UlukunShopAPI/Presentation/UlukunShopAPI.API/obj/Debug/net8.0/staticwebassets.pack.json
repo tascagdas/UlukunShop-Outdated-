@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/109298801.png",
+      "PackagePath": "staticwebassets/resource/product-images/109298801.png"
+    },
+    {
       "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/1187137427.png",
       "PackagePath": "staticwebassets/resource/product-images/1187137427.png"
+    },
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/2068271531.png",
+      "PackagePath": "staticwebassets/resource/product-images/2068271531.png"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.UlukunShopAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
