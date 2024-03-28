@@ -10,4 +10,9 @@
       <ProjectReference Include="..\..\Core\UlukunShopAPI.Application\UlukunShopAPI.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Services\Storage\AWS\" />
+      <Folder Include="Services\Storage\Azure\" />
+    </ItemGroup>
+
 </Project>

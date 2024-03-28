@@ -1,7 +1,9 @@
 using FluentValidation.AspNetCore;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
+using UlukunShopAPI.Infrastructure.Enums;
 using UlukunShopAPI.Infrastructure.Filters;
+using UlukunShopAPI.Infrastructure.Services.Storage.Local;
 using UlukunShopAPI.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
+
+builder.Services.AddStorage(StorageType.Local);
+
+// builder.Services.AddStorage<LocalStorage>();
+
+
 builder.Services.AddCors(options =>options.AddDefaultPolicy(policyBuilder =>
     policyBuilder
         .WithOrigins("http://localhost:4200","https://localhost:4200")

@@ -11,6 +11,8 @@ import {
   FileUploadDialogState
 } from "../../../dialogs/file-upload-dialog/file-upload-dialog.component";
 import {DialogService} from "../dialog.service";
+import {NgxSpinnerService} from "ngx-spinner";
+import {SpinnerType} from "../../../base/base.component";
 
 @Component({
   selector: 'app-file-upload',
@@ -22,7 +24,8 @@ export class FileUploadComponent {
               private alertify: AlertifyService,
               private toastr: CustomToastrService,
               private dialog:MatDialog,
-              private dialogService:DialogService) {}
+              private dialogService:DialogService,
+              private spinner:NgxSpinnerService) {}
 
   public files: NgxFileDropEntry[];
 
@@ -41,6 +44,7 @@ export class FileUploadComponent {
       componentType:FileUploadDialogComponent,
       data:FileUploadDialogState.Yes,
       afterClosed:()=>{
+        this.spinner.show(SpinnerType.BallAtom)
         this._httpClientService.post({
           controller: this.options.controller,
           action: this.options.action,
@@ -48,6 +52,9 @@ export class FileUploadComponent {
           headers: new HttpHeaders({"responseType": "blob"})
         }, fileData).subscribe(data => {
           const message:string="Dosyalar Basariyla yuklenmistir"
+
+          this.spinner.hide(SpinnerType.BallAtom)
+
           if (this.options.isAdminPage){
             this.alertify.message(message,{
               messageType:MessageType.Success,
@@ -59,6 +66,7 @@ export class FileUploadComponent {
               position:ToastrPosition.TopRight
             })
           }
+
         }, (errorResponse: HttpErrorResponse) => {
           if (this.options.isAdminPage){
             this.alertify.message("Hata olustu",{
@@ -71,6 +79,9 @@ export class FileUploadComponent {
               position:ToastrPosition.TopRight
             })
           }
+
+          this.spinner.hide(SpinnerType.BallAtom)
+
         });
       }
     })
