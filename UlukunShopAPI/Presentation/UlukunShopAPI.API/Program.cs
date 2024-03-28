@@ -3,6 +3,7 @@ using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
 using UlukunShopAPI.Infrastructure.Enums;
 using UlukunShopAPI.Infrastructure.Filters;
+using UlukunShopAPI.Infrastructure.Services.Storage.Azure;
 using UlukunShopAPI.Infrastructure.Services.Storage.Local;
 using UlukunShopAPI.Persistence;
 
@@ -12,8 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
 
-builder.Services.AddStorage(StorageType.Local);
+// builder.Services.AddStorage(StorageType.Azure);
 
+builder.Services.AddStorage<AzureStorage>();
 // builder.Services.AddStorage<LocalStorage>();
 
 

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+Kz/DkjxIyzeY93pm+UcxGLlD+lbECxGe5wJiQHWClNd2cvbrdOczN76ESdmIMJRysYbfbaccCdQUoWH18j8ig==",
+  "dgSpecHash": "Id/A7ROiMaAnceaJLBQ4/g3ZeHn8k39p1kCCohbuJXUa3rrcPZO6UMhzbGg3y2vlZ2+S6ifsNlAweQPW+9dP6w==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
   "expectedPackageFiles": [
+    "/Users/tascagdas/.nuget/packages/azure.core/1.36.0/azure.core.1.36.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/azure.storage.blobs/12.19.1/azure.storage.blobs.12.19.1.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/azure.storage.common/12.18.1/azure.storage.common.12.18.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/fluentvalidation/10.4.0/fluentvalidation.10.4.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/fluentvalidation.aspnetcore/10.4.0/fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.4.0/fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
@@ -134,10 +137,14 @@
     "/Users/tascagdas/.nuget/packages/system.composition.typedparts/7.0.0/system.composition.typedparts.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.configuration.configurationmanager/7.0.0/system.configuration.configurationmanager.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.diagnostics.eventlog/7.0.0/system.diagnostics.eventlog.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.formats.asn1/5.0.0/system.formats.asn1.5.0.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/system.io.hashing/6.0.0/system.io.hashing.6.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/system.memory.data/1.0.2/system.memory.data.1.0.2.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.reflection.metadataloadcontext/7.0.0/system.reflection.metadataloadcontext.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
@@ -150,6 +157,7 @@
     "/Users/tascagdas/.nuget/packages/system.text.json/9.0.0-preview.1.24080.9/system.text.json.9.0.0-preview.1.24080.9.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.threading.tasks.dataflow/7.0.0/system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/system.windows.extensions/7.0.0/system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -4,7 +4,7 @@ using UlukunShopAPI.Application.Abstractions.Storage.Local;
 
 namespace UlukunShopAPI.Infrastructure.Services.Storage.Local;
 
-public class LocalStorage : ILocalStorage
+public class LocalStorage : Storage, ILocalStorage
 {
     readonly IWebHostEnvironment _webHostEnvironment;
 
@@ -41,13 +41,12 @@ public class LocalStorage : ILocalStorage
 
         foreach (IFormFile file in files)
         {
-            // string fileNewName = await FileRenameAsync(uploadPath, file.FileName);
+            
+            string fileNewName=  await FileRenameAsync(path, file.Name, HasFile);
 
-            await CopyFileAsync($"{uploadPath}/{file.Name}", file);
-            datas.Add((file.Name, $"{uploadPath}/{file.Name}"));
+            await CopyFileAsync($"{uploadPath}/{fileNewName}", file);
+            datas.Add((fileNewName, $"{uploadPath}/{fileNewName}"));
         }
-
-
         return datas;
     }
 
