@@ -114,49 +114,17 @@ namespace UlukunShopAPI.API.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Upload()
+        public async Task<IActionResult> Upload(string id)
         {
+            List<(string fileName,string pathOrContainerName)> result = await _storageService.UploadAsync("product-images", Request.Form.Files);
+            await _imageWrite.AddRangeAsync(result.Select(x => new ProductImageFile
+            {
+                FileName = x.fileName,
+                Path = x.pathOrContainerName,
+                Storage = _storageService.storageName
+            }).ToList());
 
-            var datas=await _storageService.UploadAsync("files", Request.Form.Files);
-             await _imageWrite.AddRangeAsync(datas.Select(d => new ProductImageFile()
-             {
-                 FileName = d.fileName,
-                 Path = d.pathOrContainer,
-                 Storage = _storageService.storageName
-             }).ToList());
-              await _imageWrite.SaveAsync();
-            
-            
-            // var datas= await _fileService.UploadAsync("resource/product-images", Request.Form.Files);
-            // await _imageWrite.AddRangeAsync(datas.Select(d => new ProductImageFile()
-            // {
-            //     FileName = d.fileName,
-            //     Path = d.path
-            // }).ToList());
-            // await _imageWrite.SaveAsync();
-            
-            // var datas= await _fileService.UploadAsync("resource/invoices", Request.Form.Files);
-            // await _invoiceFileWrite.AddRangeAsync(datas.Select(d => new InvoiceFile()
-            // {
-            //     FileName = d.fileName,
-            //     Path = d.path,
-            //     Price = new Random().Next()
-            // }).ToList());
-            // await _invoiceFileWrite.SaveAsync();
-            
-            // var datas= await _fileService.UploadAsync("resource/files", Request.Form.Files);
-            // await _fileWriteRepository.AddRangeAsync(datas.Select(d => new File()
-            // {
-            //     FileName = d.fileName,
-            //     Path = d.path
-            // }).ToList());
-            // await _invoiceFileWrite.SaveAsync();
-            
-            
-            // var data= _fileReadRepository.GetAll(false);
-            // var data2= _invoiceFileRead.GetAll(false);
-            // var data3= _imageRead.GetAll(false);
-            
+            await _imageWrite.SaveAsync();
             return Ok();
         }
     }

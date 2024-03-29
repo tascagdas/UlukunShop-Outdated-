@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EgXQpv8hbWJecxaoIBSVyGSmEFWrblUfR5v8m6gEJBU=",
+  "Hash": "GShbVEIye8bIESE5eqLj63xIZRr0U8vGGNMjXwJVk9Y=",
   "Source": "UlukunShopAPI.API",
   "BasePath": "_content/UlukunShopAPI.API",
   "Mode": "Default",
@@ -15,5 +15,44 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/files/41992trashrecyclebingarbageicon.png",
+      "SourceId": "UlukunShopAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/",
+      "BasePath": "_content/UlukunShopAPI.API",
+      "RelativePath": "files/41992trashrecyclebingarbageicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/41992trashrecyclebingarbageicon.png"
+    },
+    {
+      "Identity": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/files/cagdas.png",
+      "SourceId": "UlukunShopAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/",
+      "BasePath": "_content/UlukunShopAPI.API",
+      "RelativePath": "files/cagdas.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/cagdas.png"
+    }
+  ]
 }

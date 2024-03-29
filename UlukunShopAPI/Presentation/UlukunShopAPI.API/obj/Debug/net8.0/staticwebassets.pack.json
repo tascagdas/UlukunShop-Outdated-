@@ -1,60 +1,12 @@
 {
   "Files": [
     {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/files/41992trashrecyclebingarbageicon.png",
-      "PackagePath": "staticwebassets/resource/files/41992trashrecyclebingarbageicon.png"
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/files/41992trashrecyclebingarbageicon.png",
+      "PackagePath": "staticwebassets/files/41992trashrecyclebingarbageicon.png"
     },
     {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/files/51Tp10uNyLL-ACUF10001000QL80.jpg",
-      "PackagePath": "staticwebassets/resource/files/51Tp10uNyLL-ACUF10001000QL80.jpg"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/files/A1cmedreftable.png",
-      "PackagePath": "staticwebassets/resource/files/A1cmedreftable.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/14-astonishing-facts-about-zakk-wylde-1696812508.jpg",
-      "PackagePath": "staticwebassets/resource/invoices/14-astonishing-facts-about-zakk-wylde-1696812508.jpg"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/18.png",
-      "PackagePath": "staticwebassets/resource/invoices/18.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/19.png",
-      "PackagePath": "staticwebassets/resource/invoices/19.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/4.png",
-      "PackagePath": "staticwebassets/resource/invoices/4.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/41992trashrecyclebingarbageicon.png",
-      "PackagePath": "staticwebassets/resource/invoices/41992trashrecyclebingarbageicon.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/51Tp10uNyLL-ACUF10001000QL80.jpg",
-      "PackagePath": "staticwebassets/resource/invoices/51Tp10uNyLL-ACUF10001000QL80.jpg"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/invoices/A1cmedreftable.png",
-      "PackagePath": "staticwebassets/resource/invoices/A1cmedreftable.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/18.png",
-      "PackagePath": "staticwebassets/resource/product-images/18.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/19.png",
-      "PackagePath": "staticwebassets/resource/product-images/19.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/22.png",
-      "PackagePath": "staticwebassets/resource/product-images/22.png"
-    },
-    {
-      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/resource/product-images/NoPicture.png",
-      "PackagePath": "staticwebassets/resource/product-images/NoPicture.png"
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/files/cagdas.png",
+      "PackagePath": "staticwebassets/files/cagdas.png"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.UlukunShopAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
