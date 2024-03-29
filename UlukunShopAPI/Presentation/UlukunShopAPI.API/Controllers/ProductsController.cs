@@ -117,11 +117,29 @@ namespace UlukunShopAPI.API.Controllers
         public async Task<IActionResult> Upload(string id)
         {
             List<(string fileName,string pathOrContainerName)> result = await _storageService.UploadAsync("product-images", Request.Form.Files);
+
+            Product product= await _productReadRepository.GetByIdAsync(id);
+
+
+            // foreach (var r in result)
+            // {
+            //     product.ProductImageFiles.Add(new()
+            //     {
+            //         FileName = r.fileName,
+            //         Path = r.pathOrContainerName,
+            //         Storage = _storageService.storageName,
+            //         Products = new List<Product>(){product}
+            //     });
+            // }
+            
+            
+            
             await _imageWrite.AddRangeAsync(result.Select(x => new ProductImageFile
             {
                 FileName = x.fileName,
                 Path = x.pathOrContainerName,
-                Storage = _storageService.storageName
+                Storage = _storageService.storageName,
+                Products = new List<Product>(){product}
             }).ToList());
 
             await _imageWrite.SaveAsync();

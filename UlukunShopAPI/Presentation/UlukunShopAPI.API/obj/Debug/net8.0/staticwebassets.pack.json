@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets/files/cagdas.png"
     },
     {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/14-astonishing-facts-about-zakk-wylde-1696812508.jpg",
+      "PackagePath": "staticwebassets/product-images/14-astonishing-facts-about-zakk-wylde-1696812508.jpg"
+    },
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/41992trashrecyclebingarbageicon.png",
+      "PackagePath": "staticwebassets/product-images/41992trashrecyclebingarbageicon.png"
+    },
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/51Tp10uNyLL-ACUF10001000QL80.jpg",
+      "PackagePath": "staticwebassets/product-images/51Tp10uNyLL-ACUF10001000QL80.jpg"
+    },
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/A1cmedreftable.png",
+      "PackagePath": "staticwebassets/product-images/A1cmedreftable.png"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.UlukunShopAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
