@@ -1,6 +1,7 @@
 using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UlukunShopAPI.Application.Abstractions.Storage;
 using UlukunShopAPI.Application.Repositories;
 using UlukunShopAPI.Application.Repositories.InvoiceFile;
@@ -144,6 +145,18 @@ namespace UlukunShopAPI.API.Controllers
 
             await _imageWrite.SaveAsync();
             return Ok();
+        }
+
+        [HttpGet("[action]/{id}")]
+        public async Task<IActionResult> GetProductImages(string id)
+        {
+           Product? product= await _productReadRepository.Table.Include(p => p.ProductImageFiles)
+               .FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
+           return Ok(product.ProductImageFiles.Select(p => new
+           {
+                p.Path,
+                p.FileName
+           }));
         }
     }
 }
