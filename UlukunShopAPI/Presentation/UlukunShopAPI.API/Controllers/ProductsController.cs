@@ -27,6 +27,7 @@ namespace UlukunShopAPI.API.Controllers
         private readonly IInvoiceFileReadRepository _invoiceFileRead;
         private readonly IInvoiceFileWriteRepository _invoiceFileWrite;
         private readonly IStorageService _storageService;
+        private readonly IConfiguration configuration;
         
         
         public ProductsController(
@@ -38,7 +39,7 @@ namespace UlukunShopAPI.API.Controllers
             IProductImageFileWriteRepository imageWrite,
             IInvoiceFileReadRepository invoiceFileRead,
             IInvoiceFileWriteRepository invoiceFileWrite,
-            IStorageService storageService)
+            IStorageService storageService, IConfiguration configuration)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -49,6 +50,7 @@ namespace UlukunShopAPI.API.Controllers
             _invoiceFileRead = invoiceFileRead;
             _invoiceFileWrite = invoiceFileWrite;
             _storageService = storageService;
+            this.configuration = configuration;
         }
 
         [HttpGet]
@@ -154,9 +156,21 @@ namespace UlukunShopAPI.API.Controllers
                .FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
            return Ok(product.ProductImageFiles.Select(p => new
            {
-                p.Path,
-                p.FileName
+                Path=$"{configuration["BaseStorageUrl"]}/{p.Path}",
+                p.FileName,
+                p.Id
            }));
+        }
+
+        [HttpDelete("[action]/{id}")]
+        public async Task<IActionResult> DeleteProductImage(string id, string imageId)
+        {
+            Product? product= await _productReadRepository.Table.Include(p => p.ProductImageFiles)
+                .FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
+            ProductImageFile productImageFile = product.ProductImageFiles.FirstOrDefault(p => p.Id == Guid.Parse(imageId));
+            product.ProductImageFiles.Remove(productImageFile);
+            await _productWriteRepository.SaveAsync();
+            return Ok();
         }
     }
 }
