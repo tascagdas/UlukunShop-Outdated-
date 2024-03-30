@@ -1,4 +1,5 @@
 using FluentValidation.AspNetCore;
+using UlukunShopAPI.Application;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
 using UlukunShopAPI.Infrastructure.Enums;
@@ -12,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
+builder.Services.AddApplicationServices();
 
 // builder.Services.AddStorage(StorageType.Azure);
 

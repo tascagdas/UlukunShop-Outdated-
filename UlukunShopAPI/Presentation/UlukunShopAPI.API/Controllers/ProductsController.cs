@@ -1,8 +1,11 @@
 using System.Net;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UlukunShopAPI.Application.Abstractions.Storage;
+using UlukunShopAPI.Application.Features.Commands.CreateProduct;
+using UlukunShopAPI.Application.Features.Queries.GetAllProducts;
 using UlukunShopAPI.Application.Repositories;
 using UlukunShopAPI.Application.Repositories.InvoiceFile;
 using UlukunShopAPI.Application.Repositories.ProductImageFile;
@@ -27,7 +30,11 @@ namespace UlukunShopAPI.API.Controllers
         private readonly IInvoiceFileReadRepository _invoiceFileRead;
         private readonly IInvoiceFileWriteRepository _invoiceFileWrite;
         private readonly IStorageService _storageService;
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _configuration;
+
+        private readonly IMediator _mediator;
+        
+        
         
         
         public ProductsController(
@@ -39,7 +46,7 @@ namespace UlukunShopAPI.API.Controllers
             IProductImageFileWriteRepository imageWrite,
             IInvoiceFileReadRepository invoiceFileRead,
             IInvoiceFileWriteRepository invoiceFileWrite,
-            IStorageService storageService, IConfiguration configuration)
+            IStorageService storageService, IConfiguration configuration, IMediator mediator)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -50,28 +57,15 @@ namespace UlukunShopAPI.API.Controllers
             _invoiceFileRead = invoiceFileRead;
             _invoiceFileWrite = invoiceFileWrite;
             _storageService = storageService;
-            this.configuration = configuration;
+            this._configuration = configuration;
+            _mediator = mediator;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery]Pagination pagination)
+        public async Task<IActionResult> Get([FromQuery]GetAllProductsQueryRequest getAllProductsQueryRequest)
         {
-            var totalCount = _productReadRepository.GetAll(false).Count();
-            //tracking devre disi daha verimli calisma icin.
-            var products = _productReadRepository.GetAll(false).Skip(pagination.Page * pagination.Size).Take(pagination.Size).Select(p => new
-            {
-                p.Id,
-                p.Name,
-                p.Stock,
-                p.Price,
-                p.CreatedDate,
-                p.UpdatedDate
-            }).ToList();
-            return Ok(new
-            {
-                totalCount,
-                products
-            });
+          GetAllProductsQueryResponse response= await _mediator.Send(getAllProductsQueryRequest);
+          return Ok(response);
         }
 
         [HttpGet("{id}")]
@@ -83,16 +77,9 @@ namespace UlukunShopAPI.API.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProductCreateViewModel model)
+        public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
-
-            await _productWriteRepository.AddAsync(new()
-            {
-                Name = model.Name,
-                Price = model.Price,
-                Stock = model.Stock
-            });
-            await _productWriteRepository.SaveAsync();
+            CreateProductCommandResponse response= await _mediator.Send(createProductCommandRequest);
             return StatusCode((int)HttpStatusCode.Created);
         }
 
@@ -156,7 +143,7 @@ namespace UlukunShopAPI.API.Controllers
                .FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
            return Ok(product.ProductImageFiles.Select(p => new
            {
-                Path=$"{configuration["BaseStorageUrl"]}/{p.Path}",
+                Path=$"{_configuration["BaseStorageUrl"]}/{p.Path}",
                 p.FileName,
                 p.Id
            }));

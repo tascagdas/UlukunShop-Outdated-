@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Id/A7ROiMaAnceaJLBQ4/g3ZeHn8k39p1kCCohbuJXUa3rrcPZO6UMhzbGg3y2vlZ2+S6ifsNlAweQPW+9dP6w==",
+  "dgSpecHash": "JIDTgnAmMNUFs3bnRrkkuokPov/CAzXqk9WhgVRVgiXghs4pbCyqTj3yO/hj2KrEgN2HyZbMRKv4BQktpa5DHA==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/UlukunShopAPI.API.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,9 @@
     "/Users/tascagdas/.nuget/packages/humanizer.core.zh-cn/2.14.1/humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core.zh-hans/2.14.1/humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/humanizer.core.zh-hant/2.14.1/humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/tascagdas/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.24/microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "/Users/tascagdas/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
