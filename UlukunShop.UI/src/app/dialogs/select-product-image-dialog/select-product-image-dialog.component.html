@@ -4,17 +4,17 @@
   <app-file-upload [options]="options"></app-file-upload>
 
 
-  <mat-card *ngFor="let image of images" class="product-image-card">
+  <mat-card  *ngFor="let image of images" class="product-image-card">
     <mat-card-header>
 
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="image.path" >
     <mat-card-content>
 
     </mat-card-content>
     <mat-card-actions>
       <button class="text-bg-primary" mat-button>İndir</button>
-      <button class="text-bg-danger" mat-button>Sil</button>
+      <button class="text-bg-danger" mat-button (click)="deleteImage(image.id, $event)">Sil</button>
     </mat-card-actions>
   </mat-card>
 
