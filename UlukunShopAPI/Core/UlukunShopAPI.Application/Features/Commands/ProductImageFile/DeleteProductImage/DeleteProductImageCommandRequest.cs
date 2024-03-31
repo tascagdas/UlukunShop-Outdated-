@@ -4,5 +4,6 @@ namespace UlukunShopAPI.Application.Features.Commands.ProductImageFile.DeletePro
 
 public class DeleteProductImageCommandRequest:IRequest<DeleteProductImageCommandResponse>
 {
-    
+    public string Id { get; set; }
+    public string? ImageId { get; set; }
 }

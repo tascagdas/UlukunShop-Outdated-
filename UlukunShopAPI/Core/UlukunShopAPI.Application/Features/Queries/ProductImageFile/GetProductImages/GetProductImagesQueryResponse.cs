@@ -2,5 +2,7 @@ namespace UlukunShopAPI.Application.Features.Queries.ProductImageFile.GetProduct
 
 public class GetProductImagesQueryResponse
 {
-    
+    public string Path { get; set; }
+    public Guid Id { get; set; }
+    public string FileName { get; set; }
 }
