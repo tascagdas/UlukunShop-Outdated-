@@ -1,7 +1,6 @@
 using MediatR;
-using UlukunShopAPI.Application.RequestParameters;
 
-namespace UlukunShopAPI.Application.Features.Queries.GetAllProducts;
+namespace UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts;
 
 public class GetAllProductsQueryRequest:IRequest<GetAllProductsQueryResponse>
 {

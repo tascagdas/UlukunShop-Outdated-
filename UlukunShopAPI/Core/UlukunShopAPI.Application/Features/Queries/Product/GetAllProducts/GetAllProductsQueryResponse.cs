@@ -1,4 +1,4 @@
-namespace UlukunShopAPI.Application.Features.Queries.GetAllProducts;
+namespace UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts;
 
 public class GetAllProductsQueryResponse
 {

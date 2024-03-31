@@ -1,7 +1,7 @@
 using MediatR;
 using UlukunShopAPI.Application.Repositories;
 
-namespace UlukunShopAPI.Application.Features.Commands.CreateProduct;
+namespace UlukunShopAPI.Application.Features.Commands.Product.CreateProduct;
 
 public class CreateProductCommandHandler:IRequestHandler<CreateProductCommandRequest,CreateProductCommandResponse>
 {

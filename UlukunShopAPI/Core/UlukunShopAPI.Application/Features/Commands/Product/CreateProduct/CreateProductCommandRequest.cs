@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace UlukunShopAPI.Application.Features.Commands.CreateProduct;
+namespace UlukunShopAPI.Application.Features.Commands.Product.CreateProduct;
 
 public class CreateProductCommandRequest:IRequest<CreateProductCommandResponse>
 {
