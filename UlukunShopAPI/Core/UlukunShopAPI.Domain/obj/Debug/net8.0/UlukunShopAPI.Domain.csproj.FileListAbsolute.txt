@@ -22,3 +22,4 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/refint/UlukunShopAPI.Domain.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.pdb
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/ref/UlukunShopAPI.Domain.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Domain/obj/Debug/net8.0/UlukunShopAPI.Domain.csproj.AssemblyReference.cache

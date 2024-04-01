@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using UlukunShopAPI.Application.Repositories;
 using UlukunShopAPI.Application.Repositories.InvoiceFile;
 using UlukunShopAPI.Application.Repositories.ProductImageFile;
+using UlukunShopAPI.Domain.Entities.Identity;
 using UlukunShopAPI.Persistence.Contexts;
 using UlukunShopAPI.Persistence.Repositories;
 using UlukunShopAPI.Persistence.Repositories.File;
@@ -17,6 +18,8 @@ public static class ServiceRegistration
     {
         services.AddDbContext<UlukunAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString),
             ServiceLifetime.Singleton);
+        services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<UlukunAPIDbContext>();
+        
         services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
         services.AddScoped<ICustomerWriteRepository, CustomerWriteRespository>();
         services.AddScoped<IOrderReadRepository, OrderReadRepository>();

@@ -1,11 +1,13 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using UlukunShopAPI.Domain.Entities;
 using UlukunShopAPI.Domain.Entities.Common;
+using UlukunShopAPI.Domain.Entities.Identity;
 using File = UlukunShopAPI.Domain.Entities.File;
 
 namespace UlukunShopAPI.Persistence.Contexts;
 
-public class UlukunAPIDbContext : DbContext
+public class UlukunAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
 {
     public UlukunAPIDbContext(DbContextOptions options) : base(options)
     {
@@ -23,7 +25,7 @@ public class UlukunAPIDbContext : DbContext
         //changetracker entityler uzerinde yapilan degisikliklerin yada yeni eklenen verinin yaskalanmasini saglayan proptir.update operasyonlarinda track edilen verileri yakalayip elde etmemizi saglar.
         var datas = ChangeTracker
             .Entries<BaseEntity>();
-        
+
         foreach (var data in datas)
         {
             _ = data.State switch
