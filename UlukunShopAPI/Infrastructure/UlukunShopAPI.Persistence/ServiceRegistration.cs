@@ -18,7 +18,14 @@ public static class ServiceRegistration
     {
         services.AddDbContext<UlukunAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString),
             ServiceLifetime.Singleton);
-        services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<UlukunAPIDbContext>();
+        services.AddIdentity<AppUser, AppRole>(options =>
+        {
+            options.Password.RequiredLength = 3;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireDigit = false;
+            options.Password.RequireLowercase = false;
+            options.Password.RequireUppercase = false;
+        } ).AddEntityFrameworkStores<UlukunAPIDbContext>();
         
         services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
         services.AddScoped<ICustomerWriteRepository, CustomerWriteRespository>();

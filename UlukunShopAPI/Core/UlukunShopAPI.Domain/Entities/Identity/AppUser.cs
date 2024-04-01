@@ -4,6 +4,6 @@ namespace UlukunShopAPI.Domain.Entities.Identity;
 
 public class AppUser : IdentityUser<string>
 {
-    public string firstName { get; set; }
-    public string lastName { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
 }
