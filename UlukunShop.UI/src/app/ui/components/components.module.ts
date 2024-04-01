@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {ProductsModule} from "./products/products.module";
 import {ShoppingcartsModule} from "./shoppingcarts/shoppingcarts.module";
 import {HomeModule} from "./home/home.module";
+import {RegisterModule} from "./register/register.module";
 
 
 
@@ -12,7 +13,8 @@ import {HomeModule} from "./home/home.module";
     CommonModule,
     ProductsModule,
     ShoppingcartsModule,
-    HomeModule
+    HomeModule,
+    RegisterModule
   ]
 })
 export class ComponentsModule { }

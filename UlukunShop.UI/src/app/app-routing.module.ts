@@ -13,7 +13,9 @@ const routes: Routes = [
     ]},
   {path:"",component:HomeComponent},
   {path:"shoppingcart",loadChildren:()=>import("./ui/components/shoppingcarts/shoppingcarts.module").then(module=>module.ShoppingcartsModule)},
-  {path:"products",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)}
+  {path:"products",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)},
+  {path:"register",loadChildren:()=>import("./ui/components/register/register.module").then(module=>module.RegisterModule)}
+
 ];
 
 @NgModule({

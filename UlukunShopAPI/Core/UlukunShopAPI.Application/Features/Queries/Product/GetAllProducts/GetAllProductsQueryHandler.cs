@@ -5,7 +5,7 @@ namespace UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts;
 
 public class GetAllProductsQueryHandler:IRequestHandler<GetAllProductsQueryRequest,GetAllProductsQueryResponse>
 {
-    readonly private IProductReadRespository _productReadRepository;
+    private readonly IProductReadRespository _productReadRepository;
     public GetAllProductsQueryHandler(IProductReadRespository productReadRespository)
     {
         _productReadRepository = productReadRespository;

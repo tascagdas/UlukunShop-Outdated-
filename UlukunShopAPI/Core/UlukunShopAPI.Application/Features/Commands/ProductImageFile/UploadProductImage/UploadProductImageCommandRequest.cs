@@ -6,5 +6,5 @@ namespace UlukunShopAPI.Application.Features.Commands.ProductImageFile.UploadPro
 public class UploadProductImageCommandRequest:IRequest<UploadProductImageCommandResponse>
 {
     public string Id { get; set; }
-    public IFormFileCollection FormFileCollection { get; set; }
+    public IFormFileCollection? FormFileCollection { get; set; }
 }
