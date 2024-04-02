@@ -38,7 +38,8 @@ builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer("Admin",options =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer("Admin",options =>
 {
     options.TokenValidationParameters = new()
     {
@@ -48,7 +49,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidateIssuerSigningKey = true, //tokenin bizim tarafimizdan uretildigi dogrulayan guvenlik anahtari
         
         ValidAudience = builder.Configuration["Token:Audience"],
-        ValidIssuer = builder.Configuration["Token:Audience"],
+        ValidIssuer = builder.Configuration["Token:Issuer"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
     };
 });

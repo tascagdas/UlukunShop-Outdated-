@@ -13,9 +13,10 @@ using UlukunShopAPI.Application.Features.Queries.ProductImageFile.GetProductImag
 
 namespace UlukunShopAPI.API.Controllers
 {
-    [Authorize(AuthenticationSchemes = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")]
+
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
