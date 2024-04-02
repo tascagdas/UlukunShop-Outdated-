@@ -1,5 +1,6 @@
 using System.Net;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Features.Commands.Product.CreateProduct;
 using UlukunShopAPI.Application.Features.Commands.Product.DeleteProduct;
@@ -12,6 +13,7 @@ using UlukunShopAPI.Application.Features.Queries.ProductImageFile.GetProductImag
 
 namespace UlukunShopAPI.API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
