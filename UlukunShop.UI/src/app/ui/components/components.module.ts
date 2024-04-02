@@ -19,7 +19,7 @@ import {LoginModule} from "./login/login.module";
     ShoppingcartsModule,
     HomeModule,
     RegisterModule,
-    LoginModule
+    // LoginModule
   ]
 })
 export class ComponentsModule { }

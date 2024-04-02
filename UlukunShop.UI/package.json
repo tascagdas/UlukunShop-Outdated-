@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@abacritt/angularx-social-login": "^1.2.5",
     "@angular/animations": "^14.3.0",
     "@angular/cdk": "^13.3.9",
     "@angular/common": "^14.3.0",
@@ -25,7 +26,7 @@
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
     "ngx-file-drop": "^13.0.0",
-    "ngx-spinner": "^13.1.1",
+    "ngx-spinner": "^14.0.0",
     "ngx-toastr": "^14.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
