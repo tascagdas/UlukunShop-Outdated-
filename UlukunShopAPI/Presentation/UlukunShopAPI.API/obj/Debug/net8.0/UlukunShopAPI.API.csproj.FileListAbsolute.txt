@@ -529,3 +529,11 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/MediatR.Contracts.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

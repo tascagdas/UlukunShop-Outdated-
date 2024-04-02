@@ -1,4 +1,6 @@
+using System.Text;
 using FluentValidation.AspNetCore;
+using Microsoft.IdentityModel.Tokens;
 using UlukunShopAPI.Application;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
@@ -34,6 +36,21 @@ builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>()
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthentication("Admin").AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new()
+    {
+        ValidateAudience = true, // tokenin hangi websitelerinde gecerli olacagini belirler
+        ValidateIssuer = true, // tokenin kim tarafindan dagitildigi bilgisi
+        ValidateLifetime = true, //tokenin omru oldugunu kontrol et
+        ValidateIssuerSigningKey = true, //tokenin bizim tarafimizdan uretildigi dogrulayan guvenlik anahtari
+        
+        ValidAudience = builder.Configuration["Token:Audience"],
+        ValidIssuer = builder.Configuration["Token:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
+    };
+});
 
 var app = builder.Build();
 

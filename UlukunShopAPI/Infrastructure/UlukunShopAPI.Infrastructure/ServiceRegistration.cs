@@ -1,9 +1,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using UlukunShopAPI.Application.Abstractions.Storage;
+using UlukunShopAPI.Application.Abstractions.Token;
 using UlukunShopAPI.Infrastructure.Enums;
 using UlukunShopAPI.Infrastructure.Services.Storage;
 using UlukunShopAPI.Infrastructure.Services.Storage.Azure;
 using UlukunShopAPI.Infrastructure.Services.Storage.Local;
+using UlukunShopAPI.Infrastructure.Services.Token;
 
 namespace UlukunShopAPI.Infrastructure;
 
@@ -12,6 +14,7 @@ public static class ServiceRegistration
     public static void AddInfrastructureServices(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddScoped<IStorageService, StorageService>();
+        serviceCollection.AddScoped<ITokenHandler, TokenHandler>();
     }
 
     public static void AddStorage<T>(this IServiceCollection serviceCollection)where T:Storage,IStorage
