@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"shoppingcart",loadChildren:()=>import("./ui/components/shoppingcarts/shoppingcarts.module").then(module=>module.ShoppingcartsModule)},
   {path:"products",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)},
-  {path:"register",loadChildren:()=>import("./ui/components/register/register.module").then(module=>module.RegisterModule)}
+  {path:"register",loadChildren:()=>import("./ui/components/register/register.module").then(module=>module.RegisterModule)},
+  {path:"login",loadChildren:()=>import("./ui/components/login/login.module").then(module=>module.LoginModule)}
 
 ];
 

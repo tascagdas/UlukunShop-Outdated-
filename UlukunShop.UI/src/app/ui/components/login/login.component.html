@@ -1,0 +1,19 @@
+<div class="container w-25" style="margin-top: 25vh">
+  <h3 class="display-6" style="font-size: 32px">Giris Yap</h3>
+  <hr>
+  <div class="align-items-center">
+      <div class="form-group mt-3">
+        <label for="userName">Kullanici Adi / Email:</label>
+        <input #txtUsernameOrEmail type="text"  id="userName" class="form-control" placeholder="kullanici adi veya Email" >
+        <small  class=" text-danger">******</small>
+      </div>
+      <div class="form-group mt-3">
+        <label for="password">Parola:</label>
+        <input #txtPassword type="password"  class="form-control" id="password" placeholder="Parola"  >
+      </div>
+      <div class=" text-center">
+        <button type="submit" class=" mt-4 btn w-50 btn-primary" (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Giris Yap</button>
+      </div>
+  </div>
+
+</div>
