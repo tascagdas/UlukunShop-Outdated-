@@ -22,7 +22,7 @@
             Profile
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="admin">Admin Panel</a></li>
+            <li><a class="dropdown-item" routerLink="admin" *ngIf="authService._isAuthenticated">Admin Panel</a></li>
             <li><a class="dropdown-item" routerLink="">Profile Details</a></li>
             <li><a class="dropdown-item" routerLink="">Orders</a></li>
             <li><a class="dropdown-item" routerLink="">Messages</a></li>
@@ -35,7 +35,13 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      <ul class="navbar-nav  mb-2 mb-lg-0">
+      <ul class="navbar-nav  mb-2 mb-lg-0" *ngIf="authService._isAuthenticated">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="" (click)="logOut()">Cikis Yap</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav  mb-2 mb-lg-0" *ngIf="!authService._isAuthenticated">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="register">Kayit ol</a>
         </li>

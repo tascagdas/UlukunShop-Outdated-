@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
+import {JwtModule} from "@auth0/angular-jwt";
 
 @NgModule({
     declarations: [
@@ -29,6 +30,12 @@ import {MatDialogModule} from "@angular/material/dialog";
     HttpClientModule,
     MatButtonModule,
     MatDialogModule,
+    JwtModule.forRoot({
+      config:{
+        tokenGetter:()=>localStorage.getItem("accessToken"),
+        allowedDomains:["localhost:7131"]
+      }
+    })
   ],
     providers: [
         {provide: "baseUrl", useValue: 'https://localhost:7131/api', multi: true},
