@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
+using UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser;
 using UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser;
 
 namespace UlukunShopAPI.API.Controllers
@@ -28,5 +29,13 @@ namespace UlukunShopAPI.API.Controllers
             LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
             return Ok(response);
         }
+
+        [HttpPost("google-login")]
+        public async Task<IActionResult> GoogleLogin(GoogleLoginUserCommandRequest googleLoginUserCommandRequest)
+        {
+            GoogleLoginUserCommandResponse response = await _mediator.Send(googleLoginUserCommandRequest);
+            return Ok(response);
+        }
+
     }
 }

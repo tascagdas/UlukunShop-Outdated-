@@ -537,3 +537,7 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Google.Apis.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Google.Apis.Auth.PlatformServices.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Google.Apis.Auth.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Google.Apis.Core.dll

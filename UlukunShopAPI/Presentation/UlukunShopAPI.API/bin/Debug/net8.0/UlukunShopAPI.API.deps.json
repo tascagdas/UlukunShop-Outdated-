@@ -94,6 +94,44 @@
           }
         }
       },
+      "Google.Apis/1.57.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.57.0": {
+        "dependencies": {
+          "Google.Apis": "1.57.0",
+          "Google.Apis.Core": "1.57.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -2235,6 +2273,7 @@
           "FluentValidation": "10.4.0",
           "FluentValidation.AspNetCore": "10.4.0",
           "FluentValidation.DependencyInjectionExtensions": "10.4.0",
+          "Google.Apis.Auth": "1.57.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
@@ -2326,6 +2365,27 @@
       "sha512": "sha512-25LzRDm9Chfyw4aPMsoE+3qkz1x2evb2/537hUcnqkhA9zpREfQYm8y1JF1LCMdcH57q5QAZ27X7dqVOcN6TOA==",
       "path": "fluentvalidation.dependencyinjectionextensions/10.4.0",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512"
+    },
+    "Google.Apis/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-30V7T2G98HQjfI6y0AzBOXJUu7j7Trl1ZzH0e6DKmUaXNCvdMPwxApjBKESeTOkWjMdFRmkpAGyDEoxim+Xq1A==",
+      "path": "google.apis/1.57.0",
+      "hashPath": "google.apis.1.57.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xNY9rprn3iih1H5dymbxxHeZggn4bMYKtYdwO3Yr+Cj06f6xrxnL0LqEi1bmG46LBY2FlVMy9NKIF99tZ6ZBZg==",
+      "path": "google.apis.auth/1.57.0",
+      "hashPath": "google.apis.auth.1.57.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5wuY88PewhfaWsk37EEHcwU6CFqxpaWMm20ogWLXmaCw8NbTlV/Lna0gjtr2jpTLgb3mtVa7RC1AG/mgi530SQ==",
+      "path": "google.apis.core/1.57.0",
+      "hashPath": "google.apis.core.1.57.0.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
