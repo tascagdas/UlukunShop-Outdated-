@@ -1726,7 +1726,6 @@
           "FluentValidation": "10.4.0",
           "FluentValidation.AspNetCore": "10.4.0",
           "FluentValidation.DependencyInjectionExtensions": "10.4.0",
-          "Google.Apis.Auth": "1.57.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
@@ -4163,6 +4162,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Google.Apis.Auth >= 1.57.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0-preview.1.24081.2",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.1.24081.2",
       "Microsoft.Extensions.Configuration >= 9.0.0-preview.1.24080.9",
@@ -4214,6 +4214,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Google.Apis.Auth": {
+            "target": "Package",
+            "version": "[1.57.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.0-preview.1.24081.2, )"

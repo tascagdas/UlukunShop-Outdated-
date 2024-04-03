@@ -24,25 +24,7 @@ namespace UlukunShopAPI.API.Controllers
             CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
             return Ok(response);
         }
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
-        {
-            LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
-            return Ok(response);
-        }
 
-        [HttpPost("google-login")]
-        public async Task<IActionResult> GoogleLogin(GoogleLoginUserCommandRequest googleLoginUserCommandRequest)
-        {
-            GoogleLoginUserCommandResponse response = await _mediator.Send(googleLoginUserCommandRequest);
-            return Ok(response);
-        }
-        [HttpPost("facebook-login")]
-        public async Task<IActionResult> FacebookLogin(FacebookLoginUserCommandRequest facebookLoginUserCommandRequest)
-        {
-            FacebookLoginUserCommandResponse response = await _mediator.Send(facebookLoginUserCommandRequest);
-            return Ok(response);
-        }
 
     }
 }

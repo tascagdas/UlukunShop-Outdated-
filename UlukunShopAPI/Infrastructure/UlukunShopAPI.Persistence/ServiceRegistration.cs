@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using UlukunShopAPI.Application.Abstractions.Services;
+using UlukunShopAPI.Application.Abstractions.Services.Authentications;
 using UlukunShopAPI.Application.Repositories;
 using UlukunShopAPI.Application.Repositories.InvoiceFile;
 using UlukunShopAPI.Application.Repositories.ProductImageFile;
@@ -9,6 +11,7 @@ using UlukunShopAPI.Persistence.Repositories;
 using UlukunShopAPI.Persistence.Repositories.File;
 using UlukunShopAPI.Persistence.Repositories.InvoiceFile;
 using UlukunShopAPI.Persistence.Repositories.ProductImageFile;
+using UlukunShopAPI.Persistence.Services;
 
 namespace UlukunShopAPI.Persistence;
 
@@ -39,6 +42,12 @@ public static class ServiceRegistration
         services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
         services.AddScoped<IInvoiceFileReadRepository, InvoiceFileReadRepository>();
         services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
+
+
+        services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IExternalAuthentication, AuthService>();
+        services.AddScoped<IInternalAuthentication, AuthService>();
 
     }
 }

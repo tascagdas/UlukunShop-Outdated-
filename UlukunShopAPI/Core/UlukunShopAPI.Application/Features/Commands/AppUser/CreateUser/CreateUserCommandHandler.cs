@@ -1,44 +1,36 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using UlukunShopAPI.Application.Abstractions.Services;
+using UlukunShopAPI.Application.DTOs.User;
 using UlukunShopAPI.Application.Exceptions;
 
 namespace UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
 
 public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
 {
-    private readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
+    private readonly IUserService _userService;
 
-    public CreateUserCommandHandler(UserManager<Domain.Entities.Identity.AppUser> userManager)
+    public CreateUserCommandHandler(IUserService userService)
     {
-        _userManager = userManager;
+        _userService = userService;
     }
-
+    
     public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request,
         CancellationToken cancellationToken)
     {
-        IdentityResult result = await _userManager.CreateAsync(new()
+        CreateUserResponse_DTO response = await _userService.CreateAsync(new CreateUser_DTO()
         {
-            Id=Guid.NewGuid().ToString(),
-            UserName = request.Username,
+            Email = request.Email,
             FirstName = request.FirstName,
             LastName = request.LastName,
-            Email = request.Email
-        }, request.Password);
-        CreateUserCommandResponse response = new() { Succeeded = result.Succeeded };
-        if (result.Succeeded)
+            Password = request.Password,
+            RePassword = request.RePassword,
+            Username = request.Username
+        });
+        return new CreateUserCommandResponse()
         {
-            response.Message = "Kullanici basariyla olusturuldu.";
-        }
-        else
-        {
-            foreach (var error in result.Errors)
-            {
-                response.Message += $"{error.Code} / {error.Description}\n";
-            }
-        }
-
-        return response;
-
-        // throw new UserCreateFailedException();
+            Message = response.Message,
+            Succeeded = response.Succeeded
+        };
     }
 }
