@@ -3972,6 +3972,22 @@
         "runtime": {
           "bin/placeholder/UlukunShopAPI.Persistence.dll": {}
         }
+      },
+      "UlukunShopAPI.SignalR/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UlukunShopAPI.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UlukunShopAPI.SignalR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UlukunShopAPI.SignalR.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -11125,6 +11141,11 @@
       "type": "project",
       "path": "../../Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj",
       "msbuildProject": "../../Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj"
+    },
+    "UlukunShopAPI.SignalR/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/UlukunShopAPI.SignalR/UlukunShopAPI.SignalR.csproj",
+      "msbuildProject": "../../Infrastructure/UlukunShopAPI.SignalR/UlukunShopAPI.SignalR.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11140,7 +11161,8 @@
       "Swashbuckle.AspNetCore >= 6.4.0",
       "UlukunShopAPI.Application >= 1.0.0",
       "UlukunShopAPI.Infrastructure >= 1.0.0",
-      "UlukunShopAPI.Persistence >= 1.0.0"
+      "UlukunShopAPI.Persistence >= 1.0.0",
+      "UlukunShopAPI.SignalR >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11177,6 +11199,9 @@
             },
             "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj": {
               "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/UlukunShopAPI.Persistence.csproj"
+            },
+            "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.SignalR/UlukunShopAPI.SignalR.csproj": {
+              "projectPath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.SignalR/UlukunShopAPI.SignalR.csproj"
             }
           }
         }
@@ -11249,7 +11274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

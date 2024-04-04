@@ -18,6 +18,8 @@ using UlukunShopAPI.Infrastructure.Filters;
 using UlukunShopAPI.Infrastructure.Services.Storage.Azure;
 using UlukunShopAPI.Infrastructure.Services.Storage.Local;
 using UlukunShopAPI.Persistence;
+using UlukunShopAPI.SignalR;
+using UlukunShopAPI.SignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
+builder.Services.AddsignalRServices();
 
 // builder.Services.AddStorage(StorageType.Azure);
 
@@ -127,5 +130,7 @@ app.Use(async (context, next) =>
 });
 
 app.MapControllers();
+
+app.MapHubs();
 
 app.Run();

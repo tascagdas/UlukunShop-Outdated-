@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.API", "Presentation\UlukunShopAPI.API\UlukunShopAPI.API.csproj", "{14092011-4C45-4341-936C-28D4E76E0445}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlukunShopAPI.SignalR", "Infrastructure\UlukunShopAPI.SignalR\UlukunShopAPI.SignalR.csproj", "{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,7 @@ Global
 		{A4A1A3DD-9E07-4794-9FD0-4E723985EC67} = {276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}
 		{48273DFE-CD26-4426-BA20-07346DA2CDAA} = {276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}
 		{14092011-4C45-4341-936C-28D4E76E0445} = {FDF0F0F4-EFFA-4728-850C-6FBDC748CDC6}
+		{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67} = {276C99A8-3D49-4AF5-B6BC-0428CD9EA1A8}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FB177E84-DE92-436F-AF7D-0A88AB574C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,5 +52,9 @@ Global
 		{14092011-4C45-4341-936C-28D4E76E0445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14092011-4C45-4341-936C-28D4E76E0445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14092011-4C45-4341-936C-28D4E76E0445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74A216E-58B5-4C7B-BF8F-BA5CC8C6BD67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -21,7 +21,7 @@ public class
     public async Task<FacebookLoginUserCommandResponse> Handle(FacebookLoginUserCommandRequest request,
         CancellationToken cancellationToken)
     {
-        var token=await _authService.FacebookLoginAsync(request.AuthToken,30);
+        var token=await _authService.FacebookLoginAsync(request.AuthToken,604800);
         return new()
         {
             Token = token

@@ -29,7 +29,7 @@ public class GoogleLoginUserCommandHandler : IRequestHandler<GoogleLoginUserComm
             IdToken = request.IdToken,
             PhotoUrl = request.PhotoUrl,
             Provider = request.Provider
-        },30);
+        },604800);
         return new()
         {
             Token = token

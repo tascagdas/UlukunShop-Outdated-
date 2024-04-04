@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{14092011-4C45-4341-936C-28D4E76E0445}|https">
+  <MonoDevelop.Ide.ItemProperties.Presentation.UlukunShopAPI.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UlukunShopAPI" expanded="True">
+            <Node name="Infrastructure" expanded="True">
+              <Node name="UlukunShopAPI.Infrastructure" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
