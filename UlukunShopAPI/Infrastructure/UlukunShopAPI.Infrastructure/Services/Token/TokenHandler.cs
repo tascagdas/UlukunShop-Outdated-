@@ -1,4 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -37,6 +38,17 @@ public class TokenHandler : ITokenHandler
         //Token olusturucu sinifindan bir ornek alalim.
         JwtSecurityTokenHandler tokenHandler = new();
         token.AccessToken=tokenHandler.WriteToken(securityToken);
+
+        string refreshToken=CreateRefreshToken();
+        token.RefreshToken = refreshToken;
         return token;
+    }
+
+    public string CreateRefreshToken()
+    {
+        byte[] number = new byte[32];
+        using RandomNumberGenerator random=RandomNumberGenerator.Create();
+        random.GetBytes(number);
+        return Convert.ToBase64String(number);
     }
 }

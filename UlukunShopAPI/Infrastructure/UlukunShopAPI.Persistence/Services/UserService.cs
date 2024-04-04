@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.DTOs.User;
+using UlukunShopAPI.Application.Exceptions;
 using UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
 using UlukunShopAPI.Domain.Entities.Identity;
 
@@ -8,9 +9,9 @@ namespace UlukunShopAPI.Persistence.Services;
 
 public class UserService:IUserService
 {
-    private readonly UserManager<AppUser> _userManager;
+    private readonly UserManager<AppUser?> _userManager;
 
-    public UserService(UserManager<AppUser> userManager)
+    public UserService(UserManager<AppUser?> userManager)
     {
         _userManager = userManager;
     }
@@ -39,5 +40,19 @@ public class UserService:IUserService
         }
 
         return response;
+    }
+
+    public async Task UpdateRefreshToken(string refreshToken, AppUser? user,DateTime accessTokenDate,int addTimeToAccessToken)
+    {
+        if (user!=null)
+        {
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addTimeToAccessToken);
+            await _userManager.UpdateAsync(user);
+        }
+        else
+        {
+            throw new UserNotFoundException();
+        }
     }
 }

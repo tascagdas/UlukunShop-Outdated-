@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using UlukunShopAPI.Persistence.Contexts;
@@ -11,9 +12,11 @@ using UlukunShopAPI.Persistence.Contexts;
 namespace UlukunShopAPI.Persistence.Migrations
 {
     [DbContext(typeof(UlukunAPIDbContext))]
-    partial class UlukunAPIDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240403191934_mig13_RefreshToken")]
+    partial class mig13_RefreshToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -291,6 +294,7 @@ namespace UlukunShopAPI.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("RefreshToken")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("RefreshTokenEndDate")

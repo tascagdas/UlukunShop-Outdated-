@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Features.Commands.AppUser.FacebookLoginUser;
 using UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser;
 using UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser;
+using UlukunShopAPI.Application.Features.Commands.AppUser.RefreshTokenLogin;
 
 namespace UlukunShopAPI.API.Controllers
 {
@@ -22,6 +23,13 @@ namespace UlukunShopAPI.API.Controllers
         public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
         {
             LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
+            return Ok(response);
+        }
+        
+        [HttpPost("[action]")]
+        public async Task<IActionResult> RefreshTokenLogin([FromBody]RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
+        {
+            RefreshTokenLoginCommandResponse response = await _mediator.Send(refreshTokenLoginCommandRequest);
             return Ok(response);
         }
 

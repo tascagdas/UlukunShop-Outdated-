@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {firstValueFrom, Observable} from "rxjs";
 import {TokenResponse} from "../../../contracts/Token/tokenResponse";
 import {CustomToastrService, ToastrMessageType, ToastrPosition} from "../../ui/custom-toastr.service";
@@ -10,7 +10,8 @@ import {HttpClientService} from "../http-client.service";
 })
 export class UserAuthService {
 
-  constructor(private _httpClientService: HttpClientService, private toastr: CustomToastrService) {}
+  constructor(private _httpClientService: HttpClientService, private toastr: CustomToastrService) {
+  }
 
   async login(userNameOrEmail: string, password: string, callBackFunction?: () => void): Promise<any> {
     const observable: Observable<any | TokenResponse> = this._httpClientService.post<any | TokenResponse>({
@@ -23,6 +24,7 @@ export class UserAuthService {
     const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
       this.toastr.message("Kullanici girisi basarili !", "Basarili", {
         messageType: ToastrMessageType.Success,
@@ -32,7 +34,23 @@ export class UserAuthService {
     callBackFunction();
   }
 
-  async googleLogin(user: SocialUser, callBackFunction?: () => void):Promise<any> {
+  async refreshTokenLogin(refreshToken: string, callBackFunction?: () => void) {
+    const observable: Observable<any | TokenResponse> = this._httpClientService.post({
+      controller: "auth",
+      action: "refreshtokenlogin"
+    }, {refreshToken: refreshToken});
+
+    const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
+    if (tokenResponse) {
+      localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
+
+    }
+
+    callBackFunction();
+  }
+
+  async googleLogin(user: SocialUser, callBackFunction?: () => void): Promise<any> {
     const observable: Observable<SocialUser | TokenResponse> =
       this._httpClientService.post<SocialUser | TokenResponse>({
         action: "google-login",
@@ -42,6 +60,7 @@ export class UserAuthService {
     const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
       this.toastr.message("Google ile giris basarılı", "Gırıs basarılı", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
@@ -60,6 +79,7 @@ export class UserAuthService {
 
     if (tokenResponse) {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
+      localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
       this.toastr.message("Facebook Login başarıyla sağlanmıştır.", "Giriş Başarılı", {
         messageType: ToastrMessageType.Success,
