@@ -1,0 +1,594 @@
+2024-04-04 10:35:06.913 +03:00 [INF] User profile is available. Using '/Users/tascagdas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-04-04 10:35:07.301 +03:00 [INF] Now listening on: https://localhost:7131
+2024-04-04 10:35:07.302 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 10:35:07.302 +03:00 [INF] Hosting environment: Development
+2024-04-04 10:35:07.302 +03:00 [INF] Content root path: /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API
+2024-04-04 10:37:41.850 +03:00 [INF] Application is shutting down...
+2024-04-04 11:50:16.561 +03:00 [INF] User profile is available. Using '/Users/tascagdas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-04-04 11:50:16.945 +03:00 [INF] Now listening on: https://localhost:7131
+2024-04-04 11:50:16.946 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 11:50:16.946 +03:00 [INF] Hosting environment: Development
+2024-04-04 11:50:16.946 +03:00 [INF] Content root path: /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API
+2024-04-04 11:51:16.722 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - null null
+2024-04-04 11:51:16.757 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:51:16.758 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:51:16.760 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 11:51:16.763 +03:00 [INF] Duration: 4.6788ms
+2024-04-04 11:51:16.769 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - 204 null null 47.23ms
+2024-04-04 11:51:16.774 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/auth/google-login - application/json 1467
+2024-04-04 11:51:16.783 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1467
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:51:16.784 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:51:16.794 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 11:51:16.813 +03:00 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleLogin(UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandRequest) on controller UlukunShopAPI.API.Controllers.AuthController (UlukunShopAPI.API).
+2024-04-04 11:51:16.876 +03:00 [INF] RequestBody: {"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkzNGE1ODE2NDY4Yjk1NzAzOTUzZDE0ZTlmMTVkZjVkMDlhNDAxZTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDkwMDIzMTY4NDM5NzY4MTg1MTAiLCJlbWFpbCI6InRhc2NhZ2Rhc0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzEyMjEzMDUyLCJuYW1lIjoiw6dhxJ9kYcWfIHRhxZ8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0tLbm5IS3R4NFdMNnVaTmpMR253Y3ZHcm9mZjBxYm5vbmtYY0dPUnNfeVlWY2NENnk9czk2LWMiLCJnaXZlbl9uYW1lIjoiw6dhxJ9kYcWfIiwiZmFtaWx5X25hbWUiOiJ0YcWfIiwiaWF0IjoxNzEyMjEzMzUyLCJleHAiOjE3MTIyMTY5NTIsImp0aSI6IjIyMTI4M2RlMWY2ZGQzMGFiMmJhY2EzYTNlNDE4Njc1YjZlYTYzMmMifQ.ruQc7LLW1ziiSQluDiqMZtda41CwGu5d23NJ8YmF_mwz9Uc4cpLNWNV7hra_7bC1xELprsJoRgVlJ7gzwn-YcVQfGh2tOt4P3ZallUS3OyYJ7-s_tEcbp3LohCCpoWtjNHHUp0p1Nn8MDvTbozjxCmpHhrCVI2oJXGxSRBfMU2i3nPYQFQcZnDgkNFDsw7yCv0yaPz5IEwkUMNKjb40Xt3M_DydycHygRGuouQGb7OhMSrRq6ikXkJmKE-UNR41yGSIIJkINGOaWP8fMPFQ9UWoQN0_QiOi4mZTeAOecyVkTedrMaBsUY6fhu2FA_QtTkTuZncUkw86y5aaxLyjbdg","id":"109002316843976818510","name":"çağdaş taş","email":"tascagdas@gmail.com","photoUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKKnnHKtx4WL6uZNjLGnwcvGroff0qbnonkXcGORs_yYVccD6y=s96-c","firstName":"çağdaş","lastName":"taş","provider":"GOOGLE"}
+2024-04-04 11:51:16.902 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 11:51:17.136 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) in 321.149ms
+2024-04-04 11:51:17.136 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 11:51:17.136 +03:00 [INF] Response:
+StatusCode: 200
+2024-04-04 11:51:17.136 +03:00 [INF] Duration: 353.508ms
+2024-04-04 11:51:17.136 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Google.Apis.Auth.InvalidJwtException: JWT has expired.
+   at Google.Apis.Auth.SignedTokenVerification.VerifySignedTokenAsync[TJswHeader,TJswPayload](SignedToken`2 signedToken, SignedTokenVerificationOptions options, CancellationToken cancellationToken)
+   at Google.Apis.Auth.GoogleJsonWebSignature.ValidateInternalAsync(String jwt, ValidationSettings validationSettings)
+   at UlukunShopAPI.Persistence.Services.AuthService.GoogleLoginAsync(GoogleLoginRequest_DTO model, Int32 accessTokenLifeTime) in /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/Services/AuthService.cs:line 111
+   at UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandHandler.Handle(GoogleLoginUserCommandRequest request, CancellationToken cancellationToken) in /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Core/UlukunShopAPI.Application/Features/Commands/AppUser/GoogleLoginUser/GoogleLoginUserCommandHandler.cs:line 22
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at UlukunShopAPI.API.Controllers.AuthController.GoogleLogin(GoogleLoginUserCommandRequest googleLoginUserCommandRequest) in /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/Controllers/AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/Program.cs:line 119
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-04 11:51:17.161 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/auth/google-login - 500 null text/plain; charset=utf-8 386.6702ms
+2024-04-04 11:53:17.451 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - null null
+2024-04-04 11:53:17.460 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:17.463 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:17.464 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 11:53:17.464 +03:00 [INF] Duration: 4.9197ms
+2024-04-04 11:53:17.465 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - 204 null null 14.8777ms
+2024-04-04 11:53:17.468 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/auth/google-login - application/json 1467
+2024-04-04 11:53:17.471 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1467
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:17.472 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:17.480 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 11:53:17.484 +03:00 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleLogin(UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandRequest) on controller UlukunShopAPI.API.Controllers.AuthController (UlukunShopAPI.API).
+2024-04-04 11:53:17.492 +03:00 [INF] RequestBody: {"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkzNGE1ODE2NDY4Yjk1NzAzOTUzZDE0ZTlmMTVkZjVkMDlhNDAxZTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDkwMDIzMTY4NDM5NzY4MTg1MTAiLCJlbWFpbCI6InRhc2NhZ2Rhc0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzEyMjIwNDk3LCJuYW1lIjoiw6dhxJ9kYcWfIHRhxZ8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0tLbm5IS3R4NFdMNnVaTmpMR253Y3ZHcm9mZjBxYm5vbmtYY0dPUnNfeVlWY2NENnk9czk2LWMiLCJnaXZlbl9uYW1lIjoiw6dhxJ9kYcWfIiwiZmFtaWx5X25hbWUiOiJ0YcWfIiwiaWF0IjoxNzEyMjIwNzk3LCJleHAiOjE3MTIyMjQzOTcsImp0aSI6ImJhOGEwYmY4ZDI5NDk4ZjZmYzNmZjI5MjJiMDZlMDdiNGFiM2ZlZDEifQ.Fu4ImEzalg6IeF62A4SyxjrwPrkHdTU8jQSl1wM_Qfu3W7o49wttQvjH4Jy26Hyf44LVzAar0KPQ-9AEHL1MAPDktRQtWtzkazpwB_zWkzcZ9fb3Ak6dJOCh3dQXsyC61GfXPB3dbY3_wHkwf_ZXnaGhQq1DwUM7O_DH0omjPv2HaOVc71gR9H4IooRqOHnnOMJ0Nfb_dEvYPNaM11pS4orxi9BYNmFBBlsRWFP5IvE7EyrIdgZ7s3i6yuNx3OyA7TdNAPfsY9-0_G8XXxJgcKDCOAn1pnRAMNVEOe2RtqlqiSDw5i93FOCfsVTUI-FvmpD1igv67ijVbXN_HdBw3w","id":"109002316843976818510","name":"çağdaş taş","email":"tascagdas@gmail.com","photoUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKKnnHKtx4WL6uZNjLGnwcvGroff0qbnonkXcGORs_yYVccD6y=s96-c","firstName":"çağdaş","lastName":"taş","provider":"GOOGLE"}
+2024-04-04 11:53:17.497 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 11:53:18.429 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__loginProvider_0='?', @__providerKey_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."LoginProvider", a."ProviderKey", a."ProviderDisplayName", a."UserId"
+FROM "AspNetUserLogins" AS a
+WHERE a."LoginProvider" = @__loginProvider_0 AND a."ProviderKey" = @__providerKey_1
+LIMIT 2
+2024-04-04 11:53:18.511 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2024-04-04 11:53:18.542 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__loginProvider_0='?', @__providerKey_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."LoginProvider", a."ProviderKey", a."ProviderDisplayName", a."UserId"
+FROM "AspNetUserLogins" AS a
+WHERE a."LoginProvider" = @__loginProvider_0 AND a."ProviderKey" = @__providerKey_1
+LIMIT 2
+2024-04-04 11:53:18.544 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2024-04-04 11:53:18.618 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 11:53:18.714 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FirstName" = @p4, "LastName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2024-04-04 11:53:18.727 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1226.3245ms.
+2024-04-04 11:53:18.732 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandResponse'.
+2024-04-04 11:53:18.761 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 11:53:18.764 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) in 1278.7459ms
+2024-04-04 11:53:18.764 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 11:53:18.766 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGFzY2FnZGFzIiwibmJmIjoxNzEyMjIwNzk4LCJleHAiOjE3MTIyMjA4MjgsImlzcyI6ImFwaS5jb20iLCJhdWQiOiJjbGllbnQuY29tIn0.PpelWxHLXrl_jk-k4SwFwZW6uhwkUemebXAmrAxoaNg","expiration":"2024-04-04T08:53:48.555355Z","refreshToken":"J0/OYqWIIzj/xCF4qvccKQwor2FY6kDkjvNjPTxAKRY="}}
+2024-04-04 11:53:18.766 +03:00 [INF] Duration: 1296.1201ms
+2024-04-04 11:53:18.769 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/auth/google-login - 200 null application/json; charset=utf-8 1300.6581ms
+2024-04-04 11:53:55.113 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 11:53:55.117 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:55.117 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:55.118 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 11:53:55.118 +03:00 [INF] Duration: 0.8438ms
+2024-04-04 11:53:55.118 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 4.9038ms
+2024-04-04 11:53:55.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 11:53:55.132 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:55.132 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:55.202 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-04 11:53:55.206 +03:00 [INF] Admin was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-04-04 11:53:55.207 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-04-04 11:53:55.210 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2024-04-04 11:53:55.210 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2024-04-04 11:53:55.210 +03:00 [INF] Duration: 78.4338ms
+2024-04-04 11:53:55.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 401 0 null 91.1882ms
+2024-04-04 11:53:55.215 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/auth/refreshtokenlogin - null null
+2024-04-04 11:53:55.215 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/auth/refreshtokenlogin
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:55.215 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:55.216 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 11:53:55.216 +03:00 [INF] Duration: 1.3451ms
+2024-04-04 11:53:55.216 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/auth/refreshtokenlogin - 204 null null 1.605ms
+2024-04-04 11:53:55.217 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/auth/refreshtokenlogin - application/json 63
+2024-04-04 11:53:55.217 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/auth/refreshtokenlogin
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 63
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:53:55.217 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:53:55.217 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.AuthController.RefreshTokenLogin (UlukunShopAPI.API)'
+2024-04-04 11:53:55.220 +03:00 [INF] Route matched with {action = "RefreshTokenLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshTokenLogin(UlukunShopAPI.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandRequest) on controller UlukunShopAPI.API.Controllers.AuthController (UlukunShopAPI.API).
+2024-04-04 11:53:55.222 +03:00 [INF] RequestBody: {"refreshToken":"J0/OYqWIIzj/xCF4qvccKQwor2FY6kDkjvNjPTxAKRY="}
+2024-04-04 11:53:55.236 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.AuthController.RefreshTokenLogin (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 11:53:55.254 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__refreshToken_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2024-04-04 11:53:55.259 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 11:53:55.264 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FirstName" = @p4, "LastName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2024-04-04 11:53:55.265 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.AuthController.RefreshTokenLogin (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.2411ms.
+2024-04-04 11:53:55.265 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandResponse'.
+2024-04-04 11:53:55.266 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 11:53:55.266 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.AuthController.RefreshTokenLogin (UlukunShopAPI.API) in 45.7226ms
+2024-04-04 11:53:55.266 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.AuthController.RefreshTokenLogin (UlukunShopAPI.API)'
+2024-04-04 11:53:55.266 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGFzY2FnZGFzIiwibmJmIjoxNzEyMjIwODM1LCJleHAiOjE3MTIyMjA4NTAsImlzcyI6ImFwaS5jb20iLCJhdWQiOiJjbGllbnQuY29tIn0.XxsKGlvJkf7-b1fZg8hVjOXlSpGO_AzDKXuA18pR0AM","expiration":"2024-04-04T08:54:10.256898Z","refreshToken":"lmkYuAbS+u/8cyaP6pEZ0AsPAuvMJR2OkNOLksgpBYY="}}
+2024-04-04 11:53:55.266 +03:00 [INF] Duration: 49.1843ms
+2024-04-04 11:53:55.268 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/auth/refreshtokenlogin - 200 null application/json; charset=utf-8 50.5077ms
+2024-04-04 11:54:02.861 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 11:54:02.869 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:54:02.870 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:54:02.871 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 11:54:02.871 +03:00 [INF] Duration: 2.0655ms
+2024-04-04 11:54:02.872 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 11.6248ms
+2024-04-04 11:54:02.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 11:54:02.884 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 11:54:02.885 +03:00 [INF] CORS policy execution successful.
+2024-04-04 11:54:02.935 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 11:54:02.944 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 11:54:02.952 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 11:54:03.008 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 11:54:03.014 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 11:54:03.015 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 11:54:03.020 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 11:54:03.027 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 11:54:03.029 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 76.0352ms.
+2024-04-04 11:54:03.029 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 11:54:03.058 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 11:54:03.058 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 114.0115ms
+2024-04-04 11:54:03.058 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 11:54:03.058 +03:00 [INF] ResponseBody: {"totalCount":21,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 11:54:03.059 +03:00 [INF] Duration: 174.2815ms
+2024-04-04 11:54:03.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 178.8992ms
+2024-04-04 12:06:13.003 +03:00 [INF] Application is shutting down...
+2024-04-04 12:06:57.615 +03:00 [INF] User profile is available. Using '/Users/tascagdas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-04-04 12:06:58.270 +03:00 [INF] Now listening on: https://localhost:7131
+2024-04-04 12:06:58.271 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 12:06:58.272 +03:00 [INF] Hosting environment: Development
+2024-04-04 12:06:58.272 +03:00 [INF] Content root path: /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API
+2024-04-04 12:08:04.180 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - null null
+2024-04-04 12:08:04.239 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 12:08:04.244 +03:00 [INF] CORS policy execution successful.
+2024-04-04 12:08:04.246 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 12:08:04.249 +03:00 [INF] Duration: 8.803ms
+2024-04-04 12:08:04.252 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/auth/google-login - 204 null null 73.287ms
+2024-04-04 12:08:04.258 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/auth/google-login - application/json 1467
+2024-04-04 12:08:04.260 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/auth/google-login
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 1467
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 12:08:04.260 +03:00 [INF] CORS policy execution successful.
+2024-04-04 12:08:04.281 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 12:08:04.319 +03:00 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleLogin(UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandRequest) on controller UlukunShopAPI.API.Controllers.AuthController (UlukunShopAPI.API).
+2024-04-04 12:08:04.357 +03:00 [INF] RequestBody: {"idToken":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjkzNGE1ODE2NDY4Yjk1NzAzOTUzZDE0ZTlmMTVkZjVkMDlhNDAxZTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzMTg0NDIwMDYwMTUtOWRwa2VuZGZpdWIxbHI3OTJ2dDAzcmk2bW12cWk2aXAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDkwMDIzMTY4NDM5NzY4MTg1MTAiLCJlbWFpbCI6InRhc2NhZ2Rhc0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzEyMjIxMzgzLCJuYW1lIjoiw6dhxJ9kYcWfIHRhxZ8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0tLbm5IS3R4NFdMNnVaTmpMR253Y3ZHcm9mZjBxYm5vbmtYY0dPUnNfeVlWY2NENnk9czk2LWMiLCJnaXZlbl9uYW1lIjoiw6dhxJ9kYcWfIiwiZmFtaWx5X25hbWUiOiJ0YcWfIiwiaWF0IjoxNzEyMjIxNjgzLCJleHAiOjE3MTIyMjUyODMsImp0aSI6ImNkOTg1ODA1YzZmMWM5MzViYmM0ZDFiNmM4ZWZhN2FlMjkzZDU1Y2EifQ.plfVwhnWwHJEfFhx7sFpZ0mG_3Jj0-xHIpNa_qUywHT5olT4ku3mP2CO4f-qyT0K5niBPRirXueOB9Rt5D0PkIkX9ItjxVvkAuhAej2L8SR7xjzGUpgxaOq6hrYTFi8pISYNlVMW7aWu3JfrzDHL_1_C6ANWj0-tbxX2erhdboDB1RflepMlBNcErJkzb_pZU5j1Ka9TSuLbhjyFFVzcLVqq5rDOnmlDb374GyYkViNgID3yHXCWa_o1czswaA4jUJNSdiuh1950k1uu6ml9j7khmBifGx0i-e5sN41Wb2HK-4JcGK_TOU6KIXSRscwZVV_N5qnbR_Slhw2MqBGuTw","id":"109002316843976818510","name":"çağdaş taş","email":"tascagdas@gmail.com","photoUrl":"https://lh3.googleusercontent.com/a/ACg8ocKKKnnHKtx4WL6uZNjLGnwcvGroff0qbnonkXcGORs_yYVccD6y=s96-c","firstName":"çağdaş","lastName":"taş","provider":"GOOGLE"}
+2024-04-04 12:08:04.386 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 12:08:05.820 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__loginProvider_0='?', @__providerKey_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."LoginProvider", a."ProviderKey", a."ProviderDisplayName", a."UserId"
+FROM "AspNetUserLogins" AS a
+WHERE a."LoginProvider" = @__loginProvider_0 AND a."ProviderKey" = @__providerKey_1
+LIMIT 2
+2024-04-04 12:08:05.904 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2024-04-04 12:08:05.936 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__loginProvider_0='?', @__providerKey_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."LoginProvider", a."ProviderKey", a."ProviderDisplayName", a."UserId"
+FROM "AspNetUserLogins" AS a
+WHERE a."LoginProvider" = @__loginProvider_0 AND a."ProviderKey" = @__providerKey_1
+LIMIT 2
+2024-04-04 12:08:05.938 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2024-04-04 12:08:06.006 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 12:08:06.090 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FirstName" = @p4, "LastName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2024-04-04 12:08:06.102 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1713.1596ms.
+2024-04-04 12:08:06.108 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser.GoogleLoginUserCommandResponse'.
+2024-04-04 12:08:06.139 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 12:08:06.145 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API) in 1822.8707ms
+2024-04-04 12:08:06.146 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.AuthController.GoogleLogin (UlukunShopAPI.API)'
+2024-04-04 12:08:06.149 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGFzY2FnZGFzIiwibmJmIjoxNzEyMjIxNjg1LCJleHAiOjE3MTIyMjE3MTUsImlzcyI6ImFwaS5jb20iLCJhdWQiOiJjbGllbnQuY29tIn0.Sr70c58ciVnPY7pLTaek7hP64lFpVZWrfhtSs9CD5Hc","expiration":"2024-04-04T09:08:35.946045Z","refreshToken":"1S+24u3Zu5ZVvVIbXqEwiFLWTt6nn6xldk2x/b91ofk="}}
+2024-04-04 12:08:06.149 +03:00 [INF] Duration: 1889.0512ms
+2024-04-04 12:08:06.153 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/auth/google-login - 200 null application/json; charset=utf-8 1895.6675ms
+2024-04-04 12:08:09.942 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 12:08:09.949 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 12:08:09.951 +03:00 [INF] CORS policy execution successful.
+2024-04-04 12:08:09.952 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 12:08:09.953 +03:00 [INF] Duration: 4.3554ms
+2024-04-04 12:08:09.954 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 11.814ms
+2024-04-04 12:08:09.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 12:08:10.009 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 12:08:10.011 +03:00 [INF] CORS policy execution successful.
+2024-04-04 12:08:10.105 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 12:08:10.110 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 12:08:10.117 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 12:08:10.173 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 12:08:10.180 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 12:08:10.181 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 12:08:10.187 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 12:08:10.192 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 12:08:10.193 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 75.2404ms.
+2024-04-04 12:08:10.193 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 12:08:10.214 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 12:08:10.215 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 104.3032ms
+2024-04-04 12:08:10.215 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 12:08:10.215 +03:00 [INF] ResponseBody: {"totalCount":21,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 12:08:10.215 +03:00 [INF] Duration: 206.3354ms
+2024-04-04 12:08:10.215 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 257.4701ms
+2024-04-04 12:08:55.471 +03:00 [INF] Application is shutting down...

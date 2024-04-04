@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.Extensions.Logging;
 using UlukunShopAPI.Application.Repositories;
 
 namespace UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts;
@@ -6,9 +7,11 @@ namespace UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts;
 public class GetAllProductsQueryHandler:IRequestHandler<GetAllProductsQueryRequest,GetAllProductsQueryResponse>
 {
     private readonly IProductReadRespository _productReadRepository;
-    public GetAllProductsQueryHandler(IProductReadRespository productReadRespository)
+    private readonly ILogger<GetAllProductsQueryHandler> _logger;
+    public GetAllProductsQueryHandler(IProductReadRespository productReadRespository, ILogger<GetAllProductsQueryHandler> logger)
     {
         _productReadRepository = productReadRespository;
+        _logger = logger;
     }
     public async Task<GetAllProductsQueryResponse> Handle(GetAllProductsQueryRequest request, CancellationToken cancellationToken)
     {
@@ -23,7 +26,7 @@ public class GetAllProductsQueryHandler:IRequestHandler<GetAllProductsQueryReque
             p.CreatedDate,
             p.UpdatedDate
         }).ToList();
-
+        _logger.LogInformation("GetAllProducts calistirildi.");
         return new()
         {
             Products = products,

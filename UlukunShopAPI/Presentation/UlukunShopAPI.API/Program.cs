@@ -1,7 +1,14 @@
+using System.Security.Claims;
 using System.Text;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Context;
+using Serilog.Core;
+using Serilog.Sinks.PostgreSQL;
+using UlukunShopAPI.API.Configurations.ColumnWriters;
 using UlukunShopAPI.Application;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
@@ -30,6 +37,35 @@ builder.Services.AddCors(options =>options.AddDefaultPolicy(policyBuilder =>
         .AllowAnyHeader()
         .AllowAnyMethod()) );
 
+Logger logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt")
+    .WriteTo.PostgreSQL(builder.Configuration.GetConnectionString("PostgreSQL"),"logs",needAutoCreateTable:true,columnOptions:new Dictionary<string, ColumnWriterBase>
+    {
+        {"message",new RenderedMessageColumnWriter()},
+        {"message_template",new MessageTemplateColumnWriter()},
+        {"level",new LevelColumnWriter()},
+        {"time_stamp",new TimestampColumnWriter()},
+        {"log_event",new LogEventSerializedColumnWriter()},
+        {"user_name",new UsernameColumnWriter()}
+    })
+    .WriteTo.Seq(builder.Configuration["Seq:ServerURL"])
+    .Enrich.FromLogContext()
+    .MinimumLevel.Information()
+    .CreateLogger();
+
+builder.Host.UseSerilog(logger);
+
+builder.Services.AddHttpLogging(logging =>
+{
+    logging.LoggingFields = HttpLoggingFields.All;
+    logging.RequestHeaders.Add("sec-ch-ua");
+    logging.ResponseHeaders.Add("UlukunShop");
+    logging.MediaTypeOptions.AddText("application/javascript");
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
+});
+
 builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>())
     .AddFluentValidation(configuration =>
         configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValidator>())
@@ -51,7 +87,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidAudience = builder.Configuration["Token:Audience"],
         ValidIssuer = builder.Configuration["Token:Issuer"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
-        LifetimeValidator = (notBefore,expires, securityToken,validationParameters)=>expires!=null && expires>DateTime.UtcNow
+        LifetimeValidator = (notBefore,expires, securityToken,validationParameters)=>expires!=null && expires>DateTime.UtcNow,
+        
+        //jwt uzerinde name claime karsilik gelen degeri user identity name propertysinden elde edebiliyoruz.
+        NameClaimType = ClaimTypes.Name
     };
 });
 
@@ -62,14 +101,25 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseStaticFiles();
+
+app.UseSerilogRequestLogging();
+app.UseHttpLogging();
+
 app.UseCors();
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.Use(async (context, next) =>
+{
+
+    var username = context.User.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
+    LogContext.PushProperty("user_name", username);
+    await next();
+});
 
 app.MapControllers();
 

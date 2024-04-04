@@ -1,9 +1,11 @@
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using UlukunShopAPI.Application.Abstractions.Token;
+using UlukunShopAPI.Domain.Entities.Identity;
 
 namespace UlukunShopAPI.Infrastructure.Services.Token;
 
@@ -16,7 +18,7 @@ public class TokenHandler : ITokenHandler
         _configuration = configuration;
     }
 
-    public Application.DTOs.Token CreateAccessToken(int second)
+    public Application.DTOs.Token CreateAccessToken(int second, AppUser appUser)
     {
         Application.DTOs.Token token = new();
         //Securitykeyin simetrigini aliyoruz.
@@ -33,7 +35,8 @@ public class TokenHandler : ITokenHandler
             issuer: _configuration["Token:Issuer"],
             expires: token.Expiration,
             notBefore: DateTime.UtcNow, // NotBefore bu token uretildikten ne kadar sure sonra devreye girsin. eklemek icin .addminute denebiliyor.
-            signingCredentials: signingCredentials
+            signingCredentials: signingCredentials,
+            claims:new List<Claim>{new Claim(ClaimTypes.Name,appUser.UserName)}
         );
         //Token olusturucu sinifindan bir ornek alalim.
         JwtSecurityTokenHandler tokenHandler = new();

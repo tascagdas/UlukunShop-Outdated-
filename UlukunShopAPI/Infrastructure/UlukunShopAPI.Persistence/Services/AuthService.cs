@@ -62,7 +62,7 @@ public class AuthService : IAuthService
         if (result)
         {
             await _userManager.AddLoginAsync(user, info);
-            Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+            Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime,user);
             await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 10);
             return token;
         }
@@ -135,7 +135,7 @@ public class AuthService : IAuthService
         {
             //Buraya kadar gelebildiginde authentication basarili burada artik yetkiler belirlenicek
 
-            Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+            Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime,user);
             await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 10);
             return token;
         }
@@ -147,7 +147,7 @@ public class AuthService : IAuthService
         AppUser? user=await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
         if (user!=null && user?.RefreshTokenEndDate>DateTime.UtcNow)
         {
-            Token token = _tokenHandler.CreateAccessToken(15);
+            Token token = _tokenHandler.CreateAccessToken(15,user);
             await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
             return token;
         }
