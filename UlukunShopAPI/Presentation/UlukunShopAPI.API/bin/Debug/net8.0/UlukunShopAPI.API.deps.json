@@ -19,7 +19,8 @@
           "Swashbuckle.AspNetCore": "6.4.0",
           "UlukunShopAPI.Application": "1.0.0",
           "UlukunShopAPI.Infrastructure": "1.0.0",
-          "UlukunShopAPI.Persistence": "1.0.0"
+          "UlukunShopAPI.Persistence": "1.0.0",
+          "UlukunShopAPI.SignalR": "1.0.0"
         },
         "runtime": {
           "UlukunShopAPI.API.dll": {}
@@ -2269,16 +2270,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Diagnostics.EventLog/7.0.0": {
-        "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
-        }
-      },
+      "System.Diagnostics.EventLog/7.0.0": {},
       "System.Diagnostics.Tracing/4.1.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -2585,6 +2577,14 @@
         },
         "runtime": {
           "UlukunShopAPI.Persistence.dll": {}
+        }
+      },
+      "UlukunShopAPI.SignalR/1.0.0": {
+        "dependencies": {
+          "UlukunShopAPI.Application": "1.0.0"
+        },
+        "runtime": {
+          "UlukunShopAPI.SignalR.dll": {}
         }
       }
     }
@@ -4207,6 +4207,11 @@
       "sha512": ""
     },
     "UlukunShopAPI.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UlukunShopAPI.SignalR/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

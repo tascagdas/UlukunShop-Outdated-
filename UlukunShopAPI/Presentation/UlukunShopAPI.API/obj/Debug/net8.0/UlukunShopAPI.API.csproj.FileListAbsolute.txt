@@ -481,7 +481,6 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll
-/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Drawing.Common.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
@@ -508,7 +507,6 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.UlukunShopAPI.API.props
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/scopedcss/bundle/UlukunShopAPI.API.styles.css
-/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/UlukunShopAPI.API.csproj.CopyComplete
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/UlukunShopAPI.API.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/refint/UlukunShopAPI.API.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/UlukunShopAPI.API.pdb
@@ -553,3 +551,6 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Serilog.Sinks.PeriodicBatching.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Serilog.Sinks.PostgreSQL.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/Serilog.Sinks.Seq.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/UlukunShopAPI.SignalR.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/bin/Debug/net8.0/UlukunShopAPI.SignalR.pdb
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/obj/Debug/net8.0/UlukunSh.C8649869.Up2Date

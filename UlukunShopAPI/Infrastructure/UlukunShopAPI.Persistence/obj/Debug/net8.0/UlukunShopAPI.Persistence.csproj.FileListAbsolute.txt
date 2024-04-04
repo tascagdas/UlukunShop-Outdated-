@@ -32,9 +32,9 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.AssemblyInfo.cs
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.csproj.CoreCompileInputs.cache
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.sourcelink.json
-/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.csproj.CopyComplete
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/refint/UlukunShopAPI.Persistence.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.pdb
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunShopAPI.Persistence.genruntimeconfig.cache
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/ref/UlukunShopAPI.Persistence.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Persistence/obj/Debug/net8.0/UlukunSh.D247EA9B.Up2Date

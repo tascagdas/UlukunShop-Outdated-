@@ -39,7 +39,9 @@ builder.Services.AddCors(options =>options.AddDefaultPolicy(policyBuilder =>
     policyBuilder
         .WithOrigins("http://localhost:4200","https://localhost:4200")
         .AllowAnyHeader()
-        .AllowAnyMethod()) );
+        .AllowAnyMethod()
+        .AllowCredentials() //bu konfig ile signalR calisabilecek.
+    ) );
 
 Logger logger = new LoggerConfiguration()
     .WriteTo.Console()

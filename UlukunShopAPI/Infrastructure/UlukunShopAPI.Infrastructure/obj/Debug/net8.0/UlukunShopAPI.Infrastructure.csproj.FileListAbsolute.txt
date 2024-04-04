@@ -29,8 +29,8 @@
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.AssemblyInfo.cs
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.csproj.CoreCompileInputs.cache
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.sourcelink.json
-/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.csproj.CopyComplete
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/refint/UlukunShopAPI.Infrastructure.dll
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunShopAPI.Infrastructure.pdb
 /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/ref/UlukunShopAPI.Infrastructure.dll
+/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.Infrastructure/obj/Debug/net8.0/UlukunSh.C6E12D8B.Up2Date

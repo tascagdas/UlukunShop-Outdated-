@@ -592,3 +592,1469 @@ Content-Type: application/json; charset=utf-8
 2024-04-04 12:08:10.215 +03:00 [INF] Duration: 206.3354ms
 2024-04-04 12:08:10.215 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 257.4701ms
 2024-04-04 12:08:55.471 +03:00 [INF] Application is shutting down...
+2024-04-04 21:05:40.781 +03:00 [INF] User profile is available. Using '/Users/tascagdas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-04-04 21:05:41.504 +03:00 [INF] Now listening on: https://localhost:7131
+2024-04-04 21:05:41.505 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 21:05:41.506 +03:00 [INF] Hosting environment: Development
+2024-04-04 21:05:41.506 +03:00 [INF] Content root path: /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API
+2024-04-04 21:07:34.201 +03:00 [INF] Application is shutting down...
+2024-04-04 21:07:44.557 +03:00 [INF] User profile is available. Using '/Users/tascagdas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-04-04 21:07:44.890 +03:00 [INF] Now listening on: https://localhost:7131
+2024-04-04 21:07:44.892 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 21:07:44.893 +03:00 [INF] Hosting environment: Development
+2024-04-04 21:07:44.893 +03:00 [INF] Content root path: /Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API
+2024-04-04 21:11:36.865 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/users - null null
+2024-04-04 21:11:36.962 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/users
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:11:36.966 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:11:36.969 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:11:36.972 +03:00 [INF] Duration: 9.779ms
+2024-04-04 21:11:36.979 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/users - 204 null null 116.455ms
+2024-04-04 21:11:36.984 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/users - application/json 136
+2024-04-04 21:11:36.987 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/users
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 136
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:11:36.987 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:11:37.019 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.UsersController.CreateUser (UlukunShopAPI.API)'
+2024-04-04 21:11:37.065 +03:00 [INF] Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller UlukunShopAPI.API.Controllers.UsersController (UlukunShopAPI.API).
+2024-04-04 21:11:37.106 +03:00 [INF] RequestBody: {"firstName":"cagdas","lastName":"tas","email":"tascagdas10@gmail.com","password":"12345","rePassword":"12345","userName":"tascagdas10"}
+2024-04-04 21:11:37.137 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.UsersController.CreateUser (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:11:38.190 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 21:11:38.329 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = DateTime), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenEndDate", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2024-04-04 21:11:38.342 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.UsersController.CreateUser (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1201.6862ms.
+2024-04-04 21:11:38.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandResponse'.
+2024-04-04 21:11:38.372 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:11:38.377 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.UsersController.CreateUser (UlukunShopAPI.API) in 1309.5804ms
+2024-04-04 21:11:38.378 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.UsersController.CreateUser (UlukunShopAPI.API)'
+2024-04-04 21:11:38.380 +03:00 [INF] ResponseBody: {"succeeded":true,"message":"Kullanici basariyla olusturuldu."}
+2024-04-04 21:11:38.380 +03:00 [INF] Duration: 1393.9857ms
+2024-04-04 21:11:38.384 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/users - 200 null application/json; charset=utf-8 1400.2608ms
+2024-04-04 21:11:50.717 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/auth/login - null null
+2024-04-04 21:11:50.722 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/auth/login
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:11:50.723 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:11:50.724 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:11:50.724 +03:00 [INF] Duration: 2.2898ms
+2024-04-04 21:11:50.724 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/auth/login - 204 null null 7.2892ms
+2024-04-04 21:11:50.726 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/auth/login - application/json 52
+2024-04-04 21:11:50.729 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/auth/login
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 52
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:11:50.730 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:11:50.747 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.AuthController.Login (UlukunShopAPI.API)'
+2024-04-04 21:11:50.757 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller UlukunShopAPI.API.Controllers.AuthController (UlukunShopAPI.API).
+2024-04-04 21:11:50.761 +03:00 [INF] RequestBody: {"userNameOrEmail":"tascagdas10","password":"12345"}
+2024-04-04 21:11:50.772 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.AuthController.Login (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:11:50.811 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 21:11:50.949 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-04-04 21:11:50.964 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p18='?', @p0='?' (DbType = Int32), @p1='?', @p19='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?', @p16='?' (DbType = Boolean), @p17='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "FirstName" = @p4, "LastName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenEndDate" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19;
+2024-04-04 21:11:50.966 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.AuthController.Login (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 193.4931ms.
+2024-04-04 21:11:50.966 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2024-04-04 21:11:50.975 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:11:50.975 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.AuthController.Login (UlukunShopAPI.API) in 216.816ms
+2024-04-04 21:11:50.975 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.AuthController.Login (UlukunShopAPI.API)'
+2024-04-04 21:11:50.975 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGFzY2FnZGFzMTAiLCJuYmYiOjE3MTIyNTQzMTAsImV4cCI6MTcxMjg1OTExMCwiaXNzIjoiYXBpLmNvbSIsImF1ZCI6ImNsaWVudC5jb20ifQ.kC7kw_zw_d4OzuVIlgcJUd4phlErrFQzkOQeK3JWVCQ","expiration":"2024-04-11T18:11:50.874657Z","refreshToken":"JBivvkELaSGoGejDt4iJ8p94u1txra6+dFBN54TIdl4="}}
+2024-04-04 21:11:50.975 +03:00 [INF] Duration: 246.4536ms
+2024-04-04 21:11:50.975 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/auth/login - 200 null application/json; charset=utf-8 249.7728ms
+2024-04-04 21:12:06.754 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:12:06.757 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:12:06.757 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:12:06.758 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:12:06.758 +03:00 [INF] Duration: 1.4309ms
+2024-04-04 21:12:06.758 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 4.4205ms
+2024-04-04 21:12:06.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:12:06.785 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:12:06.785 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:12:06.856 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:12:06.860 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:12:06.867 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:12:06.916 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 21:12:06.926 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 21:12:06.927 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-04-04 21:12:06.934 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 21:12:06.940 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 21:12:06.941 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 74.0489ms.
+2024-04-04 21:12:06.942 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 21:12:06.967 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:12:06.968 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 107.1519ms
+2024-04-04 21:12:06.968 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:12:06.968 +03:00 [INF] ResponseBody: {"totalCount":21,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 21:12:06.968 +03:00 [INF] Duration: 183.0658ms
+2024-04-04 21:12:06.968 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 205.909ms
+2024-04-04 21:13:06.911 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc - null null
+2024-04-04 21:13:06.919 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:13:06.919 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:13:06.920 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:13:06.920 +03:00 [INF] Duration: 1.4247ms
+2024-04-04 21:13:06.921 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc - 204 null null 11.9889ms
+2024-04-04 21:13:06.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc - null null
+2024-04-04 21:13:06.932 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:13:06.933 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:13:06.966 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.GetProductImages (UlukunShopAPI.API)'
+2024-04-04 21:13:06.985 +03:00 [INF] Route matched with {action = "GetProductImages", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductImages(UlukunShopAPI.Application.Features.Queries.ProductImageFile.GetProductImages.GetProductImagesQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:13:06.988 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.GetProductImages (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:13:07.246 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p1."Id", p1."CreatedDate", p1."Name", p1."Price", p1."Stock", p1."UpdatedDate", s."ProductImageFilesId", s."ProductsId", s."Id", s."CreatedDate", s."Discriminator", s."FileName", s."Path", s."Storage"
+FROM (
+    SELECT p."Id", p."CreatedDate", p."Name", p."Price", p."Stock", p."UpdatedDate"
+    FROM "Products" AS p
+    WHERE p."Id" = @__Parse_0
+    LIMIT 1
+) AS p1
+LEFT JOIN (
+    SELECT p0."ProductImageFilesId", p0."ProductsId", f0."Id", f0."CreatedDate", f0."Discriminator", f0."FileName", f0."Path", f0."Storage"
+    FROM "ProductProductImageFile" AS p0
+    INNER JOIN (
+        SELECT f."Id", f."CreatedDate", f."Discriminator", f."FileName", f."Path", f."Storage"
+        FROM "Files" AS f
+        WHERE f."Discriminator" = 'ProductImageFile'
+    ) AS f0 ON p0."ProductImageFilesId" = f0."Id"
+) AS s ON p1."Id" = s."ProductsId"
+ORDER BY p1."Id", s."ProductImageFilesId", s."ProductsId"
+2024-04-04 21:13:07.288 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.GetProductImages (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 299.39ms.
+2024-04-04 21:13:07.288 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UlukunShopAPI.Application.Features.Queries.ProductImageFile.GetProductImages.GetProductImagesQueryResponse, UlukunShopAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-04 21:13:07.296 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:13:07.296 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.GetProductImages (UlukunShopAPI.API) in 311.064ms
+2024-04-04 21:13:07.296 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.GetProductImages (UlukunShopAPI.API)'
+2024-04-04 21:13:07.296 +03:00 [INF] ResponseBody: [{"path":"https://ulukunshop.blob.core.windows.net/product-images/41992trashrecyclebingarbageicon-2.png","id":"e8f26827-615d-4937-89b5-b8009a148531","fileName":"41992trashrecyclebingarbageicon-2.png"}]
+2024-04-04 21:13:07.296 +03:00 [INF] Duration: 364.1997ms
+2024-04-04 21:13:07.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products/GetProductImages/170b9d26-6a1e-4534-8268-a1864adc07dc - 200 null application/json; charset=utf-8 373.5213ms
+2024-04-04 21:34:47.769 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 21:34:47.867 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:34:47.873 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:34:47.874 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:34:47.875 +03:00 [INF] Duration: 8.8259ms
+2024-04-04 21:34:47.876 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 115.3877ms
+2024-04-04 21:34:47.908 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 21:34:47.909 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:34:47.911 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:34:47.923 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 21:34:48.161 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 21:34:48.163 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 21:34:48.164 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 21:34:48.165 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"O-P0MI0LwDJSJrPrBImW6A","connectionToken":"S0rXkT3SbZhlmf9bkICyvQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 21:34:48.165 +03:00 [INF] Duration: 256.7547ms
+2024-04-04 21:34:48.165 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 257.4082ms
+2024-04-04 21:34:48.169 +03:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7131/products-hub?id=S0rXkT3SbZhlmf9bkICyvQ - null null
+2024-04-04 21:34:48.169 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: CONNECT
+Scheme: https
+PathBase: 
+Path: /products-hub
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 21:34:48.169 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:34:48.169 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 21:34:54.717 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:34:54.720 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:34:54.720 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:34:54.721 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:34:54.721 +03:00 [INF] Duration: 1.5803ms
+2024-04-04 21:34:54.722 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 5.0515ms
+2024-04-04 21:34:54.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:34:54.727 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:34:54.728 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:34:54.883 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:34:54.957 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:34:55.048 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:34:55.191 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 21:34:55.206 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 21:34:55.206 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 21:34:55.208 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 159.3944ms.
+2024-04-04 21:34:55.208 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 21:34:55.212 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:34:55.212 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 253.404ms
+2024-04-04 21:34:55.212 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:34:55.212 +03:00 [INF] ResponseBody: {"totalCount":21,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 21:34:55.212 +03:00 [INF] Duration: 485.0217ms
+2024-04-04 21:34:55.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 489.7114ms
+2024-04-04 21:35:08.586 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products - null null
+2024-04-04 21:35:08.592 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:35:08.593 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:35:08.594 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:35:08.594 +03:00 [INF] Duration: 2.6762ms
+2024-04-04 21:35:08.594 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products - 204 null null 8.7042ms
+2024-04-04 21:35:08.597 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/products - application/json 59
+2024-04-04 21:35:08.600 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 59
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:35:08.600 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:35:08.603 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API)'
+2024-04-04 21:35:08.621 +03:00 [INF] Route matched with {action = "Post", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(UlukunShopAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:35:08.653 +03:00 [INF] RequestBody: {"name":"SignalR denemesiiii","stock":1231234,"price":3251}
+2024-04-04 21:35:08.661 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:35:08.798 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "CreatedDate", "Name", "Price", "Stock", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-04-04 21:35:08.801 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.StatusCodeResult in 139.7461ms.
+2024-04-04 21:35:08.805 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-04-04 21:35:08.805 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API) in 183.3965ms
+2024-04-04 21:35:08.805 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API)'
+2024-04-04 21:35:08.805 +03:00 [INF] Response:
+StatusCode: 201
+2024-04-04 21:35:08.805 +03:00 [INF] Duration: 204.6635ms
+2024-04-04 21:35:08.805 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/products - 201 0 null 208.2485ms
+2024-04-04 21:35:08.811 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:35:08.811 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:35:08.811 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:35:08.811 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:35:08.811 +03:00 [INF] Duration: 0.1368ms
+2024-04-04 21:35:08.811 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 0.2992ms
+2024-04-04 21:35:08.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:35:08.813 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:35:08.813 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:35:08.813 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:35:08.814 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:35:08.814 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:35:08.823 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 21:35:08.825 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 21:35:08.826 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 21:35:08.826 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.9643ms.
+2024-04-04 21:35:08.826 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 21:35:08.826 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:35:08.827 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 12.6365ms
+2024-04-04 21:35:08.827 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:35:08.827 +03:00 [INF] ResponseBody: {"totalCount":22,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 21:35:08.827 +03:00 [INF] Duration: 14.376ms
+2024-04-04 21:35:08.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 14.6977ms
+2024-04-04 21:38:11.394 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 21:38:11.537 +03:00 [INF] Response:
+StatusCode: 200
+Date: Thu, 04 Apr 2024 18:34:47 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:38:11.542 +03:00 [INF] Duration: 203374.052ms
+2024-04-04 21:38:11.552 +03:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7131/products-hub?id=S0rXkT3SbZhlmf9bkICyvQ - 200 null null 203382.6465ms
+2024-04-04 21:38:11.571 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:38:11.597 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:11.603 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:11.606 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:38:11.606 +03:00 [INF] Duration: 18.5571ms
+2024-04-04 21:38:11.607 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 35.4796ms
+2024-04-04 21:38:11.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:38:11.628 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:11.629 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:11.684 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:38:11.713 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:38:11.869 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:38:12.083 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 21:38:12.087 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:12.087 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:12.087 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:38:12.087 +03:00 [INF] Duration: 0.5437ms
+2024-04-04 21:38:12.087 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 4.6182ms
+2024-04-04 21:38:12.090 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 21:38:12.096 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:12.101 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:12.101 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 21:38:12.134 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 21:38:12.135 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 21:38:12.136 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 21:38:12.136 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"cMzrmG3Uk6Uma3kPWwrVPQ","connectionToken":"8GUIVmypJzH-9lw-VHu_dQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 21:38:12.137 +03:00 [INF] Duration: 40.6041ms
+2024-04-04 21:38:12.137 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 46.6842ms
+2024-04-04 21:38:12.196 +03:00 [INF] Executed DbCommand (168ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 21:38:12.260 +03:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7131/products-hub?id=8GUIVmypJzH-9lw-VHu_dQ - null null
+2024-04-04 21:38:12.261 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: CONNECT
+Scheme: https
+PathBase: 
+Path: /products-hub
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 21:38:12.262 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:12.262 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 21:38:12.264 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 21:38:12.299 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 21:38:12.299 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 421.8885ms.
+2024-04-04 21:38:12.302 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 21:38:12.307 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:38:12.307 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 593.3984ms
+2024-04-04 21:38:12.307 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:38:12.307 +03:00 [INF] ResponseBody: {"totalCount":22,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 21:38:12.309 +03:00 [INF] Duration: 681.1127ms
+2024-04-04 21:38:12.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 698.9422ms
+2024-04-04 21:38:27.620 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products - null null
+2024-04-04 21:38:27.626 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:27.626 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:27.626 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:38:27.626 +03:00 [INF] Duration: 0.5205ms
+2024-04-04 21:38:27.627 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products - 204 null null 5.9836ms
+2024-04-04 21:38:27.628 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/api/products - application/json 62
+2024-04-04 21:38:27.629 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:27.629 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:27.634 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API)'
+2024-04-04 21:38:27.634 +03:00 [INF] Route matched with {action = "Post", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(UlukunShopAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:38:27.635 +03:00 [INF] RequestBody: {"name":"SignalR deneme 2 alalalalal","stock":134,"price":313}
+2024-04-04 21:38:27.636 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:38:27.670 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "CreatedDate", "Name", "Price", "Stock", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-04-04 21:38:27.671 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.StatusCodeResult in 34.0632ms.
+2024-04-04 21:38:27.672 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 201
+2024-04-04 21:38:27.672 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API) in 37.77ms
+2024-04-04 21:38:27.672 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Post (UlukunShopAPI.API)'
+2024-04-04 21:38:27.672 +03:00 [INF] Response:
+StatusCode: 201
+2024-04-04 21:38:27.672 +03:00 [INF] Duration: 42.9327ms
+2024-04-04 21:38:27.672 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/api/products - 201 0 null 44.6932ms
+2024-04-04 21:38:27.680 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:38:27.681 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:27.683 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:27.684 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:38:27.684 +03:00 [INF] Duration: 2.9088ms
+2024-04-04 21:38:27.684 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/api/products?page=0&size=5 - 204 null null 3.7947ms
+2024-04-04 21:38:27.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - null null
+2024-04-04 21:38:27.688 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/products
+Accept: application/json, text/plain, */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Authorization: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:38:27.689 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:38:27.690 +03:00 [INF] Executing endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:38:27.690 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryRequest) on controller UlukunShopAPI.API.Controllers.ProductsController (UlukunShopAPI.API).
+2024-04-04 21:38:27.691 +03:00 [INF] Executing action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) - Validation state: "Valid"
+2024-04-04 21:38:27.692 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Products" AS p
+2024-04-04 21:38:27.694 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2024-04-04 21:38:27.694 +03:00 [INF] GetAllProducts calistirildi.
+2024-04-04 21:38:27.694 +03:00 [INF] Executed action method UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.3533ms.
+2024-04-04 21:38:27.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'UlukunShopAPI.Application.Features.Queries.Product.GetAllProducts.GetAllProductsQueryResponse'.
+2024-04-04 21:38:27.695 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-04-04 21:38:27.695 +03:00 [INF] Executed action UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API) in 4.686ms
+2024-04-04 21:38:27.695 +03:00 [INF] Executed endpoint 'UlukunShopAPI.API.Controllers.ProductsController.Get (UlukunShopAPI.API)'
+2024-04-04 21:38:27.695 +03:00 [INF] ResponseBody: {"totalCount":23,"products":[{"id":"2c2f15de-2cef-4346-8726-f4d0bc4683eb","name":"Ürün 4","stock":1,"price":1,"createdDate":"2024-03-24T12:32:51.948861Z","updatedDate":"0001-01-01T00:00:00"},{"id":"65a1e93c-e670-401b-aed3-bc9127377b00","name":"Ürün 5","stock":1,"price":1,"createdDate":"2024-03-24T12:32:54.077035Z","updatedDate":"0001-01-01T00:00:00"},{"id":"3634c157-3436-4a05-8d3c-03f7a0e7c04e","name":"Ürün 10","stock":1,"price":1,"createdDate":"2024-03-24T12:33:05.872321Z","updatedDate":"0001-01-01T00:00:00"},{"id":"170b9d26-6a1e-4534-8268-a1864adc07dc","name":"Ürün 13","stock":1,"price":1,"createdDate":"2024-03-24T12:42:14.968851Z","updatedDate":"0001-01-01T00:00:00"},{"id":"25bd7acd-56f5-4a47-9d61-1d4a2c2821a9","name":"Ürün 14","stock":1,"price":1,"createdDate":"2024-03-24T12:42:17.628016Z","updatedDate":"0001-01-01T00:00:00"}]}
+2024-04-04 21:38:27.695 +03:00 [INF] Duration: 6.6544ms
+2024-04-04 21:38:27.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/api/products?page=0&size=5 - 200 null application/json; charset=utf-8 8.8164ms
+2024-04-04 21:59:40.770 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 21:59:40.849 +03:00 [INF] Response:
+StatusCode: 200
+Date: Thu, 04 Apr 2024 18:38:11 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:59:40.854 +03:00 [INF] Duration: 1288592.7759ms
+2024-04-04 21:59:40.872 +03:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7131/products-hub?id=8GUIVmypJzH-9lw-VHu_dQ - 200 null null 1288609.604ms
+2024-04-04 21:59:41.734 +03:00 [INF] Connection id "0HN2KQALED3GC", Request id "0HN2KQALED3GC:00000007": the application completed without reading the entire request body.
+2024-04-04 21:59:41.945 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 21:59:41.948 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:59:41.949 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:59:41.952 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 21:59:41.954 +03:00 [INF] Duration: 6.3814ms
+2024-04-04 21:59:41.954 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 9.5474ms
+2024-04-04 21:59:41.982 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 21:59:41.982 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 21:59:41.988 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:59:41.991 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 21:59:41.995 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 21:59:41.998 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 21:59:41.998 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 21:59:41.999 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"aD5bkjD7DQmQPOZPXL6p9A","connectionToken":"3ByQsAx8X0Gy9rKW1UhLSA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 21:59:41.999 +03:00 [INF] Duration: 16.6173ms
+2024-04-04 21:59:42.001 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 19.6715ms
+2024-04-04 21:59:42.139 +03:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7131/products-hub?id=3ByQsAx8X0Gy9rKW1UhLSA - null null
+2024-04-04 21:59:42.139 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: CONNECT
+Scheme: https
+PathBase: 
+Path: /products-hub
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 21:59:42.139 +03:00 [INF] CORS policy execution successful.
+2024-04-04 21:59:42.140 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 22:19:58.679 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 22:19:58.713 +03:00 [INF] Response:
+StatusCode: 200
+Date: Thu, 04 Apr 2024 18:59:41 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:19:58.716 +03:00 [INF] Duration: 399504.5577ms
+2024-04-04 22:19:58.732 +03:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7131/products-hub?id=3ByQsAx8X0Gy9rKW1UhLSA - 200 null null 399518.4639ms
+2024-04-04 22:19:58.745 +03:00 [INF] Connection id "0HN2KQALED3GI", Request id "0HN2KQALED3GI:00000003": the application completed without reading the entire request body.
+2024-04-04 22:20:04.005 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 22:20:04.009 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:04.011 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:04.011 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:20:04.011 +03:00 [INF] Duration: 1.5414ms
+2024-04-04 22:20:04.011 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 5.5201ms
+2024-04-04 22:20:04.042 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 22:20:04.043 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:04.044 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:04.047 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 22:20:04.050 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 22:20:04.051 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 22:20:04.051 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 22:20:04.122 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"7oYCu_vQAF5cPe8z61HYDg","connectionToken":"GDbyVi4AZeuaIOUSj5rcrg","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 22:20:04.122 +03:00 [INF] Duration: 80.1312ms
+2024-04-04 22:20:04.123 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 80.9676ms
+2024-04-04 22:20:55.842 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7131/products-hub?id=GDbyVi4AZeuaIOUSj5rcrg - null null
+2024-04-04 22:20:55.858 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /products-hub
+Connection: Upgrade
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Upgrade: websocket
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Key: [Redacted]
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 22:20:55.860 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:55.866 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 22:20:55.906 +03:00 [INF] Response:
+StatusCode: 404
+2024-04-04 22:20:55.925 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 22:20:55.925 +03:00 [INF] Duration: 67.9571ms
+2024-04-04 22:20:55.926 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7131/products-hub?id=GDbyVi4AZeuaIOUSj5rcrg - 404 null null 85.0897ms
+2024-04-04 22:20:57.297 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 22:20:57.298 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:57.299 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:57.299 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:20:57.301 +03:00 [INF] Duration: 1.2644ms
+2024-04-04 22:20:57.301 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 4.058ms
+2024-04-04 22:20:57.337 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 22:20:57.338 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:57.340 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:57.340 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 22:20:57.342 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 22:20:57.343 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 22:20:57.343 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 22:20:57.346 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"9VnpCLm5wkvdfk9RROtpEg","connectionToken":"H7Yf9AxXk3kVZ7fdbOXY_Q","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 22:20:57.346 +03:00 [INF] Duration: 8.8434ms
+2024-04-04 22:20:57.347 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 9.4076ms
+2024-04-04 22:20:57.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - null null
+2024-04-04 22:20:57.541 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /products-hub
+Accept: text/event-stream
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:57.542 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:57.542 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 22:20:57.564 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/event-stream
+Cache-Control: [Redacted]
+Content-Encoding: [Redacted]
+Pragma: [Redacted]
+2024-04-04 22:20:57.613 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - null null
+2024-04-04 22:20:57.613 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:57.613 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:57.613 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:20:57.614 +03:00 [INF] Duration: 1.3003ms
+2024-04-04 22:20:57.615 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - 204 null null 1.5178ms
+2024-04-04 22:20:57.616 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - text/plain;charset=UTF-8 32
+2024-04-04 22:20:57.617 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 32
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:20:57.620 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:20:57.620 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 22:20:57.635 +03:00 [INF] RequestBody: {"protocol":"json","version":1}
+2024-04-04 22:20:57.635 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 22:20:57.635 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/plain
+2024-04-04 22:20:57.635 +03:00 [INF] Duration: 18.2006ms
+2024-04-04 22:20:57.635 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - 200 0 text/plain 19.1226ms
+2024-04-04 22:21:06.235 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 22:21:06.240 +03:00 [INF] ResponseBody: :
+data: {}
+
+
+2024-04-04 22:21:06.241 +03:00 [INF] Duration: 8699.2426ms
+2024-04-04 22:21:06.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7131/products-hub?id=H7Yf9AxXk3kVZ7fdbOXY_Q - 200 null text/event-stream 8728.0317ms
+2024-04-04 22:21:12.745 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 22:21:12.753 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:21:12.753 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:21:12.756 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:21:12.756 +03:00 [INF] Duration: 4.999ms
+2024-04-04 22:21:12.757 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 11.4766ms
+2024-04-04 22:21:12.788 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 22:21:12.788 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:21:12.790 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:21:12.793 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 22:21:12.796 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 22:21:12.796 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 22:21:12.796 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 22:21:12.796 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"n1NMBQGAUHU1IeoJtrey7A","connectionToken":"xxBW4Xr1UWvL5KB8Tu0dFA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 22:21:12.796 +03:00 [INF] Duration: 8.5442ms
+2024-04-04 22:21:12.798 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 10.6575ms
+2024-04-04 22:21:12.962 +03:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7131/products-hub?id=xxBW4Xr1UWvL5KB8Tu0dFA - null null
+2024-04-04 22:21:12.962 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: CONNECT
+Scheme: https
+PathBase: 
+Path: /products-hub
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 22:21:12.962 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:21:12.963 +03:00 [INF] Executing endpoint '/products-hub'
+2024-04-04 22:27:00.140 +03:00 [INF] Executed endpoint '/products-hub'
+2024-04-04 22:27:00.159 +03:00 [INF] Response:
+StatusCode: 200
+Date: Thu, 04 Apr 2024 19:21:12 GMT
+Server: Kestrel
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:27:00.163 +03:00 [INF] Duration: 300030.7065ms
+2024-04-04 22:27:00.169 +03:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7131/products-hub?id=xxBW4Xr1UWvL5KB8Tu0dFA - 200 null null 300036.7605ms
+2024-04-04 22:27:05.635 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - null null
+2024-04-04 22:27:05.643 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: OPTIONS
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Access-Control-Request-Headers: [Redacted]
+Access-Control-Request-Method: [Redacted]
+Cache-Control: max-age=0
+Origin: [Redacted]
+Referer: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:27:05.644 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:27:05.647 +03:00 [INF] Response:
+StatusCode: 204
+Access-Control-Allow-Credentials: [Redacted]
+Access-Control-Allow-Headers: [Redacted]
+Access-Control-Allow-Methods: [Redacted]
+Access-Control-Allow-Origin: [Redacted]
+Vary: [Redacted]
+2024-04-04 22:27:05.647 +03:00 [INF] Duration: 4.4785ms
+2024-04-04 22:27:05.648 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 204 null null 12.6823ms
+2024-04-04 22:27:05.677 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - text/plain;charset=UTF-8 0
+2024-04-04 22:27:05.678 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /products-hub/negotiate
+Accept: */*
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: text/plain;charset=UTF-8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+x-signalr-user-agent: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-04-04 22:27:05.684 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:27:05.694 +03:00 [INF] Executing endpoint '/products-hub/negotiate'
+2024-04-04 22:27:05.700 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json
+Content-Length: 316
+2024-04-04 22:27:05.701 +03:00 [INF] Executed endpoint '/products-hub/negotiate'
+2024-04-04 22:27:05.701 +03:00 [INF] RequestBody: [Not consumed by app]
+2024-04-04 22:27:05.702 +03:00 [INF] ResponseBody: {"negotiateVersion":1,"connectionId":"jhOoTOaYkBq5zQFg8ay1jA","connectionToken":"4kuaJtD2_gTCRECJiATA1A","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}
+2024-04-04 22:27:05.702 +03:00 [INF] Duration: 24.0547ms
+2024-04-04 22:27:05.702 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7131/products-hub/negotiate?negotiateVersion=1 - 200 316 application/json 24.6065ms
+2024-04-04 22:27:06.057 +03:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7131/products-hub?id=4kuaJtD2_gTCRECJiATA1A - null null
+2024-04-04 22:27:06.058 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: CONNECT
+Scheme: https
+PathBase: 
+Path: /products-hub
+Host: localhost:7131
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Origin: [Redacted]
+Pragma: [Redacted]
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-04-04 22:27:06.058 +03:00 [INF] CORS policy execution successful.
+2024-04-04 22:27:06.058 +03:00 [INF] Executing endpoint '/products-hub'
