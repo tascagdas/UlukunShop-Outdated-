@@ -9,6 +9,7 @@ using Serilog.Context;
 using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
 using UlukunShopAPI.API.Configurations.ColumnWriters;
+using UlukunShopAPI.API.Extensions;
 using UlukunShopAPI.Application;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
@@ -101,8 +102,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
+
 app.UseStaticFiles();
 
+//middlewares
 app.UseSerilogRequestLogging();
 app.UseHttpLogging();
 
