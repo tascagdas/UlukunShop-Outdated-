@@ -145,13 +145,13 @@ namespace UlukunShopAPI.Persistence.Migrations
 
             modelBuilder.Entity("ProductProductImageFile", b =>
                 {
-                    b.Property<Guid>("ProductImageFilesId")
+                    b.Property<Guid>("ProductImagesId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("ProductsId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("ProductImageFilesId", "ProductsId");
+                    b.HasKey("ProductImagesId", "ProductsId");
 
                     b.HasIndex("ProductsId");
 
@@ -364,6 +364,10 @@ namespace UlukunShopAPI.Persistence.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
+                    b.Property<string>("Properties")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("Stock")
                         .HasColumnType("integer");
 
@@ -388,6 +392,9 @@ namespace UlukunShopAPI.Persistence.Migrations
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ProductImageFile", b =>
                 {
                     b.HasBaseType("UlukunShopAPI.Domain.Entities.File");
+
+                    b.Property<bool>("isThumbnail")
+                        .HasColumnType("boolean");
 
                     b.HasDiscriminator().HasValue("ProductImageFile");
                 });
@@ -462,7 +469,7 @@ namespace UlukunShopAPI.Persistence.Migrations
                 {
                     b.HasOne("UlukunShopAPI.Domain.Entities.ProductImageFile", null)
                         .WithMany()
-                        .HasForeignKey("ProductImageFilesId")
+                        .HasForeignKey("ProductImagesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
