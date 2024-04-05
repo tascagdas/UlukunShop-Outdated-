@@ -55,6 +55,13 @@ export class SelectProductImageDialogComponent extends BaseDialog<SelectProductI
     });
   }
 
+  makeThumbnail(imageId: string) {
+    this.spinner.show(SpinnerType.Triangle)
+this.productService.changeThumbnail(imageId,this.data as string,()=>{
+  this.spinner.hide(SpinnerType.Triangle)
+
+})
+  }
 }
 
 

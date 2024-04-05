@@ -6,11 +6,11 @@
 
   <mat-card  *ngFor="let image of images" class="product-image-card">
     <mat-card-header>
-
     </mat-card-header>
     <img mat-card-image [src]="image.path" >
     <mat-card-content>
-
+      <input type="radio" name="img" (click)="makeThumbnail(image.id)" [checked]="image.isThumbnail" >
+<span class="ms-1">Thumbnail olarak sec</span>
     </mat-card-content>
     <mat-card-actions>
       <button class="text-bg-primary" mat-button>İndir</button>

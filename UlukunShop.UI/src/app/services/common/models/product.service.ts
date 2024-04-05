@@ -34,11 +34,11 @@ export class ProductService {
   }
 
   async read(page: number = 0, size: number = 5, successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void): Promise<{
-    totalCount: number,
+    totalProductCount: number,
     products: List_Product[]
   }> {
-    const promiseData: Promise<{ totalCount: number, products: List_Product[] }> = this._httpClientService.get<{
-      totalCount: number,
+    const promiseData: Promise<{ totalProductCount: number, products: List_Product[] }> = this._httpClientService.get<{
+      totalProductCount: number,
       products: List_Product[]
     }>({
       controller: "products",
@@ -59,24 +59,35 @@ export class ProductService {
     await firstValueFrom(deleteObservable);
   }
 
-  async getImages(id: string,successCallBack?: () => void): Promise<List_Product_Image[]> {
+  async getImages(id: string, successCallBack?: () => void): Promise<List_Product_Image[]> {
     const getObservable: Observable<List_Product_Image[]> = this._httpClientService.get<List_Product_Image[]>({
       controller: "products",
       action: "GetProductImages"
     }, id);
 
-    const images:List_Product_Image[]=await firstValueFrom(getObservable);
+    const images: List_Product_Image[] = await firstValueFrom(getObservable);
     successCallBack();
     return images;
   }
 
-  async deleteImage(id: string,imageId: string,successCallBack?: () => void) {
-    const deleteObservable=this._httpClientService.delete({
+  async deleteImage(id: string, imageId: string, successCallBack?: () => void) {
+    const deleteObservable = this._httpClientService.delete({
       controller: "products",
       action: "DeleteProductImage",
-      queryString:`imageId=${imageId}`
-    },id)
+      queryString: `imageId=${imageId}`
+    }, id)
     await firstValueFrom(deleteObservable);
+    successCallBack();
+  }
+
+  async changeThumbnail(imageId: string, productId: string, successCallBack?: () => void):Promise<void> {
+    const changeThumbnailObservable= this._httpClientService.get({
+      controller: "products",
+      action: "MakeProductImageThumbnail",
+      queryString: `imageid=${imageId}&productid=${productId}`
+    });
+
+    await firstValueFrom(changeThumbnailObservable);
     successCallBack();
   }
 }

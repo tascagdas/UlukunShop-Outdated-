@@ -19,25 +19,28 @@ import {DialogModule} from "../../../dialogs/dialog.module";
 
 
 @NgModule({
-  declarations: [
-    ProductsComponent,
-    CreateComponent,
-    ListComponent,
-    DeleteDirective
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {path: '', component: ProductsComponent}
-    ]),
-    MatSidenavModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatPaginatorModule,
-    MatTableModule,
-    FileUploadModule,
-    DialogModule
-  ]
+    declarations: [
+        ProductsComponent,
+        CreateComponent,
+        ListComponent,
+        DeleteDirective
+    ],
+    exports: [
+        ListComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([
+            {path: '', component: ProductsComponent}
+        ]),
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatPaginatorModule,
+        MatTableModule,
+        FileUploadModule,
+        DialogModule
+    ]
 })
 export class ProductsModule { }
