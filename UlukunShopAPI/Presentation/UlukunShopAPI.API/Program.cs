@@ -23,7 +23,7 @@ using UlukunShopAPI.SignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddHttpContextAccessor();// clientten gelen request neticisinde oluşturulan httpcontext nesnesine katmanlardaki classlar üzerinden(bussines logic) erişebilmemizi sağlayan bir servis.
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();

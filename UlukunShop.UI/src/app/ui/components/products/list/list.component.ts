@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
   currentPage: number;
   totalProductCount: number;
   totalPageCount: number;
-  pageListSize: number = 15;
+  pageListSize: number = 3;
   pageList: number[] = [];
   baseUrl: BaseUrl;
 
@@ -79,7 +79,6 @@ export class ListComponent implements OnInit {
         }
 
       });
-
 
   }
 

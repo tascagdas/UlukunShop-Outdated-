@@ -19,6 +19,18 @@ public class UlukunAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     public DbSet<File> Files { get; set; }
     public DbSet<ProductImageFile> ProductImageFiles { get; set; }
     public DbSet<InvoiceFile> InvoiceFiles { get; set; }
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+    public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<Order>().HasKey(sc => sc.Id);
+        builder.Entity<ShoppingCart>().HasOne(sc => sc.Order)
+            .WithOne(o => o.ShoppingCart)
+            .HasForeignKey<Order>(sc => sc.Id);
+        base.OnModelCreating(builder);
+    }
+
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

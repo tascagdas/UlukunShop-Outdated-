@@ -321,7 +321,6 @@ namespace UlukunShopAPI.Persistence.Migrations
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<string>("Address")
@@ -365,7 +364,6 @@ namespace UlukunShopAPI.Persistence.Migrations
                         .HasColumnType("numeric");
 
                     b.Property<string>("Properties")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Stock")
@@ -377,6 +375,59 @@ namespace UlukunShopAPI.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCart", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCartItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ShoppingCartId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("ShoppingCartId");
+
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.InvoiceFile", b =>
@@ -488,12 +539,63 @@ namespace UlukunShopAPI.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("UlukunShopAPI.Domain.Entities.ShoppingCart", "ShoppingCart")
+                        .WithOne("Order")
+                        .HasForeignKey("UlukunShopAPI.Domain.Entities.Order", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Customer");
+
+                    b.Navigation("ShoppingCart");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCart", b =>
+                {
+                    b.HasOne("UlukunShopAPI.Domain.Entities.Identity.AppUser", "User")
+                        .WithMany("ShoppingCarts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCartItem", b =>
+                {
+                    b.HasOne("UlukunShopAPI.Domain.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UlukunShopAPI.Domain.Entities.ShoppingCart", "ShoppingCart")
+                        .WithMany("ShoppingCartItems")
+                        .HasForeignKey("ShoppingCartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ShoppingCart");
                 });
 
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Identity.AppUser", b =>
+                {
+                    b.Navigation("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCart", b =>
+                {
+                    b.Navigation("Order")
+                        .IsRequired();
+
+                    b.Navigation("ShoppingCartItems");
                 });
 #pragma warning restore 612, 618
         }
