@@ -10,4 +10,5 @@ public class Product:BaseEntity
     public string? Properties { get; set; }
     public ICollection<Order> Orders { get; set; }
     public ICollection<ProductImageFile> ProductImages { get; set; }
+    public ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
 }

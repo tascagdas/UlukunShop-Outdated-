@@ -37,7 +37,7 @@ public class ShoppingCartService : IShoppingCartService
 
     private async Task<ShoppingCart?> ContextUser()
     {
-        var username = _contextAccessor.HttpContext?.User.Identity.Name;
+        var username = _contextAccessor.HttpContext?.User.Identity?.Name;
         if (!string.IsNullOrEmpty(username))
         {
             AppUser? user = await _userManager.Users.Include(u => u.ShoppingCarts)
@@ -58,7 +58,7 @@ public class ShoppingCartService : IShoppingCartService
             }
             else
             {
-                targetShoppingCart = new ShoppingCart();
+                targetShoppingCart = new ();
                 user.ShoppingCarts.Add(targetShoppingCart);
             }
 
@@ -66,7 +66,7 @@ public class ShoppingCartService : IShoppingCartService
             return targetShoppingCart;
         }
 
-        throw new Exception("Beklenmeyen bir hata (user'a ulaşılamadı)");
+        throw new Exception("Beklenmeyen bir hata (user'a ulaşılamadı??)");
     }
 
     public async Task<List<ShoppingCartItem>> GetShoppingCartItemsAsync()
@@ -84,7 +84,7 @@ public class ShoppingCartService : IShoppingCartService
         if (shoppingCart != null)
         {
             ShoppingCartItem shoppingCartItem = await _cartItemRead.GetSingleAsync(cartItem =>
-                cartItem.Id == shoppingCart.Id && cartItem.ProductId == Guid.Parse(item.ProductId));
+                cartItem.ShoppingCartId == shoppingCart.Id && cartItem.ProductId == Guid.Parse(item.ProductId));
 
             if (shoppingCartItem != null)
             {
@@ -99,7 +99,6 @@ public class ShoppingCartService : IShoppingCartService
                     Quantity = item.Quantity
                 });
             }
-
             await _cartItemWrite.SaveAsync();
         }
     }
@@ -116,7 +115,7 @@ public class ShoppingCartService : IShoppingCartService
 
     public async Task DeleteShoppingCartItem(string shoppingCartItemId)
     {
-        ShoppingCartItem shoppingCartItem = await _cartItemRead.GetByIdAsync(shoppingCartItemId);
+        ShoppingCartItem? shoppingCartItem = await _cartItemRead.GetByIdAsync(shoppingCartItemId);
         if (shoppingCartItem!=null)
         {
             _cartItemWrite.Remove(shoppingCartItem);
