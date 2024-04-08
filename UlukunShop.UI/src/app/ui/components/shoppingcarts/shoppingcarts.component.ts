@@ -8,6 +8,14 @@ import {Create_Order} from "../../../contracts/Order/create_order";
 import {CustomToastrService, ToastrMessageType, ToastrPosition} from 'src/app/services/ui/custom-toastr.service';
 import { Router } from '@angular/router';
 import { OrderService } from 'src/app/services/common/models/order.service';
+import {DialogService} from "../../../services/common/dialog.service";
+import {
+  ShoppingCartItemDeleteState,
+  ShoppingCartItemRemoveDialogComponent
+} from "../../../dialogs/shopping-cart-item-remove-dialog/shopping-cart-item-remove-dialog.component";
+import {
+  ShoppingCartCompleteDialogComponent, ShoppingCartCompleteState
+} from "../../../dialogs/shopping-cart-complete-dialog/shopping-cart-complete-dialog.component";
 
 declare var $: any;
 
@@ -18,7 +26,12 @@ declare var $: any;
 })
 export class ShoppingcartsComponent extends BaseComponent implements OnInit {
 
-  constructor( _spinner:NgxSpinnerService, private shoppingCartService:ShoppingCartService, private orderService: OrderService, private toastrService: CustomToastrService, private router: Router) {
+  constructor( _spinner:NgxSpinnerService,
+               private shoppingCartService:ShoppingCartService,
+               private orderService: OrderService,
+               private toastrService: CustomToastrService,
+               private router: Router,
+               private dialogService:DialogService) {
     super(_spinner)
   }
 
@@ -43,27 +56,44 @@ console.log(this.shoppingCartItems);
 
 
 
-  async removeShoppingCartItem(shoppingCartItemId: string) {
+   removeShoppingCartItem(shoppingCartItemId: string) {
 
+    $("#shoppingCartModal").modal("hide");
 
-    this.showSpinner(SpinnerType.BallAtom);
-    await this.shoppingCartService.remove(shoppingCartItemId);
-    var a = $("." + shoppingCartItemId)
-    $("." + shoppingCartItemId).fadeOut(500, () => this.hideSpinner(SpinnerType.BallAtom));
+    this.dialogService.openDialog({
+      componentType: ShoppingCartItemRemoveDialogComponent,
+      data: ShoppingCartItemDeleteState.Yes,
+      afterClosed: async () => {
+        this.showSpinner(SpinnerType.BallAtom);
+        await this.shoppingCartService.remove(shoppingCartItemId);
+
+        var a = $("." + shoppingCartItemId)
+        $("." + shoppingCartItemId).fadeOut(500, () => this.hideSpinner(SpinnerType.BallAtom));
+        $("#shoppingCartModal").modal("show");
+      }
+    });
   }
 
   async shoppingComplete() {
-    this.showSpinner(SpinnerType.BallAtom);
-    const order: Create_Order = new Create_Order();
-    order.address = "İstanbul adresi Buralar ileride kullanıcan bir form aracılığıyla alınacak.";
-    order.description = "Hızlı kargoya verin lütfen...";
-    await this.orderService.create(order);
-    this.hideSpinner(SpinnerType.BallAtom);
-    this.toastrService.message("Sipariş alınmıştır!", "Sipariş Oluşturuldu!", {
-      messageType: ToastrMessageType.Info,
-      position: ToastrPosition.TopRight
-    })
-    this.router.navigate(["/"]);
+    $("#shoppingCartModal").modal("hide");
+
+    this.dialogService.openDialog({
+      componentType: ShoppingCartCompleteDialogComponent,
+      data: ShoppingCartCompleteState.Yes,
+      afterClosed: async () => {
+        this.showSpinner(SpinnerType.BallAtom);
+        const order: Create_Order = new Create_Order();
+        order.address = "Yenimahalle";
+        order.description = "Falanca filanca...";
+        await this.orderService.create(order);
+        this.hideSpinner(SpinnerType.BallAtom);
+        this.toastrService.message("Sipariş alınmıştır!", "Sipariş Oluşturuldu!", {
+          messageType: ToastrMessageType.Info,
+          position: ToastrPosition.TopRight
+        })
+        this.router.navigate(["/"]);
+      }
+    });
   }
 
 

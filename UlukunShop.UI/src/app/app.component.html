@@ -42,7 +42,7 @@
       <ul class="navbar-nav  mb-2 mb-lg-0" *ngIf="authService._isAuthenticated">
         <li class="nav-item mx-3">
           <a class="nav-link active" (click)="loadComponent()" aria-current="page" data-bs-toggle="modal"
-             data-bs-target="#exampleModal" data-bs-dismiss="modal" aria-label="Close" style="cursor: pointer">
+             data-bs-target="#shoppingCartModal" data-bs-dismiss="modal" aria-label="Close" style="cursor: pointer">
             <img style="height: 26px " src="./assets/shopping_cart_icon.png" alt="">
           </a>
         </li>
@@ -75,7 +75,7 @@
 
 <!--<app-shoppingcarts></app-shoppingcarts>-->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="shoppingCartModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <ng-template appDynamicLoadComponent></ng-template>
   </div>
