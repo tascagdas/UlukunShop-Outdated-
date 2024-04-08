@@ -4,6 +4,10 @@ import {BaseComponent, SpinnerType} from "../../../base/base.component";
 import {List_Shopping_Cart_Item} from "../../../contracts/ShoppingCart/list_shopping_cart_item";
 import {Update_Shopping_Cart_Item} from "../../../contracts/ShoppingCart/update_shopping_cart_item";
 import {ShoppingCartService} from "../../../services/common/models/shoppingcart.service";
+import {Create_Order} from "../../../contracts/Order/create_order";
+import {CustomToastrService, ToastrMessageType, ToastrPosition} from 'src/app/services/ui/custom-toastr.service';
+import { Router } from '@angular/router';
+import { OrderService } from 'src/app/services/common/models/order.service';
 
 declare var $: any;
 
@@ -14,7 +18,7 @@ declare var $: any;
 })
 export class ShoppingcartsComponent extends BaseComponent implements OnInit {
 
-  constructor( _spinner:NgxSpinnerService, private shoppingCartService:ShoppingCartService) {
+  constructor( _spinner:NgxSpinnerService, private shoppingCartService:ShoppingCartService, private orderService: OrderService, private toastrService: CustomToastrService, private router: Router) {
     super(_spinner)
   }
 
@@ -46,6 +50,20 @@ console.log(this.shoppingCartItems);
     await this.shoppingCartService.remove(shoppingCartItemId);
     var a = $("." + shoppingCartItemId)
     $("." + shoppingCartItemId).fadeOut(500, () => this.hideSpinner(SpinnerType.BallAtom));
+  }
+
+  async shoppingComplete() {
+    this.showSpinner(SpinnerType.BallAtom);
+    const order: Create_Order = new Create_Order();
+    order.address = "İstanbul adresi Buralar ileride kullanıcan bir form aracılığıyla alınacak.";
+    order.description = "Hızlı kargoya verin lütfen...";
+    await this.orderService.create(order);
+    this.hideSpinner(SpinnerType.BallAtom);
+    this.toastrService.message("Sipariş alınmıştır!", "Sipariş Oluşturuldu!", {
+      messageType: ToastrMessageType.Info,
+      position: ToastrPosition.TopRight
+    })
+    this.router.navigate(["/"]);
   }
 
 
