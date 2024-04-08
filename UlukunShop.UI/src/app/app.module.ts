@@ -24,11 +24,13 @@ import {
 import {HttpErrorHandlerInterceptorService} from "./services/common/http-error-handler-interceptor.service";
 import {ShoppingcartsModule} from "./ui/components/shoppingcarts/shoppingcarts.module";
 import {ShoppingcartsComponent} from "./ui/components/shoppingcarts/shoppingcarts.component";
+import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-component.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DynamicLoadComponentDirective
   ],
     imports: [
         BrowserModule,
