@@ -22,31 +22,34 @@ import {
   SocialLoginModule
 } from "@abacritt/angularx-social-login";
 import {HttpErrorHandlerInterceptorService} from "./services/common/http-error-handler-interceptor.service";
+import {ShoppingcartsModule} from "./ui/components/shoppingcarts/shoppingcarts.module";
+import {ShoppingcartsComponent} from "./ui/components/shoppingcarts/shoppingcarts.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    AdminModule,
-    UiModule,
-    ToastrModule.forRoot(),
-    NgxSpinnerModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatDialogModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: () => localStorage.getItem("accessToken"),
-        allowedDomains: ["localhost:7131"]
-      }
-    }),
-    SocialLoginModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        AdminModule,
+        UiModule,
+        ToastrModule.forRoot(),
+        NgxSpinnerModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatDialogModule,
+        JwtModule.forRoot({
+            config: {
+                tokenGetter: () => localStorage.getItem("accessToken"),
+                allowedDomains: ["localhost:7131"]
+            }
+        }),
+        SocialLoginModule,
+        ShoppingcartsModule
+    ],
   providers: [
     {provide: "baseUrl", useValue: 'https://localhost:7131/api', multi: true},
     {
@@ -68,7 +71,9 @@ import {HttpErrorHandlerInterceptorService} from "./services/common/http-error-h
     },
     {provide:HTTP_INTERCEPTORS,useClass:HttpErrorHandlerInterceptorService,multi: true}
   ],
-  exports: [],
+  exports: [
+    ShoppingcartsComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

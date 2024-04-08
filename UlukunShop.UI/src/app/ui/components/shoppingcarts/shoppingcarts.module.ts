@@ -7,14 +7,17 @@ import * as path from "path";
 
 
 @NgModule({
-  declarations: [
-    ShoppingcartsComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {path: '', component: ShoppingcartsComponent},
-    ])
-  ]
+    declarations: [
+        ShoppingcartsComponent
+    ],
+    exports: [
+        ShoppingcartsComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([
+            {path: '', component: ShoppingcartsComponent},
+        ])
+    ]
 })
 export class ShoppingcartsModule { }

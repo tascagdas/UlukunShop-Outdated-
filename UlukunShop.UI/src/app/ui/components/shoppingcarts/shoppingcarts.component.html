@@ -1,1 +1,46 @@
-<p>shoppingcarts works!</p>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alışveriş Sepeti</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ürün</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Adet</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="{{item.shoppingCartItemId}}" *ngFor="let item of shoppingCartItems;let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>
+              <input type="hidden" [value]="item.shoppingCartItemId">
+              <input type="number" [value]="item.quantity" style="width:60px;" data-id="{{item.shoppingCartItemId}}" (change)="changeQuantity($event)" />
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="removeShoppingCartItem(item.shoppingCartItemId)">X</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+        <button type="button" class="btn btn-success">Alışverişi Tamamla</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,21 +6,32 @@ import {List_Product} from "../../../../contracts/List_Product";
 import {ActivatedRoute} from "@angular/router";
 import {FileService} from "../../../../services/common/models/file.service";
 import { BaseUrl } from '../../../../contracts/base_url';
+import {ShoppingCartService} from "../../../../services/common/models/shoppingcart.service";
+import {BaseComponent, SpinnerType} from "../../../../base/base.component";
+import {NgxSpinnerService} from "ngx-spinner";
+import {Create_Shopping_Cart_Item} from "../../../../contracts/ShoppingCart/create_shopping_cart_item";
+import {CustomToastrService, ToastrMessageType, ToastrPosition} from "../../../../services/ui/custom-toastr.service";
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListComponent extends BaseComponent implements OnInit {
 
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private fileService: FileService) {
+  constructor(private productService: ProductService,
+              private activatedRoute: ActivatedRoute,
+              private fileService: FileService,
+              private shoppingCartService:ShoppingCartService,
+              spinner:NgxSpinnerService,
+              private toastr:CustomToastrService) {
+  super(spinner)
   }
 
   currentPage: number;
   totalProductCount: number;
   totalPageCount: number;
-  pageListSize: number = 3;
+  pageListSize: number = 9;
   pageList: number[] = [];
   baseUrl: BaseUrl;
 
@@ -82,4 +93,16 @@ export class ListComponent implements OnInit {
 
   }
 
+  async addToShoppingCart(product: List_Product) {
+    this.showSpinner(SpinnerType.BallAtom);
+    let _basketItem: Create_Shopping_Cart_Item = new Create_Shopping_Cart_Item();
+    _basketItem.productId = product.id;
+    _basketItem.quantity = 1;
+    await this.shoppingCartService.add(_basketItem);
+    this.hideSpinner(SpinnerType.BallAtom);
+    this.toastr.message("Ürün sepete eklenmiştir.", "Sepete Eklendi", {
+      messageType: ToastrMessageType.Success,
+      position: ToastrPosition.TopRight
+    });
+  }
 }
