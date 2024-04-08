@@ -18,7 +18,7 @@ public class GetCartItemsQueryHandler:IRequestHandler<GetCartItemsQueryRequest,L
         var cartItems = await _shoppingCartService.GetShoppingCartItemsAsync();
         return cartItems.Select(item => new GetCartItemsQueryResponse
         {
-            CartItemId = item.Id.ToString(),
+            ShoppingCartItemId = item.Id.ToString(),
             Name = item.Product.Name,
             Price = item.Product.Price,
             Quantity = item.Quantity

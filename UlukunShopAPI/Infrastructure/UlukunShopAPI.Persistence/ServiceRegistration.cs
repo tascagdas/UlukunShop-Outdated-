@@ -24,7 +24,7 @@ public static class ServiceRegistration
     public static void AddPersistenceServices(this IServiceCollection services)
     {
         services.AddDbContext<UlukunAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString),
-            ServiceLifetime.Transient);
+            ServiceLifetime.Scoped);
         services.AddIdentity<AppUser, AppRole>(options =>
         {
             options.Password.RequiredLength = 3;

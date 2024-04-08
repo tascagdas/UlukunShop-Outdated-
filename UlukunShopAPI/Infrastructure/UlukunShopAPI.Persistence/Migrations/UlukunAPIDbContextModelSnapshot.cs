@@ -564,7 +564,7 @@ namespace UlukunShopAPI.Persistence.Migrations
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCartItem", b =>
                 {
                     b.HasOne("UlukunShopAPI.Domain.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("ShoppingCartItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -588,6 +588,11 @@ namespace UlukunShopAPI.Persistence.Migrations
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Identity.AppUser", b =>
                 {
                     b.Navigation("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.ShoppingCart", b =>
