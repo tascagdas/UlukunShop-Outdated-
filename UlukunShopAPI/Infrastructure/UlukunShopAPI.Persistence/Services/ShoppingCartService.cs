@@ -122,4 +122,13 @@ public class ShoppingCartService : IShoppingCartService
             await _cartItemWrite.SaveAsync();
         }
     }
+    
+    public ShoppingCart? GetUserActiveBasket
+    {
+        get
+        {
+            ShoppingCart? basket = ContextUser().Result;
+            return basket;
+        }
+    }
 }

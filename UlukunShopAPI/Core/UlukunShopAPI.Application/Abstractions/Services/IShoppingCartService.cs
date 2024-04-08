@@ -9,5 +9,7 @@ public interface IShoppingCartService
     public Task AddItemToShoppingCartAsync(ShoppingCartItemCreateViewModel item);
     public Task UpdateShoppingCartItemQuantityAsync(ShoppingCartItemUpdateViewModel item);
     public Task DeleteShoppingCartItem(string shoppingCartItemId);
+    
+    public ShoppingCart? GetUserActiveBasket { get; }
 
 }
