@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UlukunShopAPI.SignalR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aaebcd94089b2305274690c7e5bc2f43d1c5eaa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+945750838d71d054d4308a358426798575ea5bb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("UlukunShopAPI.SignalR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UlukunShopAPI.SignalR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

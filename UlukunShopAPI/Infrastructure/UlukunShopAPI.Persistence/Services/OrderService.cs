@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.DTOs.Order;
 using UlukunShopAPI.Application.Repositories;
+using UlukunShopAPI.Domain.Entities;
 
 namespace UlukunShopAPI.Persistence.Services;
 
@@ -47,11 +48,36 @@ public class OrderService:IOrderService
             TotalOrderCount = await query.CountAsync(),
             Orders = await data.Select(o => new
             {
+                Id=o.Id,
                 CreatedDate = o.CreatedDate,
                 OrderCode = o.OrderCode,
                 TotalPrice = o.ShoppingCart.ShoppingCartItems.Sum(bi => bi.Product.Price * bi.Quantity),
-                UserName = o.ShoppingCart.User.UserName
+                UserName = o.ShoppingCart.User.UserName,
             }).ToListAsync()
+        };
+    }
+    
+    public async Task<SingleOrder> GetOrderByIdAsync(string id)
+    {
+        var data = await _orderReadRepository.Table
+            .Include(o => o.ShoppingCart)
+            .ThenInclude(b => b.ShoppingCartItems)
+            .ThenInclude(bi => bi.Product)
+            .FirstOrDefaultAsync(o => o.Id == Guid.Parse(id));
+
+        return new()
+        {
+            Id = data.Id.ToString(),
+            BasketItems = data.ShoppingCart.ShoppingCartItems.Select(bi => new
+            {
+                bi.Product.Name,
+                bi.Product.Price,
+                bi.Quantity
+            }),
+            Address = data.Address,
+            CreatedDate = data.CreatedDate,
+            Description = data.Description,
+            OrderCode = data.OrderCode
         };
     }
     
