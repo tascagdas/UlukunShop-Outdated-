@@ -35,6 +35,8 @@ export class SignalrService {
     return hubConnection;
   }
 
+  //SignalR çoklu bağlantı sağlandı. artık ioc ye giderken singleton olarak gitmiyor. daha önceden o şekildeydi. önceki commitlerden incelenebilir.
+
   invoke(hubURL:string,procedureName: string, message: any, successCallback: (value) => void, errorCallback: (error) => void) {
     this.start(hubURL).invoke(procedureName, message).then(successCallback).catch(errorCallback);
   }

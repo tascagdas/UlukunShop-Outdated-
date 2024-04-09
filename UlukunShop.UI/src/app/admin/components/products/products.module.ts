@@ -15,6 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {DeleteDialogComponent} from "../../../dialogs/delete-dialog/delete-dialog.component";
 import {FileUploadModule} from "../../../services/common/file-upload/file-upload.module";
 import {DialogModule} from "../../../dialogs/dialog.module";
+import {DeleteDirectiveModule} from "../../../directives/admin/delete.directive.module";
 
 
 
@@ -22,8 +23,7 @@ import {DialogModule} from "../../../dialogs/dialog.module";
     declarations: [
         ProductsComponent,
         CreateComponent,
-        ListComponent,
-        DeleteDirective
+        ListComponent
     ],
     exports: [
         ListComponent
@@ -40,7 +40,8 @@ import {DialogModule} from "../../../dialogs/dialog.module";
         MatPaginatorModule,
         MatTableModule,
         FileUploadModule,
-        DialogModule
+        DialogModule,
+      DeleteDirectiveModule
     ]
 })
 export class ProductsModule { }
