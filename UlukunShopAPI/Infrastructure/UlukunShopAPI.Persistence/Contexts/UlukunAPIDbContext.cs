@@ -25,6 +25,7 @@ public class UlukunAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Order>().HasKey(sc => sc.Id);
+        builder.Entity<Order>().HasIndex(o => o.OrderCode).IsUnique();
         builder.Entity<ShoppingCart>().HasOne(sc => sc.Order)
             .WithOne(o => o.ShoppingCart)
             .HasForeignKey<Order>(sc => sc.Id);

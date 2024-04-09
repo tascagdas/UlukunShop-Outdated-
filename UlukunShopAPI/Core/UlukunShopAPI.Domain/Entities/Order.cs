@@ -10,5 +10,6 @@ public class Order:BaseEntity
     // public ICollection<Product> Products { get; set; }
     // public Customer Customer { get; set; }
     public Guid ShoppingCartId { get; set; }
+    public string OrderCode { get; set; }
     public ShoppingCart ShoppingCart { get; set; }
 }
