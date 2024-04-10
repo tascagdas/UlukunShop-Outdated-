@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:"products",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)},
   {path:"products/:page",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)},
   {path:"register",loadChildren:()=>import("./ui/components/register/register.module").then(module=>module.RegisterModule)},
-  {path:"login",loadChildren:()=>import("./ui/components/login/login.module").then(module=>module.LoginModule)}
+  {path:"login",loadChildren:()=>import("./ui/components/login/login.module").then(module=>module.LoginModule)},
+  {path:"contact",loadChildren:()=>import("./ui/components/contact/contact.module").then(module=>module.ContactModule)}
 
 ];
 

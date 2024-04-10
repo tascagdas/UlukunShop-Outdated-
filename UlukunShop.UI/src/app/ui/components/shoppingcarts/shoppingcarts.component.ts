@@ -83,8 +83,8 @@ console.log(this.shoppingCartItems);
       afterClosed: async () => {
         this.showSpinner(SpinnerType.BallAtom);
         const order: Create_Order = new Create_Order();
-        order.address = "Yenimahalle";
-        order.description = "Falanca filanca...";
+        order.address = "İstanbul Eyüpsultan Çırçır mah. ";
+        order.description = "Lütfen hızlı gönderinn....";
         await this.orderService.create(order);
         this.hideSpinner(SpinnerType.BallAtom);
         this.toastrService.message("Sipariş alınmıştır!", "Sipariş Oluşturuldu!", {
