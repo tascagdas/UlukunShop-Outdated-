@@ -18,7 +18,9 @@ const routes: Routes = [
   {path:"products/:page",loadChildren:()=>import("./ui/components/products/products.module").then(module=>module.ProductsModule)},
   {path:"register",loadChildren:()=>import("./ui/components/register/register.module").then(module=>module.RegisterModule)},
   {path:"login",loadChildren:()=>import("./ui/components/login/login.module").then(module=>module.LoginModule)},
-  {path:"contact",loadChildren:()=>import("./ui/components/contact/contact.module").then(module=>module.ContactModule)}
+  {path:"contact",loadChildren:()=>import("./ui/components/contact/contact.module").then(module=>module.ContactModule)},
+  { path: "passwordreset", loadChildren: () => import("./ui/components/passwordreset/passwordreset.module").then(module => module.PasswordresetModule) },
+  { path: "passwordupdate/:userId/:resetToken", loadChildren: () => import("./ui/components/passwordupdate/passwordupdate.module").then(module => module.PasswordupdateModule) },
 
 ];
 

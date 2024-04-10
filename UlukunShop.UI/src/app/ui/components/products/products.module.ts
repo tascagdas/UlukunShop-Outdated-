@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ProductsComponent } from './products.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ProductsComponent} from './products.component';
 import {RouterModule} from "@angular/router";
-import { ListComponent } from './list/list.component';
+import {ListComponent} from './list/list.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
-import { FilterComponent } from './filter/filter.component';
-
+import {FilterComponent} from './filter/filter.component';
 
 
 @NgModule({
@@ -14,12 +13,13 @@ import { FilterComponent } from './filter/filter.component';
     ListComponent,
     FilterComponent
   ],
-    imports: [
-        CommonModule,
-        RouterModule.forChild([
-            {path: '', component: ProductsComponent},
-        ]),
-        MatSidenavModule
-    ]
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {path: '', component: ProductsComponent},
+    ]),
+    MatSidenavModule
+  ]
 })
-export class ProductsModule { }
+export class ProductsModule {
+}
