@@ -21,6 +21,11 @@
       <td mat-cell *matCellDef="let element"> {{element.createdDate}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="completed">
+      <th mat-header-cell *matHeaderCellDef width="30">  </th>
+      <td mat-cell *matCellDef="let element"> <img *ngIf="element.completed" style="cursor:pointer" src="./assets/checkmark_icon.png" width="25" height="25" /> </td>
+    </ng-container>
+
     <ng-container matColumnDef="viewDetail">
       <th mat-header-cell *matHeaderCellDef width="30">  </th>
       <td mat-cell *matCellDef="let element"> <img (click)="showDetail(element.id)" style="cursor:pointer" src="./assets/explore_icon.png" width="25" height="25" /> </td>
