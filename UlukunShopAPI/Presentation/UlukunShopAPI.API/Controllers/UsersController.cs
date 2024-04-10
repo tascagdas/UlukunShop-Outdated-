@@ -1,10 +1,7 @@
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
-using UlukunShopAPI.Application.Features.Commands.AppUser.FacebookLoginUser;
-using UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser;
-using UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser;
 
 namespace UlukunShopAPI.API.Controllers
 {
@@ -13,10 +10,12 @@ namespace UlukunShopAPI.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IMailService _mailService;
 
-        public UsersController(IMediator mediator)
+        public UsersController(IMediator mediator, IMailService mailService)
         {
             _mediator = mediator;
+            _mailService = mailService;
         }
         [HttpPost]
         public async Task<IActionResult> CreateUser(CreateUserCommandRequest createUserCommandRequest)
@@ -25,6 +24,12 @@ namespace UlukunShopAPI.API.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> MailTest()
+        {
+            await _mailService.SendMessageAsync("tascagdas@gmail.com", "Deneme Mail", "<h1>Deneme Maili.</h1>");
+            return Ok();
+        }
 
     }
 }
