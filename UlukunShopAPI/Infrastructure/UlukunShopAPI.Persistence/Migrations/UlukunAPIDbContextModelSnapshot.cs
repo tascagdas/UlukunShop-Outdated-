@@ -143,6 +143,29 @@ namespace UlukunShopAPI.Persistence.Migrations
                     b.ToTable("ProductProductImageFile");
                 });
 
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.CompletedOrder", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("CompletedOrders");
+                });
+
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
@@ -506,6 +529,17 @@ namespace UlukunShopAPI.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.CompletedOrder", b =>
+                {
+                    b.HasOne("UlukunShopAPI.Domain.Entities.Order", "Order")
+                        .WithOne("CompletedOrder")
+                        .HasForeignKey("UlukunShopAPI.Domain.Entities.CompletedOrder", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Order", b =>
                 {
                     b.HasOne("UlukunShopAPI.Domain.Entities.ShoppingCart", "ShoppingCart")
@@ -550,6 +584,12 @@ namespace UlukunShopAPI.Persistence.Migrations
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Identity.AppUser", b =>
                 {
                     b.Navigation("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Order", b =>
+                {
+                    b.Navigation("CompletedOrder")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UlukunShopAPI.Domain.Entities.Product", b =>

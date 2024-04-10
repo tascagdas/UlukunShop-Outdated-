@@ -2,24 +2,29 @@
   <h3 class="display-6" style="font-size: 32px">Giris Yap</h3>
   <hr>
   <div class="align-items-center">
-      <div class="form-group mt-3">
-        <label for="userName">Kullanici Adi / Email:</label>
-        <input #txtUsernameOrEmail type="text"  id="userName" class="form-control" placeholder="kullanici adi veya Email" >
-        <small  class=" text-danger">******</small>
-      </div>
-      <div class="form-group mt-3">
-        <label for="password">Parola:</label>
-        <input #txtPassword type="password"  class="form-control" id="password" placeholder="Parola"  >
-      </div>
+    <div class="form-group mt-3">
+      <label for="userName">Kullanici Adi / Email:</label>
+      <input #txtUsernameOrEmail type="text" id="userName" class="form-control" placeholder="kullanici adi veya Email">
+      <small class=" text-danger">******</small>
+    </div>
+    <div class="form-group mt-3">
+      <label for="password">Parola:</label>
+      <input #txtPassword type="password" class="form-control" id="password" placeholder="Parola">
+    </div>
 
     <div>
       <asl-google-signin-button></asl-google-signin-button>
-      <a href="#" (click)="facebookLogin()"> <img style="height: 30px" src="./assets/facebooklogo.png" ></a>
+      <a href="#" (click)="facebookLogin()"> <img style="height: 30px" src="./assets/facebooklogo.png"></a>
     </div>
 
-      <div class=" text-center">
-        <button type="submit" class=" mt-4 btn w-50 btn-primary" (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Giris Yap</button>
-      </div>
+    <div class=" text-center">
+      <button type="submit" class=" mt-4 btn w-50 btn-primary"
+              (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Giris Yap
+      </button>
+      <a style="margin-top:5px;margin-left:5px;" routerLink="/passwordreset" class="btn btn-secondary">Şifremi
+        Unuttum</a>
+    </div>
+
   </div>
 
 </div>

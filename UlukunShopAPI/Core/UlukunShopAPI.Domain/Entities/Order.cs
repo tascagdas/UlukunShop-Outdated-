@@ -12,4 +12,5 @@ public class Order:BaseEntity
     public Guid ShoppingCartId { get; set; }
     public string OrderCode { get; set; }
     public ShoppingCart ShoppingCart { get; set; }
+    public CompletedOrder CompletedOrder { get; set; }
 }

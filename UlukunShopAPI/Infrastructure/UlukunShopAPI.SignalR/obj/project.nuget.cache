@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AwKb8NSTlJ33PEf9h+IzItORymROT1SVRwSh+sUdvubVnmLZbC7Z815mDobEFQgyE98YASTq90xszFlNAq+Btg==",
+  "dgSpecHash": "P3d1QBNypwm+Pq/SCtrltyyt2ZpsPrFjxS/78mIoyNb70xiC8nOlG8vdnzG3mSDC3tNeGCZ/2hCbx6r5/GPtMw==",
   "success": true,
   "projectFilePath": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Infrastructure/UlukunShopAPI.SignalR/UlukunShopAPI.SignalR.csproj",
   "expectedPackageFiles": [

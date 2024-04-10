@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UlukunShopAPI.Application.Features.Commands.Order.CompleteOrder;
 using UlukunShopAPI.Application.Features.Commands.Order.CreateOrder;
 using UlukunShopAPI.Application.Features.Queries.Order;
 using UlukunShopAPI.Application.Features.Queries.Order.GetAllOrders;
@@ -38,6 +39,12 @@ namespace UlukunShopAPI.API.Controllers
         public async Task<ActionResult> GetOrderById([FromRoute] GetOrderByIdQueryRequest getOrderByIdQueryRequest)
         {
             GetOrderByIdQueryResponse response = await _mediator.Send(getOrderByIdQueryRequest);
+            return Ok(response);
+        }
+        [HttpGet("complete-order/{Id}")]
+        public async Task<ActionResult> CompleteOrder([FromRoute] CompleteOrderCommandRequest completeOrderCommandRequest)
+        {
+            CompleteOrderCommandResponse response = await _mediator.Send(completeOrderCommandRequest);
             return Ok(response);
         }
         

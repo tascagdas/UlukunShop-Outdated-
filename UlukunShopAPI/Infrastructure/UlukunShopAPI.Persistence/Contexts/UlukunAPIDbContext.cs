@@ -21,14 +21,23 @@ public class UlukunAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     public DbSet<InvoiceFile> InvoiceFiles { get; set; }
     public DbSet<ShoppingCart> ShoppingCarts { get; set; }
     public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+    public DbSet<CompletedOrder> CompletedOrders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Order>().HasKey(sc => sc.Id);
+        
         builder.Entity<Order>().HasIndex(o => o.OrderCode).IsUnique();
+        
         builder.Entity<ShoppingCart>().HasOne(sc => sc.Order)
             .WithOne(o => o.ShoppingCart)
             .HasForeignKey<Order>(sc => sc.Id);
+        
+        builder.Entity<Order>()
+            .HasOne(o => o.CompletedOrder)
+            .WithOne(c => c.Order)
+            .HasForeignKey<CompletedOrder>(c => c.OrderId);
+        
         base.OnModelCreating(builder);
     }
 
