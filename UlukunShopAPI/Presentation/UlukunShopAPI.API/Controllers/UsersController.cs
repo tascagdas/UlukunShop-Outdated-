@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
+using UlukunShopAPI.Application.Features.Commands.AppUser.UpdatePassword;
 
 namespace UlukunShopAPI.API.Controllers
 {
@@ -27,9 +28,15 @@ namespace UlukunShopAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> MailTest()
         {
-            await _mailService.SendMessageAsync("tascagdas@gmail.com", "Deneme Mail", "<h1>Deneme Maili.</h1>");
+            await _mailService.SendMailAsync("tascagdas@gmail.com", "Deneme Mail", "<h1>Deneme Maili.</h1>");
             return Ok();
         }
 
+        [HttpPost("update-password")]
+        public async Task<IActionResult> UpdatePassword([FromBody] UpdatePasswordCommandRequest updatePasswordCommandRequest)
+        {
+            UpdatePasswordCommandResponse response = await _mediator.Send(updatePasswordCommandRequest);
+            return Ok(response);
+        }
     }
 }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using UlukunShopAPI.Application.Abstractions.Services;
@@ -32,7 +33,7 @@ public static class ServiceRegistration
             options.Password.RequireDigit = false;
             options.Password.RequireLowercase = false;
             options.Password.RequireUppercase = false;
-        } ).AddEntityFrameworkStores<UlukunAPIDbContext>();
+        } ).AddEntityFrameworkStores<UlukunAPIDbContext>().AddDefaultTokenProviders();
         
         services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
         services.AddScoped<ICustomerWriteRepository, CustomerWriteRespository>();

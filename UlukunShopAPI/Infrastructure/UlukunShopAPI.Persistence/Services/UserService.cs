@@ -3,6 +3,7 @@ using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.DTOs.User;
 using UlukunShopAPI.Application.Exceptions;
 using UlukunShopAPI.Application.Features.Commands.AppUser.CreateUser;
+using UlukunShopAPI.Application.Helpers;
 using UlukunShopAPI.Domain.Entities.Identity;
 
 namespace UlukunShopAPI.Persistence.Services;
@@ -42,7 +43,7 @@ public class UserService:IUserService
         return response;
     }
 
-    public async Task UpdateRefreshToken(string refreshToken, AppUser? user,DateTime accessTokenDate,int addTimeToAccessToken)
+    public async Task UpdateRefreshTokenAsync(string refreshToken, AppUser? user,DateTime accessTokenDate,int addTimeToAccessToken)
     {
         if (user!=null)
         {
@@ -53,6 +54,19 @@ public class UserService:IUserService
         else
         {
             throw new UserNotFoundException();
+        }
+    }
+    public async Task UpdatePasswordAsync(string userId, string resetToken, string newPassword)
+    {
+        AppUser user = await _userManager.FindByIdAsync(userId);
+        if (user != null)
+        {
+            resetToken = resetToken.UrlDecode();
+            IdentityResult result = await _userManager.ResetPasswordAsync(user, resetToken, newPassword);
+            if (result.Succeeded)
+                await _userManager.UpdateSecurityStampAsync(user);
+            else
+                throw new PasswordChangeFailedException();
         }
     }
 }

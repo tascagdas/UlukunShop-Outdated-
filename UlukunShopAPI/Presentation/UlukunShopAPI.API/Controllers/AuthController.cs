@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using UlukunShopAPI.Application.Features.Commands.AppUser.FacebookLoginUser;
 using UlukunShopAPI.Application.Features.Commands.AppUser.GoogleLoginUser;
 using UlukunShopAPI.Application.Features.Commands.AppUser.LoginUser;
+using UlukunShopAPI.Application.Features.Commands.AppUser.PasswordReset;
 using UlukunShopAPI.Application.Features.Commands.AppUser.RefreshTokenLogin;
+using UlukunShopAPI.Application.Features.Commands.AppUser.VerifyResetToken;
 
 namespace UlukunShopAPI.API.Controllers
 {
@@ -43,6 +45,19 @@ namespace UlukunShopAPI.API.Controllers
         public async Task<IActionResult> FacebookLogin(FacebookLoginUserCommandRequest facebookLoginUserCommandRequest)
         {
             FacebookLoginUserCommandResponse response = await _mediator.Send(facebookLoginUserCommandRequest);
+            return Ok(response);
+        }
+        [HttpPost("password-reset")]
+        public async Task<IActionResult> PasswordReset([FromBody] PasswordResetCommandRequest passwordResetCommandRequest)
+        {
+            PasswordResetCommandResponse response = await _mediator.Send(passwordResetCommandRequest);
+            return Ok(response);
+        }
+
+        [HttpPost("verify-reset-token")]
+        public async Task<IActionResult> VerifyResetToken([FromBody] VerifyResetTokenCommandRequest verifyResetTokenCommandRequest)
+        {
+            VerifyResetTokenCommandResponse response = await _mediator.Send(verifyResetTokenCommandRequest);
             return Ok(response);
         }
     }
