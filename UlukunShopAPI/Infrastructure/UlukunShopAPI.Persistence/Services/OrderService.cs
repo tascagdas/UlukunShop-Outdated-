@@ -118,14 +118,24 @@ public class OrderService:IOrderService
         };
     }
     
-    public async Task CompleteOrderAsync(string id)
+    public async Task<(bool, CompletedOrder_DTO)> CompleteOrderAsync(string id)
     {
-        Order order = await _orderReadRepository.GetByIdAsync(id);
+        Order? order = await _orderReadRepository.Table
+            .Include(o => o.ShoppingCart)
+            .ThenInclude(sc => sc.User)
+            .FirstOrDefaultAsync(o => o.Id == Guid.Parse(id));
         if (order != null)
         {
             await _completedOrderWriteRepository.AddAsync(new() { OrderId = Guid.Parse(id) });
-            await _completedOrderWriteRepository.SaveAsync();
+            return (await _completedOrderWriteRepository.SaveAsync() > 0, new()
+            {
+                OrderCode = order.OrderCode,
+                OrderDate = order.CreatedDate,
+                Username = order.ShoppingCart.User.UserName,
+                EMail = order.ShoppingCart.User.Email
+            });
         }
+        return (false, null);
     }
 
     
