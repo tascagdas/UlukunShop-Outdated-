@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import {RouterModule} from "@angular/router";
 import { HeroComponent } from './hero/hero.component';
 import { HomeProductsComponent } from './home-products/home-products.component';
+import { ChooseusComponent } from './chooseus/chooseus.component';
 
 
 
@@ -11,7 +12,8 @@ import { HomeProductsComponent } from './home-products/home-products.component';
   declarations: [
     HomeComponent,
     HeroComponent,
-    HomeProductsComponent
+    HomeProductsComponent,
+    ChooseusComponent
   ],
   imports: [
     CommonModule,

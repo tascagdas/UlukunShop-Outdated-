@@ -9,15 +9,14 @@ import {LoginModule} from "./login/login.module";
 import {ContactModule} from "./contact/contact.module";
 import { UiFooterComponent } from './ui-footer/ui-footer.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import {ThankyouModule} from "./thankyou/thankyou.module";
 
 
 
 @NgModule({
   declarations: [
 
-
-    UiFooterComponent,
-      ThankyouComponent
+    UiFooterComponent
   ],
   exports: [
     UiFooterComponent
@@ -28,8 +27,8 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     ShoppingcartsModule,
     HomeModule,
     RegisterModule,
-    ContactModule
-    // LoginModule
+    ContactModule,
+    ThankyouModule
   ]
 })
 export class ComponentsModule { }

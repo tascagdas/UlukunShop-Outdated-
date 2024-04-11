@@ -91,7 +91,7 @@ console.log(this.shoppingCartItems);
           messageType: ToastrMessageType.Info,
           position: ToastrPosition.TopRight
         })
-        this.router.navigate(["/"]);
+        this.router.navigate(["/thankyou"]);
       }
     });
   }
