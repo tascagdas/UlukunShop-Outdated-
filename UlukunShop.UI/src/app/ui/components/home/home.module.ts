@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {RouterModule} from "@angular/router";
 import { HeroComponent } from './hero/hero.component';
+import { HomeProductsComponent } from './home-products/home-products.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    HeroComponent
+    HeroComponent,
+    HomeProductsComponent
   ],
   imports: [
     CommonModule,

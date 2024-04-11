@@ -43,12 +43,16 @@
               "node_modules/ngx-spinner/animations/pacman.css",
               "node_modules/ngx-spinner/animations/ball-atom.css",
               "node_modules/ngx-spinner/animations/triangle-skew-spin.css",
-              "node_modules/ngx-spinner/animations/line-scale.css"
+              "node_modules/ngx-spinner/animations/line-scale.css",
+              "src/assets/css/tiny-slider.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/alertifyjs/build/alertify.min.js"
+              "node_modules/alertifyjs/build/alertify.min.js",
+              "src/assets/js/tiny-slider.js",
+              "src/assets/js/custom.js"
             ]
           },
           "configurations": {

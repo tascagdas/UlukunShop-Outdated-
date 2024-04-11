@@ -1,232 +1,63 @@
-<!-- Navbar Begin -->
+<!-- Start Header/Navigation -->
+<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="">Ulukun Shop</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Ulukun<span>.</span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="">Anasayfa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="products">Ürünler</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="contact">İletişim</a>
-        </li>
 
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profil
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="admin" *ngIf="authService._isAuthenticated">Yönetici Paneli</a>
-            </li>
-            <li><a class="dropdown-item" routerLink="">Profil Detayları</a></li>
-            <li><a class="dropdown-item" routerLink="">Siparişlerim</a></li>
-            <li><a class="dropdown-item" routerLink="">Mesajlar</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" routerLink="" (click)="logOut()">Çıkış Yap</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Ne aramıştınız?..." aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Ara</button>
-      </form>
-      <ul class="navbar-nav  mb-2 mb-lg-0" *ngIf="authService._isAuthenticated">
-        <li class="nav-item mx-3">
-          <a class="nav-link active" (click)="loadComponent()" aria-current="page" data-bs-toggle="modal"
-             data-bs-target="#shoppingCartModal" data-bs-dismiss="modal" aria-label="Close" style="cursor: pointer">
-            <img style="height: 26px " src="./assets/shopping_cart_icon.png" alt="">
-          </a>
-        </li>
-        <li class="nav-item me-3">
-          <a class="nav-link active" aria-current="page" routerLink="" (click)="logOut()">Çıkış Yap</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav  mb-2 mb-lg-0" *ngIf="!authService._isAuthenticated">
+    <div class="collapse navbar-collapse" id="navbarsFurni">
+      <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
         <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" href="/">Anasayfa</a>
+        </li>
+        <li><a class="nav-link" [routerLinkActive]="['active']"  routerLink="products">Ürünler</a></li>
+        <li><a class="nav-link"  *ngIf="authService._isAuthenticated" routerLink="admin">Yönetim Paneli</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" routerLink="contact">İletişim</a></li>
+        <li class="nav-item" *ngIf="authService._isAuthenticated">
+          <a class="nav-link " (click)="logOut()">Çıkış Yap</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService._isAuthenticated">
           <a class="nav-link active" aria-current="page" routerLink="register">Kayıt ol</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!authService._isAuthenticated">
           <a class="nav-link active" aria-current="page" routerLink="login">Giriş Yap</a>
         </li>
       </ul>
 
+
+
+      <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+        <li><a class="nav-link" href="#"><img src="./assets/images/user.svg"></a></li>
+        <li><a class="nav-link" (click)="loadComponent()" aria-current="page" data-bs-toggle="modal"
+               data-bs-target="#shoppingCartModal" data-bs-dismiss="modal" aria-label="Close" style="cursor: pointer"><img src="./assets/images/cart.svg"></a></li>
+      </ul>
     </div>
   </div>
-</nav>
 
-<!-- Navbar End -->
-<div class="container">
+</nav>
+<!-- End Header/Navigation -->
+
+
+
+
+
 
   <!-- Content Begin -->
-
+<div class="container">
   <router-outlet></router-outlet>
-
+</div>
   <!-- Content End -->
-</div>
-
-<!-- Footer Begin -->
 
 
-<div class=" my-5">
-  <!-- Footer -->
-  <footer
-    class="text-center text-lg-start text-dark footer"
-    style="background-color: #ECEFF1"
-  >
-    <!-- Section: Social media -->
-    <section
-      class="d-flex justify-content-between p-4 text-white"
-      style="background-color: #21D192"
-    >
-      <!-- Left -->
-      <div class="me-5">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
 
-      <!-- Right -->
-      <div>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold">Company name</h6>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-            />
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Products</h6>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-            />
-            <p>
-              <a href="#!" class="text-dark">MDBootstrap</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">MDWordPress</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">BrandFlow</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Bootstrap Angular</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-            />
-            <p>
-              <a href="#!" class="text-dark">Your Account</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Become an Affiliate</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Shipping Rates</a>
-            </p>
-            <p>
-              <a href="#!" class="text-dark">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Contact</h6>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-            />
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div
-      class="text-center p-3"
-      style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/"
-      >MDBootstrap.com</a
-      >
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-</div>
-<!-- End of .container -->
 
 
 <!-- Footer Begin -->
-
+<app-ui-footer></app-ui-footer>
 
 <ngx-spinner name="s1" type="ball-atom" size="default"></ngx-spinner>
 <ngx-spinner name="s2" type="triangle-skew-spin" size="default"></ngx-spinner>

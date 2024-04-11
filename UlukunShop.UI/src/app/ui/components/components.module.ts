@@ -7,12 +7,20 @@ import {RegisterModule} from "./register/register.module";
 import { LoginComponent } from './login/login.component';
 import {LoginModule} from "./login/login.module";
 import {ContactModule} from "./contact/contact.module";
+import { UiFooterComponent } from './ui-footer/ui-footer.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 
 
 @NgModule({
   declarations: [
 
+
+    UiFooterComponent,
+      ThankyouComponent
+  ],
+  exports: [
+    UiFooterComponent
   ],
   imports: [
     CommonModule,
