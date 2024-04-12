@@ -11,6 +11,7 @@ const routes: Routes = [
       {path:"customers",loadChildren:()=>import("./admin/components/customers/customers.module").then(module=>module.CustomersModule),canActivate:[AuthGuard]},
       {path:"products",loadChildren:()=>import("./admin/components/products/products.module").then(module=>module.ProductsModule),canActivate:[AuthGuard]},
       {path:"orders",loadChildren:()=>import("./admin/components/orders/orders.module").then(module=>module.OrdersModule),canActivate:[AuthGuard]},
+      {path: "authorize-menu", loadChildren: () => import("./admin/components/authorize-menu/authorize-menu.module").then(module => module.AuthorizeMenuModule), canActivate: [AuthGuard] },
     ],canActivate:[AuthGuard]},
   {path:"",component:HomeComponent},
   {path:"shoppingcart",loadChildren:()=>import("./ui/components/shoppingcarts/shoppingcarts.module").then(module=>module.ShoppingcartsModule)},
@@ -21,8 +22,7 @@ const routes: Routes = [
   {path:"contact",loadChildren:()=>import("./ui/components/contact/contact.module").then(module=>module.ContactModule)},
   {path: "passwordreset", loadChildren: () => import("./ui/components/passwordreset/passwordreset.module").then(module => module.PasswordresetModule) },
   {path: "passwordupdate/:userId/:resetToken", loadChildren: () => import("./ui/components/passwordupdate/passwordupdate.module").then(module => module.PasswordupdateModule) },
-  {path:"thankyou",loadChildren:()=>import("./ui/components/thankyou/thankyou.module").then(module=>module.ThankyouModule)},
-
+  {path:"thankyou",loadChildren:()=>import("./ui/components/thankyou/thankyou.module").then(module=>module.ThankyouModule)}
 ];
 
 @NgModule({
