@@ -5,6 +5,7 @@ import {RouterModule} from "@angular/router";
 import { HeroComponent } from './hero/hero.component';
 import { HomeProductsComponent } from './home-products/home-products.component';
 import { ChooseusComponent } from './chooseus/chooseus.component';
+import { PopularComponent } from './popular/popular.component';
 
 
 
@@ -13,7 +14,8 @@ import { ChooseusComponent } from './chooseus/chooseus.component';
     HomeComponent,
     HeroComponent,
     HomeProductsComponent,
-    ChooseusComponent
+    ChooseusComponent,
+    PopularComponent
   ],
   imports: [
     CommonModule,
