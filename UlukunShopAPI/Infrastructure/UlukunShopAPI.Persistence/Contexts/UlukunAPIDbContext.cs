@@ -22,6 +22,8 @@ public class UlukunAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     public DbSet<ShoppingCart> ShoppingCarts { get; set; }
     public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     public DbSet<CompletedOrder> CompletedOrders { get; set; }
+    public DbSet<Menu> Menus { get; set; }
+    public DbSet<Endpoint> Endpoints { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
