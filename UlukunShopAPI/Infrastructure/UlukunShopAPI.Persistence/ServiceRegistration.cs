@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using UlukunShopAPI.Application.Abstractions.Services;
 using UlukunShopAPI.Application.Abstractions.Services.Authentications;
@@ -30,8 +31,24 @@ public static class ServiceRegistration
 {
     public static void AddPersistenceServices(this IServiceCollection services)
     {
-        services.AddDbContext<UlukunAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString),
-            ServiceLifetime.Scoped);
+        
+        //Sqlite için alttaki.
+        services.AddDbContext<UlukunAPIDbContext>(options =>
+            options
+                .UseSqlite(services
+                    .BuildServiceProvider()
+                    .GetRequiredService<IConfiguration>()
+                    .GetConnectionString("SqliteConnection")));
+        
+        
+        
+        //Postgre için aşağıdaki...
+        // services.AddDbContext<UlukunAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString),
+        //     ServiceLifetime.Scoped);
+        
+        
+        
+        
         services.AddIdentity<AppUser, AppRole>(options =>
         {
             options.Password.RequiredLength = 3;

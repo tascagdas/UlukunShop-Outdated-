@@ -23,7 +23,21 @@ public class DesignTimeDbContextFactory:IDesignTimeDbContextFactory<UlukunAPIDbC
         // configurationManager.AddJsonFile("appsettings.json");
         //
         DbContextOptionsBuilder<UlukunAPIDbContext> dbContextOptionsBuilder = new();
-        dbContextOptionsBuilder.UseNpgsql(Configuration.ConnectionString);
+        
+        
+        
+        
+        
+        
+        // dbContextOptionsBuilder.UseNpgsql(Configuration.ConnectionString);  
+        
+        //SQLite için...
+        // dbContextOptionsBuilder.UseSqlite(Configuration.ConnectionString);
+        dbContextOptionsBuilder.UseSqlite(Configuration.ConnectionString);
+
+        
+        
+        
         return new(dbContextOptionsBuilder.Options);
     }
 }
