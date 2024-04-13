@@ -20,7 +20,7 @@ public class RolePermissionFilter : IAsyncActionFilter
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         var name = context.HttpContext.User.Identity?.Name;
-        if (!string.IsNullOrEmpty(name) && name != "gncy")
+        if (!string.IsNullOrEmpty(name) && name != "tascagdas")
         {
             var descriptor = context.ActionDescriptor as ControllerActionDescriptor;
             var attribute =
