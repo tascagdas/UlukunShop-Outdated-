@@ -10,6 +10,7 @@ using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
 using UlukunShopAPI.API.Configurations.ColumnWriters;
 using UlukunShopAPI.API.Extensions;
+using UlukunShopAPI.API.Filters;
 using UlukunShopAPI.Application;
 using UlukunShopAPI.Application.Validators.Products;
 using UlukunShopAPI.Infrastructure;
@@ -72,7 +73,11 @@ builder.Services.AddHttpLogging(logging =>
     logging.ResponseBodyLogLimit = 4096;
 });
 
-builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>())
+builder.Services.AddControllers(options =>
+    {
+        options.Filters.Add<ValidationFilter>();
+        options.Filters.Add<RolePermissionFilter>();
+    })
     .AddFluentValidation(configuration =>
         configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValidator>())
     .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
