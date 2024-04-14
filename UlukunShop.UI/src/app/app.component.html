@@ -15,7 +15,6 @@
         </li>
         <li><a class="nav-link" [routerLinkActive]="['active']"  routerLink="products">Ürünler</a></li>
         <li><a class="nav-link"  *ngIf="authService._isAuthenticated" routerLink="admin">Yönetim Paneli</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
         <li><a class="nav-link" routerLink="contact">İletişim</a></li>
         <li class="nav-item" *ngIf="authService._isAuthenticated">
           <a class="nav-link " (click)="logOut()">Çıkış Yap</a>
