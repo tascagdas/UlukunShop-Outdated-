@@ -1,10 +1,10 @@
 <div class="container w-25" style="margin-top: 25vh">
-  <h3 class="display-6" style="font-size: 32px">Kayit Ol</h3>
+  <h3 class="display-6" style="font-size: 32px">Kayıt Ol</h3>
   <hr>
   <div class="align-items-center">
     <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
       <div class="form-group mt-3">
-        <label for="userName">Kullanici Adi:</label>
+        <label for="userName">Kullanıcı Adı:</label>
         <input type="text" formControlName="userName" id="userName" class="form-control" placeholder="kullanici adi" [ngClass]="{'is-invalid':isSubmitted&&component.userName.errors}">
         <small *ngIf="isSubmitted && component.userName.errors?.required" class=" text-danger">Lutfen ad soyadi bos gecmeyiniz.</small>
         <small *ngIf="isSubmitted && (component.userName.errors?.maxlength || component.userName.errors?.minlength )" class=" text-danger">Lutfen kullanici adini 3 ile 50 karakter arasinda giriniz.</small>
@@ -14,7 +14,7 @@
           <div class="form-group">
             <label for="userName">Ad:</label>
             <input type="text" formControlName="firstName" id="firstName" class="form-control" placeholder="ad" [ngClass]="{'is-invalid':isSubmitted&&component.firstName.errors}">
-            <small *ngIf="isSubmitted && component.firstName.errors?.required" class=" text-danger">Lutfen ad soyadi bos gecmeyiniz.</small>
+            <small *ngIf="isSubmitted && component.firstName.errors?.required" class=" text-danger">Lütfen ad soyadı boş geçmeyiniz.</small>
             <small *ngIf="isSubmitted && (component.firstName.errors?.maxlength || component.firstName.errors?.minlength )" class=" text-danger">Lutfen adi 2 ile 50 karakter arasinda giriniz.</small>
           </div>
         </div>
@@ -29,9 +29,9 @@
         </div>
       </div>
       <div class="form-group mt-3">
-        <label for="email">E-mail Adresiniz:</label>
+        <label for="email">E-mail Adresi:</label>
         <input type="email" formControlName="email" id="email" class="form-control" placeholder="Email"[ngClass]="{'is-invalid':isSubmitted&&component.email.errors}">
-        <small *ngIf="isSubmitted && component.email.errors?.required" class=" text-danger">Lutfen emaili bos gecmeyiniz.</small>
+        <small *ngIf="isSubmitted && component.email.errors?.required" class=" text-danger">Lütfen emaili boş gecmeyiniz.</small>
         <small *ngIf="isSubmitted && (component.email.errors?.maxlength || component.email.errors?.minlength )" class=" text-danger">Lutfen emaili duzgun giriniz.</small>
         <small id="emailHelp"  class=" text-danger" style="display: none">We'll never share your email with anyone else.</small>
       </div>
@@ -42,10 +42,10 @@
       <div class="form-group mt-3">
         <label for="rePassword">Parola Tekrar:</label>
         <input type="password" formControlName="rePassword" class="form-control" id="rePassword" [ngClass]="{'is-invalid':isSubmitted&&component.rePassword.errors}">
-        <small *ngIf="isSubmitted && frm.hasError('notSame')" class=" text-danger">Lutfen girdiginiz sifrenin dogru oldugunu kontrol ediniz.</small>
+        <small *ngIf="isSubmitted && frm.hasError('notSame')" class=" text-danger">Lütfen girdiğiniz şifrenin doğru olduğunu kontrol ediniz.</small>
       </div >
       <div class=" text-center">
-        <button type="submit" class=" mt-4 btn w-50 btn-primary">Kayit ol</button>
+        <button type="submit" class=" mt-4 btn w-50 btn-primary">Kayıt ol</button>
       </div>
     </form>
   </div>
