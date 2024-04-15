@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import {RouterModule} from "@angular/router";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {NgApexchartsModule} from "ng-apexcharts";
 
 
 
@@ -17,7 +18,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
             {path: '', component: DashboardComponent}
         ]),
         MatGridListModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        NgApexchartsModule
     ]
 })
 export class DashboardModule { }

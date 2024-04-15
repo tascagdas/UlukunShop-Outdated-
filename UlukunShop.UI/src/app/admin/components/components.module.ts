@@ -5,6 +5,7 @@ import {OrdersModule} from "./orders/orders.module";
 import {CustomersModule} from "./customers/customers.module";
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {AuthorizeMenuModule} from "./authorize-menu/authorize-menu.module";
+import {NgApexchartsModule} from "ng-apexcharts";
 
 
 
@@ -16,7 +17,7 @@ import {AuthorizeMenuModule} from "./authorize-menu/authorize-menu.module";
     OrdersModule,
     CustomersModule,
     DashboardModule,
-    AuthorizeMenuModule
+    AuthorizeMenuModule,NgApexchartsModule
   ]
 })
 export class ComponentsModule { }

@@ -26,6 +26,7 @@
     "alertifyjs": "^1.13.1",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
+    "ng-apexcharts": "^1.7.4",
     "ngx-file-drop": "^13.0.0",
     "ngx-spinner": "^14.0.0",
     "ngx-toastr": "^14.3.0",
