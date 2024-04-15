@@ -76,7 +76,7 @@ export class ListComponent extends BaseComponent implements OnInit {
       this.pageList = [];
 
         if (this.currentPage - 3 <= 0) {
-          for (let i = 1; i <= 3; i++) {
+          for (let i = 1; i <= this.totalPageCount; i++) {
             this.pageList.push(i);
           }
         } else if (this.currentPage + 3 >= this.totalPageCount) {

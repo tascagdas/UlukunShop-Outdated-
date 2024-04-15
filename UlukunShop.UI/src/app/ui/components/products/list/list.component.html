@@ -53,7 +53,7 @@
     <nav class="" aria-label="Page navigation example ">
       <ul class="pagination justify-content-center">
         <li class="page-item"><a class="page-link"
-                                 [routerLink]="['/products', currentPage - 1 <= 0 ? 1 : currentPage - 1]">Onceki
+                                 [routerLink]="['/products', currentPage - 1 <= 0 ? 1 : currentPage - 1]">Önceki
           Sayfa</a></li>
         <li class="page-item" *ngFor="let pageNo of pageList;" routerLinkActive="active">
           <a class="page-link" [routerLink]="['/products', pageNo]">
