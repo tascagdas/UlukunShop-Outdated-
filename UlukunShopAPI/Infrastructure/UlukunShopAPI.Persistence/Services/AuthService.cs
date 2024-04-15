@@ -49,11 +49,11 @@ public class AuthService : IAuthService
             user = await _userManager.FindByEmailAsync(email);
             if (user == null)
             {
-                user = new Domain.Entities.Identity.AppUser()
+                user = new AppUser()
                 {
                     Id = Guid.NewGuid().ToString(),
                     Email = email,
-                    UserName = email.Remove(email.IndexOf("@")),
+                    UserName = email,
                     FirstName = firstName,
                     LastName = lastName
                 };

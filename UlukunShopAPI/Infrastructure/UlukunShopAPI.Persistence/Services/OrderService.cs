@@ -72,7 +72,7 @@ public class OrderService:IOrderService
                 Id = o.Id,
                 CreatedDate = o.CreatedDate,
                 OrderCode = o.OrderCode,
-                TotalPrice = o.Basket.ShoppingCartItems.Sum(bi => bi.Product.Price * bi.Quantity),
+                TotalPrice = o.Basket.ShoppingCartItems.Sum(bi => (double)bi.Product.Price * bi.Quantity),
                 UserName = o.Basket.User.UserName,
                 o.Completed
             }).ToListAsync()

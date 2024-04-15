@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets/product-images/A1cmedreftable.png"
     },
     {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/IMG0730.HEIC",
+      "PackagePath": "staticwebassets/product-images/IMG0730.HEIC"
+    },
+    {
+      "Id": "/Users/tascagdas/Documents/GitHub/CagdasTas_UlukunShop/UlukunShopAPI/Presentation/UlukunShopAPI.API/wwwroot/product-images/zeroair-reviews-imalent-ms32-18.jpg",
+      "PackagePath": "staticwebassets/product-images/zeroair-reviews-imalent-ms32-18.jpg"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.UlukunShopAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
